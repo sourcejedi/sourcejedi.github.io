@@ -51,7 +51,7 @@ The install does not actually enable IDO in icinga2, despite what it says.
 
     apt-get install icingaweb2
 
-# Prepare to run the wizard.
+# Prepare to run the wizard
 
 Edit `/etc/php/7.0/apache2/php.ini`.
 Uncomment `date.timezone` and set it.
