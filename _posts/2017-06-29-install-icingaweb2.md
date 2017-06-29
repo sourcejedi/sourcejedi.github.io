@@ -65,7 +65,8 @@ change the password (IDENTIFIED BY 'icingaweb2') to be more secure.
     mysql
 
     CREATE DATABASE icingaweb2;
-    GRANT ALL PRIVILEGES ON icingaweb2.* TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
+    GRANT ALL PRIVILEGES ON icingaweb2.*
+          TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
     quit
 
     icingacli setup token create
@@ -88,6 +89,8 @@ This step is a workaround.  The privileges used above are broader than documente
     mysql
 
     DROP USER 'icingaweb2'@'localhost';
-    GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.* TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
+    GRANT SELECT, INSERT, UPDATE, DELETE,
+          DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.*
+          TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
     quit
 
