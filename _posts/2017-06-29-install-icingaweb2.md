@@ -4,7 +4,7 @@ date:   2017-06-27 20:25:00 +0100
 title:  "Installing Icinga Web 2 on Debian Stretch"
 ---
 
-Icinga Web 2 is neat, and it's in Debian Stretch.  It's not trivial to install like the original Icinga cgi scripts / "Icinga Classic UI" was.  It's not that hard, but I had to make some notes.
+Icinga Web 2 is neat, and it's in Debian Stretch.  It's not trivial to install like the original Icinga cgi scripts ("Icinga Classic UI") was.  It's not that hard, but I had to make some notes.
 
 # Install Icinga 2
 
