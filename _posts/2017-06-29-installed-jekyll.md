@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2017-06-27 14:21:29 +0100
+date:   2017-06-27 18:31:00 +0100
 title:  "How I installed Jekyll"
 ---
 
