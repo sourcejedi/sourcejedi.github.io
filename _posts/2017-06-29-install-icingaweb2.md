@@ -83,7 +83,7 @@ can be found in `/etc/icinga2/features-available/ido-mysql.conf`.
 
 # Reduce database privileges
 
-This is a workaround for the wizard not accepting a pre-created database like it says it can, and then (if you bypass validation) failing to create the user it says it creates.
+This step is a workaround.  The privileges used above are broader than documented.  The wizard did not accept a pre-created database like it says it can (and if I ignored the failed validation, it then didn't create the  user that it says it did, so you can't log in).
 
     mysql
 
