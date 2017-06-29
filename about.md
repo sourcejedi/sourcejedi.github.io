@@ -5,3 +5,5 @@ permalink: /about/
 ---
 
 This site publishes technical notes to myself... and anyone else who's reading.
+
+No comments enabled (yet?), but you could tweet me.
