@@ -79,7 +79,7 @@ Follow the link which starts the wizard.
 I like to enable the "doc" module.
 
 The password, database name etc which Debian generated for IDO,
-can be found in /etc/icinga2/features-available/ido-mysql.conf.
+can be found in `/etc/icinga2/features-available/ido-mysql.conf`.
 
 # Reduce database privileges
 
