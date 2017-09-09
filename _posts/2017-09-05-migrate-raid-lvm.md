@@ -194,6 +194,7 @@ Partition the extra disk with GPT:
 Create a RAID1, in a degraded state as if one of the two disks had been removed:
         
     # apt-get install mdadm
+
     # mdadm --create /dev/md/lair --level=1 --raid-devices=2 missing /dev/vdb1
     mdadm: Note: this array has metadata at the start and
     may not be suitable as a boot device.  If you plan to
@@ -262,10 +263,13 @@ Set up LVM on the RAID volume:
 
     # pvcreate /dev/md/lair
     Physical volume "/dev/md/lair" successfully created.
+
     # vgcreate vg_lair /dev/md/lair
     Volume group "vg_lair" successfully created
+
     # lvcreate vg_lair -n lv_debian -L 8G
     Logical volume "lv_debian" created.
+
     # mkfs.ext4 /dev/mapper/vg_lair-lv_debian
     mke2fs 1.43.4 (31-Jan-2017)
     Creating filesystem with 2097152 4k blocks and 524288 inodes
@@ -289,7 +293,7 @@ then edit the line with `linux` / `vmlinuz` to include
 `systemd.unit=rescue.target`, before booting it.
 
     # mount /dev/mapper/vg_lair-lv_debian /mnt
-    # time cp -ax / /mnt
+    # time cp -ax /. /mnt/
 
 
 #### Step 1.5: Adjust the copied system for booting
@@ -297,6 +301,9 @@ then edit the line with `linux` / `vmlinuz` to include
 Chroot into the new system.  Update `/etc/fstab` so it points to the new
 device.  I use `/dev/mapper/vg_lair-lv_debian` just because it's convenient.
 It should be equally fine to use a UUID.
+
+Make sure fstab doesn't rely on any filesystems OR swap partitions on the old
+device.
 
     # cd /mnt
     # mount --bind /dev dev
@@ -328,11 +335,11 @@ will pick up the new configuration as an extra item in its boot menu!
     # apt-get install os-prober
     # update-grub
 
-It would also be possible to boot into the RAID manually
-using the GRUB prompt.  This would avoid hacking around with
-chroot, and I think it's more fun :).  However, as well as
-requiring several more details, getting GRUB to scan for LVM
-on RAID is unpleasantly fussy (see "undocumented bug" above).
+It is also possible to boot into the RAID manually using the GRUB prompt.
+This would avoid hacking around with chroot - or you might want to resort
+to this if something went wrong.  This requires several more details, and
+a specific sequence to ensure that GRUB scans for LVM on the RAID array.
+For the latter, see "undocumented bug" above.
 
 
 ### Step 2: Reboot into the new system.
@@ -357,6 +364,14 @@ chroot step instead).
     # apt-get install os-prober
     # update-grub
     # dpkg-reconfigure grub-pc
+
+If you had a swap partition which has been moved, you will need
+need to regenerate Debian's initramfs.  Otherwise it will look
+for hibernation resume image in the wrong place, and there may
+be a delay during boot.
+
+    # vi /etc/initramfs-tools/conf.d/resume
+    # update-initramfs -u -k all
 
 
 ### Step 3: Overwrite the old system with the RAID
