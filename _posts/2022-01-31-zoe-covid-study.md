@@ -61,7 +61,7 @@ Incidence time series, estimated using data from test specimens up to 2022-01-29
 
 * Lower and upper "confidence limits". These should be 95% confidence limits. They match ZOE graphs, except for the "by vaccination status" graph.
 * Unweighted totals: 
- * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests in England.
+ * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests in England. It expresses a total over the 2 week period. To obtain the daily average, divide by 14.
  * The number of "active" reporting users. The definition of "active" appears surprising generous. This is used as the denominator for the "newly sick".
  * Total tests, and positive tests. These only include people who are "newly sick".
 * Regional population. Used to convert estimates of case rates into estimates of absolute case numbers.
