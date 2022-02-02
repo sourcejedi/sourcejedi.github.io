@@ -61,4 +61,3 @@ for the new symptom assessment was finalized on 2020-11-03.  It prompted for 13 
 The current list of symptom prompts can be seen by using the app.
 Or you can get the idea from the [latest version of the code](https://github.com/zoe/covid-tracker-react-native/blob/master/src/core/assessment/dto/AssessmentInfosRequest.ts).
 
-(Not sure if the code links are still correct. They don't work for me at the moment, because GitHub is down)
