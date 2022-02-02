@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2022-01-31
+date:   2022-02-02
 title:  "ZOE Covid Study - part 2 - the method"
 ---
 
