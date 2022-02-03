@@ -46,17 +46,32 @@ ZOE estimates by publish date have 4 discontinuities, where ZOE announced a meth
 
 [Detecting COVID-19 infection hotspots in England using large-scale self-reported data from a mobile application: a prospective, observational study](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(20)30269-3/fulltext).
 
-* 2020-11-17: Study pre-print on medrxiv.org
-* 2020-12-03: Study published in the Lancet.
+ZOE Covid Study has a complex calculation for local areas, to detect "hotspots". The paper explains local areas in England are interpolated, from (symptomatic) incidence estimates of the 7 NHS regions.
 
-## 4. Change to symptom questions, including runny nose and sore throat
+The incidence for the 7 NHS regions in England is "released daily". So, these were the same estimates shown in the "daily new cases" section on the ZOE website.  The method was:
+
+1. <b>Users of ZOE's app "are asked to record each day whether they feel physically normal"</b>. If not, they are asked "to log any symptoms and keep a record of any COVID-19 tests and their results".
+2. The exact questions used are shown in the appendix. They identify 19 different symptoms. There was also a free text entry field.
+3. "Users who logged themselves as healthy at least once in a 9-day period and then reported" ... "any of the symptoms
+asked about in the app" were termed "newly sick".
+4. ZOE calculate "the proportion of users who report as newly sick". The [denominator](https://en.wikipedia.org/wiki/Denominator) is not spelled out. I think the correct denominator is the total users who "logged themselves as healthy at least once in the 9-day period".
+5. Based on "incidence table.csv", this proportion appeared to be termed "avg. % of newly-sick/day", suggesting they use an average over several days. See point 7. The denominator appeared to be termed "active users".
+6. Newly sick users "were sent invitations to book a [PCR] test through the DHSC national testing programme". This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. "They were then asked to record the result of the test in the app".
+7. "We took <b>14-day averages</b> ... to calculate the percentage of positive tests among newly sick users". Tests are assigned to the date the swab was taken. <b>Note these test-based figures were released "with a 4-day reporting lag"</b>, to make sure enough positive and negative results were available from the swabs.
+8. <b>To estimate incidence rates, the % newly sick (from step 4) and the % positive (from step 7) are "combined" by multiplying them together</b>.
+9. <b>In this version, cases were not stratified or re-weighted e.g. by age or household income</b>.
+10. 95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be. 
+
+I was able to reproduce the same incidence estimate from the "newly sick" and testing data in "incidence table.csv".
+
+## 4. 2020-11-04 change to symptom questions, including runny nose and sore throat
 
 "Several direct symptom questions were added to the app" on 2020-11-04, according to a [paper](https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(21)00198-X/fulltext) published 2021-08-03.
 
 According to the ZOE blog 2021-03-18, any of [20 symptoms](https://web.archive.org/web/20210319152354/https://covid.joinzoe.com/post/the-20-symptoms-of-covid-19-to-watch-out-for) were sufficient for ZOE to offer you a PCR test (in England).  These include runny nose and sore throat, which are among the most common early symptoms.  These symptoms were not included in the original ZOE paper (below).
 
 The [code](https://github.com/zoe/covid-tracker-react-native/commit/39ebcd5a3beea837ca75522fffdd490db049325e#diff-41c1aa97ff22cecb0746ef2c08888371a941110072c69925850807217b017550R53)
-for the new symptom assessment was finalized on 2020-11-03.  It prompted for 13 new symptoms.
+for the new symptom assessment was finalized on 2020-11-03.  It prompted for an additional 13 symptoms.
 
 The current list of symptom prompts can be seen by using the app.
 Or you can get the idea from the [latest version of the code](https://github.com/zoe/covid-tracker-react-native/blob/master/src/core/assessment/dto/AssessmentInfosRequest.ts).
