@@ -64,6 +64,8 @@ asked about in the app" were termed "newly sick".
 
 I was able to reproduce the same incidence estimate from the "newly sick" and testing data in "incidence table.csv".
 
+The UK prevalence published on the ZOE website and in "prevalence_history_*.csv", was derived from the 14-day incidence estimates, and a curve of recovery probability estimated from the whole population.
+
 ## 4. 2020-11-04 change to symptom questions, including runny nose and sore throat
 
 "Several direct symptom questions were added to the app" on 2020-11-04, according to a [paper](https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(21)00198-X/fulltext) published 2021-08-03.
