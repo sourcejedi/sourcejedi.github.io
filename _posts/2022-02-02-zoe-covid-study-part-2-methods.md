@@ -26,7 +26,12 @@ ZOE estimates by publish date have 4 discontinuities, where ZOE announced a meth
 * 2021-10-07: v5: <https://covid.joinzoe.com/post/future-proofing-our-covid-estimates>
 * 2021-07-21: v4: <https://covid.joinzoe.com/post/covid-estimates-updated-vaccine>
 
-  Regarding "adjustments based on age group", ZOE later showed weekly graphs of incidence by age group.  I assume the graph shows the same age groups used for the adjustment: 0-18, 18-35, 35-55, 55-75, 75-120.[sic]
+  > The main adjustments we’ve made to our calculations are:
+  >  * Changing the definition of ‘newly sick’ to include more people in our estimate calculations
+  >  * Inclusion of Lateral Flow Test results
+  >  * Adjustment by both age and vaccination status
+
+  ZOE later showed weekly graphs of incidence by age group.  I assume the graph shows the same age groups used for the adjustment: 0-18, 18-35, 35-55, 55-75, 75-120.[sic]
 
   Data files starting `incidence_20210717.csv` include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence%20table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
 
