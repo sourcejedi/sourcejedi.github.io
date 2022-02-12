@@ -34,7 +34,7 @@ ZOE estimates by publish date have 4 discontinuities, where ZOE announced a meth
   >  * Inclusion of Lateral Flow Test results
   >  * Adjustment by both age and vaccination status
 
-  On the 30th, the [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) on the 30th showed incidence rates among people with 0, 1, and 2+ vaccine doses.  ZOE also later showed graphs of incidence rate by age group: 0-17, 18-34, 35-54, 55-74, 75-119.  I assume the graph shows the same age groups used for the adjustment.
+  On the 30th, the [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) showed incidence rates among people with 0, 1, and 2+ vaccine doses.  ZOE also later showed graphs of incidence rate by age group: 0-17, 18-34, 35-54, 55-74, 75-119.  I assume the graph shows the same age groups used for the adjustment.
 
   Data files starting `incidence_20210717.csv` include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence%20table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
 
