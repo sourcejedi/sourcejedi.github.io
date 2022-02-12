@@ -63,7 +63,7 @@ asked about in the app" were termed "newly sick".
 5. Based on "incidence table.csv", this proportion appeared to be termed "avg. % of newly-sick/day", suggesting they use an average over several days. See point 7. The denominator appeared to be termed "active users".
 6. Newly sick users "were sent invitations to book a [PCR] test through the DHSC national testing programme". This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. "They were then asked to record the result of the test in the app".
 7. "We took <b>14-day averages</b> ... to calculate the percentage of positive tests among newly sick users". Tests are assigned to the date the swab was taken. <b>Note these test-based figures were released "with a 4-day reporting lag"</b>, to make sure enough positive and negative results were available from the swabs.
-8. <b>To estimate incidence rates, the % newly sick (from step 4) and the % positive (from step 7) are "combined" by multiplying them together</b>.
+8. <b>To estimate incidence rates, the % newly sick (from step 4) and the % positive tests (from step 7) are "combined" by multiplying them together</b>.
 9. <b>In this version, cases were not stratified or re-weighted e.g. by age or household income</b>.
 10. 95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be. 
 
