@@ -21,12 +21,12 @@ I am not an expert.
 
 [ZOE]: https://en.wikipedia.org/wiki/COVID_Symptom_Study
 
-The "app users only" graphs are also published as `covid-public-data` on Google Cloud Storage, along with several other data files.  For example, the report with today's graphs which can be downloaded from this URL:<br>
+The "app users only" graphs are also published as `covid-public-data` on Google Cloud Storage, along with other data files.  For example, the report with today's graphs can be downloaded from this URL:<br>
 <https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf>
 
 <figure style="border: solid"><img src="/assets/for-post/2022-01-31-zoe-covid-study/covid_symptom_study_report.png" alt="We estimate there have been 187669 daily new cases of symptomatic COVID in the UK on average over the two weeks up to 29 January 2022. This is based on the number of newly symptomatic app users per day, and the proportion of these who give positive swab tests."></figure>
 
-The [GS browser][GS-browser] web app is slow.  Also, the browser does not support bulk downloads.  It recommends using the `gsutil cp` command.  There are [official instrucions to install gsutil][gsutil-install], but I [installed it on Linux using Snap][google-cloud-sdk-snap].
+There is an [online file browser][GS-browser], but it is slow.  If you try to download multiple files at once, it says you need to use `gsutil cp`.  See [official instructions to install gsutil][gsutil-install]. Alternatively, some Linux users may like to install gsutil [using Snap][google-cloud-sdk-snap].
 
 [GS-browser]: https://console.cloud.google.com/storage/browser/covid-public-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 [gsutil-install]: https://cloud.google.com/storage/docs/gsutil_install
@@ -34,47 +34,49 @@ The [GS browser][GS-browser] web app is slow.  Also, the browser does not suppor
 
 ## 3. Main data files
 
-New data files are added each day.  To download a different day, change the date in the URL (your web browser address bar).  Note some older versions use different formats and different definitions.  As of today, the following were the most recent versions:
+New data files are added each day.  To download a different day, you can simply change the date in the URL (your web browser address bar).  Note some older versions use different formats and different definitions.  As of today, the following were the most recent versions:
 
 ### 3.1 [covid_symptom_study_report_20220131.pdf][covid_symptom_study_report_20220131]
 
 [covid_symptom_study_report_20220131]: https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf
 
-_Daily COVID Infections Report_, published 2022-01-31. "Analysis by ZOE and King's College London".
+"Daily COVID Infections Report" published 2022-01-31. "Analysis by ZOE and King's College London". This includes:
 
-* An explicit note, that ZOE still use a 14 day average for their case estimates.
-* UK incidence [new cases] estimates, graphed over time:
-  * Incidence total
+* An explicit note that ZOE use a 14 day average for their case estimates.
+* UK incidence estimates \["daily new cases of symptomatic COVID"\], graphed over time:
+  * Incidence overall
   * Incidence within people "double vaccinated" (2 doses or more)
   * Incidence rates by UK nation
   * Incidence rates by English region
-* Incidence of respiratory symptoms: COVID vs non-COVID.
+* Incidence of respiratory symptoms: COVID vs non-COVID
 * Changelog
 
-...and more. Please note the disclaimer at the start of this blog post. I am not attempting to list what is "wrong" here e.g. known weirdnesses, unspecified methods, limitations which have not been stated *anywhere*.
+...and more. Please remember the disclaimer above. I am not attempting to list what is "wrong" here. E.g. known weirdnesses, unspecified methods, or limitations which might not have been stated *by anyone*.
 
 ### 3.2 [incidence_20220129.csv][incidence_20220129]
 
 [incidence_20220129]: https://storage.googleapis.com/covid-public-data/csv/incidence_20220129.csv
 
-Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the state date.  I interpret the remaining columns as:
+Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the specified date.  I interpret the remaining columns as:
 
-* Lower and upper "confidence limits". These should be 95% confidence limits. They match ZOE graphs, except for the "by vaccination status" graph.
+* Lower and upper "confidence limits". These should be 95% confidence limits. They match current ZOE graphs, except for the "by vaccination status" graph.
 * Unweighted totals: 
- * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests in England. It expresses a total over the 2 week period. To obtain the daily average, divide by 14.
- * The number of "active" reporting users. The definition of "active" appears surprising generous. This is used as the denominator for the "newly sick".
- * Total tests, and positive tests. These only include people who are "newly sick".
+  * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests if they live in England. This number is the total over the 2 week period. To obtain the daily average, divide by 14.
+  * The number of "active" reporting users. The definition of "active" might be more generous than you expect. This is used as a denominator for the "newly sick".
+  * Total tests, and positive tests. These only include people who were "newly sick".
 * Regional population. Used to convert estimates of case rates into estimates of absolute case numbers.
 
 ### 3.3 [prevalence_history_20220131.csv][prevalence_history_20220131]
 
 [prevalence_history_20220131]: https://storage.googleapis.com/covid-public-data/csv/RevisedStats/prevalence_history_20220131.csv
 
-Prevalence ["active cases"] time series. Estimated on 2022-01-31, using data from test specimens up to 2022-01-29.
+Prevalence time series \["active cases"\] estimated on 2022-01-31.
 
-Note, as per the Changelog (above), the dates were shifted by one day today. So take care if comparing today's file to previous ones.
+In a [paper from 2020][ZOE-method-prevalence], ZOE derived this prevalence from the 14-day incidence estimates. This calculation uses a curve of recovery probability, estimated from the whole population.
 
-Initially, this prevalence was derived from the 14-day incidence estimates, and a curve of recovery probability estimated from the whole population. It seems quite technical; I don't mind so much not knowing *exactly* how this method has changed, if at all.
+The dates were shifted by one day today, as per the Changelog (see above). Take care if comparing today's file to previous ones.
+
+[ZOE-method-prevalence]: /2022/02/02/zoe-covid-study-part-2-methods.html
 
 ## 4. All available files
 
