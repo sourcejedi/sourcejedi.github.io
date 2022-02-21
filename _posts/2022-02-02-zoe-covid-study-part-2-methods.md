@@ -6,7 +6,7 @@ title:  "ZOE Covid Study - part 2 - the method"
 
 [ZOE][ZOE] release daily estimates of incidence, or "new cases of symptomatic COVID", for the 7 NHS regions of England.  Here is a reference of their method, with citations.
 
-This is presented in reverse chronological order. Sorry about that. It seemed to make sense at the time.
+This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.
 
 See also [ZOE Covid Study - the public data files](/2022/01/31/zoe-covid-study.html).
 
