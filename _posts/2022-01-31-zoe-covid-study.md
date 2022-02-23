@@ -59,7 +59,7 @@ New data files are added each day.  To download a different day, you can simply 
 
 Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the specified date.  I interpret the remaining columns as:
 
-* Lower and upper "confidence limits". These should be 95% confidence limits. They match current ZOE graphs, except for the "by vaccination status" graph.
+* Lower and upper "confidence limits". These match current ZOE graphs, except for the "by vaccination status" graph.
 * Unweighted totals: 
   * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests if they live in England. This number is the total over the 2 week period. To obtain the daily average, divide by 14.
   * The number of "active" reporting users. The definition of "active" might be more generous than you expect. This is used as a denominator for the "newly sick".
