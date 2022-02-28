@@ -28,9 +28,12 @@ The "app users only" graphs are also published as `covid-public-data` on Google 
 
 There is an [online file browser][GS-browser], but it is slow.  If you try to download multiple files at once, it says you need to use `gsutil cp`.  See [official instructions to install gsutil][gsutil-install]. Alternatively, some Linux users may like to install gsutil [using Snap][google-cloud-sdk-snap].
 
+I have also put a [few related scripts][my-scripts] up on GitHub.
+
 [GS-browser]: https://console.cloud.google.com/storage/browser/covid-public-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 [gsutil-install]: https://cloud.google.com/storage/docs/gsutil_install
 [google-cloud-sdk-snap]: https://snapcraft.io/google-cloud-sdk
+[my-scripts]: https://github.com/sourcejedi/nova-covid
 
 ## 3. Main data files
 
