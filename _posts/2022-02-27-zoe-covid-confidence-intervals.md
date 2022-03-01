@@ -12,7 +12,7 @@ In one case, there is enough information to suggest the interval was wrong.
 
 In another case, ZOE reasonably explained different confidence intervals as showing an improvement.  However, when there is no explanation, it is not safe to assume we can always compare different intervals.
 
-(Also, I once said ZOE's current range "should" still use a 95% confidence interval.  I needed to correct that, or at least clarify it.  ZOE *ought* to still use a 95% confidence interval, because they didn't announce a change.)
+(Also, I once said ZOE's current range "should" still use a 95% confidence interval.  I need to retract that statement, because I don't have good evidence for it.)
 
 [wiki-CI]: https://en.wikipedia.org/wiki/Confidence_intervals
 [ZOE-method]: /2022/02/02/zoe-covid-study-part-2-methods.html
@@ -61,15 +61,15 @@ The new graphs by vaccination status have narrower intervals than the older grap
 
 2021-08-27: The graph by vaccination status is changed, to show incidence among the fully vaccinated v.s. total incidence.  The current confidence intervals are similar to the dedicated graph of total UK incidence, but not identical.
 
-2021-10-06: Just before method v5. The confidence intervals remain similar but not identical.
-
-<!-- TODO: does the "old" CI in the v5 blog match either the vaccine or total UK graph? -->
+2021-10-06: Just before method v5. The confidence intervals remain similar but not identical. Note the graph of total UK incidence was not included in the daily report at this time, although it was viewable through the app.
 
 2021-10-07: [ZOE method v5][ZOE-v5]. The purpose of this change is to narrow the confidence interval, making the estimate more sustainable "with unvaccinated users disappearing from our study". This is illustrated with a graph. The announcement is unclear how this result is achieved.
 
 2021-10-10: Method v5 is stabilized by now, after a little back-and-forth. There is still a graph with incidence among the fully vaccinated, v.s. total incidence. On this graph, the confidence intervals for total incidence are less than half as wide as those on the dedicated graph of total UK incidence.
 
-2021-12-07: I asked ZOE about this last inconsistency.  ZOE forwarded it to their team of data scientists ["to confirm this is correct"][ZOE-CI-email].  I have not received any further response.
+[[Graphs]](#v4-to-v5)
+
+2021-12-07: I asked ZOE about this last inconsistency, and sent screenshots of both graphs.  ZOE forwarded it to their team of data scientists ["to confirm this is correct"][ZOE-CI-email].  I have not received any further response.
 
 
 [ZOE-web-assets]: https://covid-assets.joinzoe.com/
@@ -105,3 +105,15 @@ The new graphs by vaccination status have narrower intervals than the older grap
 <img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-UK.png">
 
 <img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-by-vaccination.png">
+
+### v4 to v5
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-by-vaccination.png">
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-UK.png">
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5.png">
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-by-vaccination.png">
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-UK.png">
