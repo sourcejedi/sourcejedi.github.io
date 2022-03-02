@@ -67,6 +67,8 @@ The new graphs by vaccination status have narrower intervals than the older grap
 
 2021-10-10: Method v5 is stabilized by now, after a little back-and-forth. There is still a graph with incidence among the fully vaccinated, v.s. total incidence. On this graph, the confidence intervals for total incidence are less than half as wide as those on the dedicated graph of total UK incidence.
 
+So although the point of method v5 is narrower confidence intervals, this can only be seen on the graph of incidence by vaccination status.  The graphs for the UK, England etc. don't take advantage of it.  I was suprised to find the same pattern as in the change to v3.  When ZOE switched to v5, the relative size of the confidence intervals shown remained identical to v4.  I plotted a graph below to show this again.
+
 [[Graphs]](#v4-to-v5)
 
 2021-12-07: I asked ZOE about this last inconsistency, and sent screenshots of both graphs.  ZOE forwarded it to their team of data scientists ["to confirm this is correct"][ZOE-CI-email].  I have not received any further response.
@@ -117,3 +119,5 @@ The new graphs by vaccination status have narrower intervals than the older grap
 <img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-by-vaccination.png">
 
 <img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-UK.png">
+
+<img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5-ci.png">
