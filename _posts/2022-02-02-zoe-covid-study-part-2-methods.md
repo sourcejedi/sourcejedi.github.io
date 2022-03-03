@@ -4,7 +4,7 @@ date:   2022-02-02
 title:  "ZOE Covid Study - part 2 - the method"
 ---
 
-[ZOE][ZOE] release daily estimates of incidence, or "new cases of symptomatic COVID", for the 7 NHS regions of England.  Here is a reference of their method, with citations.
+[ZOE][ZOE] release daily estimates of incidence, or "new cases of symptomatic COVID", for the 7 NHS regions of England.  Here is an introduction to their method, complete with citations.
 
 This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.
 
@@ -34,9 +34,32 @@ If you look at ZOE estimates by publish date, you will see 4 discontinuities. Th
 
 [v5]: https://covid.joinzoe.com/post/future-proofing-our-covid-estimates
 
-Note: the [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
+> The ZOE COVID Study has been collecting key information on COVID-19 vaccines and infections since the start of the UK’s vaccination programme. Thanks to this data, ZOE and King's College London (KCL) have been able to assess the relative risk reduction from vaccines [...] and track changes over time in the real world, a.k.a vaccine effectiveness. The relative risk reduction measured in the study can be used to predict an incidence rate in unvaccinated and partially vaccinated users from the incidence in the fully vaccinated group.
 
-Starting in this version, England incidence is now equal to the sum of each NHS region. This means England incidence is now stratified by region. (By the same test, UK incidence appears to have always been stratified by nation).
+Method v4 was already adjusted by vaccination status. In method v5, a different adjustment is used. Neither adjustment was specified, leaving us with several important questions.
+
+The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE say the method "effectively applies a weighted average to a cohort".
+
+The main rationale is that "among some of our age cohorts, unvaccinated contributors have all but vanished". To narrow the confidence interval, the new estimate of relative risk reduction must be using larger sample sizes.
+
+I see two possibilities to increase sample sizes. One is to average over a longer time period, where there will be more infections. The other is to change the age groups used in this calculation. Reducing the number of age groups would increase the sample size.
+
+ZOE claim "even if we lost all unvaccinated users from our study", the method can still "calculate the relative risk in the unvaccinated" and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).
+
+Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some suggest ZOE estimates [understate][ZOE-omicron-understate] the Omicron wave.
+
+Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the "future proof" method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.
+
+The [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
+
+Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).
+
+[ZOE-waning]: https://covid.joinzoe.com/post/covid-vaccine-protection-fading
+
+[ZOE-waning-video]: https://covid.joinzoe.com/post/are-covid-vaccines-working-boosters-webinar
+
+[ZOE-omicron-understate]: https://twitter.com/PaulMainwood/status/1494015094182842376
+
 
 #### 2021-07-21: v4: ["COVID estimates updated as more people are being vaccinated"][v4]
 
@@ -47,15 +70,26 @@ Starting in this version, England incidence is now equal to the sum of each NHS 
 >  * Inclusion of Lateral Flow Test results
 >  * Adjustment by both age and vaccination status
 
-On the 30th, the daily report showed incidence rates among people with 0, 1, and 2+ vaccine doses.  Also, ZOE later showed graphs of incidence rate by age group: 0-17, 18-34, 35-54, 55-74, 75+.  I assume the graph shows the same age groups used for the adjustment.
+Method v3 simply re-weighted the vaccinated and unvaccinated cohorts, to match vaccination in the overall population.  My current guess is that v4 is similarly re-weighted by vaccination status and age group.
 
-Data files starting "incidence_20210717.csv" include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
+On the 30th, the daily report showed incidence rates among people with 0, 1, and 2+ vaccine doses.  Also, ZOE later showed [graphs of incidence rate by age group][incidence-age-groups]: 0-17, 18-34, 35-54, 55-74 and 75+.[[Note]][incidence-age-groups-fixed]  I assume the graph shows the same age groups used for the adjustment.
+
+Another possible method can be seen in the ONS random survey.  ONS model incidence as a smooth function of age.  The [ONS weekly report][ONS-survey] includes smooth graphs of incidence by single year of age, animated over time.  However, ZOE have not showed any graph like this.
+
+The data files "incidence_20210717.csv" and newer include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
+
+[incidence-age-groups]: https://covid.joinzoe.com/post/covid-bounces-back-as-cases-start-to-rise
+[incidence-age-groups-fixed]: https://twitter.com/sourcejedi/status/1491512209951895558
+
+[ONS-survey]: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/28january2022
+
 
 #### 2021-05-12: v3: ["COVID estimates revised after change to methodology"][v3]
 
 [v3]: https://covid.joinzoe.com/post/covid-estimates-revised-after-change-to-methodology
 
 Users' reports are now stratified by their vaccination status (0 versus 1+ doses).  Vaccination was high among app users, which was biasing the estimates down.
+
 
 #### 2021-02-23: v2: ["How we calculate COVID-19 incidence has changed and rates have now reduced"][v2]
 
@@ -66,6 +100,7 @@ ZOE start excluding likely vaccine "after-effects", if they happen in the three 
 "You might notice the % positive tests are higher in the new reports - lateral flow test results are not included in this estimate anymore (or the incidence calc) due to different sensitivity.  They are still included in lots of research and analysis we do, please still log them!" - [Mark Graham](https://twitter.com/marksgraham_/status/1364261105657257989)
   
 If you compare reports before and after, there might also be a small change to the % newly unwell data, even before any vaccination.
+
 
 #### v1: See paper below
 
