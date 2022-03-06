@@ -17,11 +17,12 @@ I am not an expert.
 
 ## 2. ZOE data is published on Google Cloud Storage
 
-[ZOE][ZOE] collect Covid test data and symptoms using a survey app.  They estimate Covid cases and publish them on a public web page.  More information is shown on a page "for app users only", which helps motivate people to take part.
+[ZOE][COVID-symptom-study] collect Covid test results and symptoms using a survey app.  They estimate Covid cases and publish them on a public web page.  More information is shown on a page "for app users only", which helps motivate people to take part.
 
-[ZOE]: https://en.wikipedia.org/wiki/COVID_Symptom_Study
+[COVID-symptom-study]: https://en.wikipedia.org/wiki/COVID_Symptom_Study
 
-The "app users only" graphs are also published as `covid-public-data` on Google Cloud Storage, along with other data files.  For example, the report with today's graphs can be downloaded from this URL:<br>
+The "for app users only" graphs are also published as `covid-public-data` on Google Cloud Storage, along with other data files.  For example, the report with today's graphs can be downloaded from this URL:
+
 <https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf>
 
 <figure style="border: solid"><img src="/assets/for-post/2022-01-31-zoe-covid-study/covid_symptom_study_report.png" alt="We estimate there have been 187669 daily new cases of symptomatic COVID in the UK on average over the two weeks up to 29 January 2022. This is based on the number of newly symptomatic app users per day, and the proportion of these who give positive swab tests."></figure>
@@ -37,13 +38,13 @@ I have also put a [few related scripts][my-scripts] up on GitHub.
 
 ## 3. Main data files
 
-New data files are added each day.  To download a different day, you can simply change the date in the URL (your web browser address bar).  Note some older versions use different formats and different definitions.  As of today, the following were the most recent versions:
+New data files are added each day.  You can download a different day by changing the date in the URL (your web browser address bar).  Note some older versions use different formats and different definitions.  Here are links to the most recent versions, as of today:
 
 ### 3.1 [covid_symptom_study_report_20220131.pdf][covid_symptom_study_report_20220131]
 
 [covid_symptom_study_report_20220131]: https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf
 
-"Daily COVID Infections Report" published 2022-01-31. "Analysis by ZOE and King's College London". This includes:
+"Daily COVID Infections Report", published 2022-01-31. "Analysis by ZOE and King's College London". The report includes:
 
 * An explicit note that ZOE use a 14 day average for their case estimates.
 * UK incidence estimates \["daily new cases of symptomatic COVID"\], graphed over time:
@@ -79,7 +80,7 @@ Prevalence time series \["active cases"\] estimated on 2022-01-31.
 
 In a [paper from 2020][ZOE-method-prevalence], ZOE derived this prevalence from the 14-day incidence estimates. This calculation uses a curve of recovery probability, estimated from the whole population.
 
-The dates were shifted by one day today, as per the Changelog (see above). Take care if comparing today's file to previous ones.
+The dates were shifted by one day today, as per the Changelog (see above). So be careful if you compare today's file to previous ones.
 
 [ZOE-method-prevalence]: /2022/02/02/zoe-covid-study-part-2-methods.html
 
