@@ -52,8 +52,6 @@ Considering the timing, and previous ZOE commentary on waning and boosters, one 
 
 The [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
 
-Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).
-
 [ZOE-waning]: https://covid.joinzoe.com/post/covid-vaccine-protection-fading
 
 [ZOE-waning-video]: https://covid.joinzoe.com/post/are-covid-vaccines-working-boosters-webinar
@@ -77,6 +75,8 @@ On the 30th, the daily report showed incidence rates among people with 0, 1, and
 Another possible method can be seen in the ONS random survey.  ONS model incidence as a smooth function of age.  The [ONS weekly report][ONS-survey] includes smooth graphs of incidence by single year of age, animated over time.  However, ZOE have not showed any graph like this.
 
 The data files "incidence_20210717.csv" and newer include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
+
+Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).
 
 [incidence-age-groups]: https://covid.joinzoe.com/post/covid-bounces-back-as-cases-start-to-rise
 [incidence-age-groups-fixed]: https://twitter.com/sourcejedi/status/1491512209951895558
