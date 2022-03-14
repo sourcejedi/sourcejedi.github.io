@@ -4,7 +4,21 @@ date:   2022-02-27
 title:  "ZOE Covid Study - confidence intervals"
 ---
 
-The "v1" [ZOE paper][ZOE-method] used 95% [confidence intervals][wiki-CI], with a specific definition.
+I once said the current "v5" ZOE method should use a 95% confidence interval.  I should not have said that.  ZOE *should* define the ranges they show.  However, people do not always do what they should.
+
+To avoid repeating my mistake, I needed to make some notes.
+
+Method v1 from the [ZOE paper][ZOE-method] did use 95% [confidence intervals][confidence-intervals].  They were calculated from the number of tests and the number of positive tests, using something called the [Wilson score](wilson-score).
+
+I found a helpful [python function][python-wilson-score] to calculate the Wilson score interval.  ZOE test data for their latest 14-day interval is available from [incidence table.csv][incidence-table].  Looking at [historical downloads][incidence-table-capture], I can reproduce both the central estimate and the confidence intervals for method "v1".
+
+The same is true for method v2, as expected.  However it is also true for method v3, which is not expected.
+
+In method v3, incidence is estimated separately in vaccinated and unvaccinated users.  ZOE have disproportionately many vaccinated users, so they re-weight the overall estimate.  "incidence table.csv" only showed the total numer of tests and total positives.  However, as a proportion of the estimate, the confidence intervals are
+
+TODO: verify exact equivalence - check they are all inside the range obtained by un-rounding all the numbers.
+
+---
 
 This post is a reminder to myself.  As ZOE have revised their methods, they showed different intervals over time and different types of graphs.  The new intervals were not defined, so we must not assume they have exactly the same meaning.
 
@@ -12,9 +26,10 @@ In one case, there is enough information to suggest the interval was wrong.
 
 In another case, ZOE reasonably explained different confidence intervals as showing an improvement.  However, when there is no explanation, it is not safe to assume we can always compare different intervals.
 
-(Also, I once said ZOE's current range "should" still use a 95% confidence interval.  I need to retract that statement, because I don't have good evidence for it.)
-
-[wiki-CI]: https://en.wikipedia.org/wiki/Confidence_intervals
+[confidence-intervals]: https://en.wikipedia.org/wiki/Confidence_intervals
+[wilson-score]: https://www.google.com/search?q=wilson+score
+[python-wilson-score]: https://www.mikulskibartosz.name/wilson-score-in-python-example/
+[incidence-table-capture]: https://github.com/sourcejedi/nova-covid
 [ZOE-method]: /2022/02/02/zoe-covid-study-part-2-methods.html
 
 
@@ -55,11 +70,11 @@ The announcement of method v4 includes a graph comparing old and new estimates. 
 
 Similarly, the intervals for the old estimate on the comparison graph are different from the old UK total graphs. They are <em>closer</em> to being consistent with the older "by vaccination" graphs, though still visibly inconsistent. It would require some historical revisions.
 
-The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status. If the two intervals are calculated in the same way, this is the result I would expect. Method v4 increased the number of tests several-fold, in part because it went back to including LFT's.
+The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status. If the two intervals are calculated in the same way, this is the result I would expect. <!-- FIXME you sure? --> Method v4 increased the number of tests several-fold, in part because it went back to including LFT's.
 
 [[Graphs]](#v3-to-v4)
 
-2021-08-27: The graph by vaccination status is changed, to show incidence among the fully vaccinated v.s. total incidence.  The current confidence intervals are similar to the dedicated graph of total UK incidence, but not identical.
+2021-08-26: The graph by vaccination status is changed, to show incidence among the fully vaccinated v.s. total incidence.  The current confidence intervals are similar to the dedicated graph of total UK incidence, but not identical.
 
 2021-10-06: Just before method v5. The confidence intervals remain similar but not identical. Note the graph of total UK incidence was not included in the daily report at this time, although it was viewable through the app.
 
@@ -75,6 +90,7 @@ So although the point of method v5 is narrower confidence intervals, this can on
 
 
 [ZOE-web-assets]: https://covid-assets.joinzoe.com/
+[incidence-table]: https://covid-assets.joinzoe.com/latest/incidence%20table.csv
 [incidence-table-csv-capture]: https://drive.google.com/drive/folders/1O9vUWKufI3KfaGtNvKjBTKxHq6yNcyfX
 
 [ZOE-v3]: /2022/02/02/zoe-covid-study-part-2-methods.html#2021-05-12-v3-covid-estimates-revised-after-change-to-methodology
