@@ -68,7 +68,7 @@ For method "v2", the confidence interval was estimated from the number of tests 
 
 <!-- TODO. Still need to put in more numbers?  Would make it more useful for users of screen readers.  And anyone for whom this stuff doesn't jump out at. Like it didn't for me, for too long :-). -->
 
-2020-10-27: [ZOE method v1][ZOE-v1] - the ZOE paper is posted in its initial form, as a preprint on medrxiv.org.
+2020-10-27: [ZOE method v1][ZOE-v1] - the ZOE paper - is posted in its initial form as a preprint on medrxiv.org.
 
 Method v1 uses 95% [confidence intervals][confidence-intervals].  They are calculated from the number of tests and the number of positive tests, using something called the [Wilson score](wilson-score).
 
@@ -78,11 +78,11 @@ I found a helpful [python function][python-wilson-score] to calculate the Wilson
 
 2021-05-12: [ZOE method v3][ZOE-v3]. Incidence is now estimated separately in vaccinated and unvaccinated people. These are added together to give total UK incidence.
 
-2021-05-27: The label "95% confidence interval" was removed from all graphs. Official releases no longer declare how the confidence intervals work.
+2021-05-27: The label "95% confidence interval" was removed from all graphs.  The official releases no longer say anything about how the confidence intervals work.
 
-Up to the current day, [internal website files][ZOE-web-assets] still label the incidence intervals as 95% upper and lower limits.  These include ["incidence table.csv"][incidence-table-capture].  Although if effectively no-one looks at this, I do not expect it to be kept up to date.
+Up to the current day, [internal website files][ZOE-web-assets] still label the incidence intervals as 95% upper and lower limits.  These include ["incidence table.csv"][incidence-table-capture].  Although, if effectively no-one looks at this, I do not expect it to be kept up to date.
 
-On balance, I think the confidence intervals for UK & regional incidence graphs are probably always calculated using a 95% confidence level.
+On balance, I think the confidence intervals for UK and regional incidence graphs are probably always calculated using a 95% confidence level.
 
 2021-06-08: Confidence intervals are now calculated slightly differently, compared to the original Wilson score.  In a couple of edge cases, there are noticable differences.  For my purposes, the two methods appear equivalent.
 
