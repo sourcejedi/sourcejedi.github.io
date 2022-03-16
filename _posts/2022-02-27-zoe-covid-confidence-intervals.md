@@ -8,7 +8,7 @@ ZOE [confidence intervals][confidence-intervals] are not always comparable betwe
 
 ZOE have not mentioned these limitations.  They no longer provide definitions, which would help an independent expert notice these limitations.  ZOE [transparency information][ZOE-public-data] may help with reverse-engineering some limitations.
 
-I started writing this post as a reminder to myself, to avoid unsafe assumptions.  Perhaps some of the details will help with further understanding.  Sadly, it seems to be quite long.  I have split out ZOE method v3 as a shorter introduction.  This was the first case where I had a concern.
+I started writing this post as a reminder to myself, to avoid unsafe assumptions.  Perhaps some of the details will help further understanding.  Sadly, it seems to be quite long.  I have split out ZOE method v3 as a more self-contained introduction.  This was the first case where I had a concern.
 
 I am not an expert.
 
