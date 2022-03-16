@@ -100,13 +100,20 @@ Contemporary side-by-side comparison: https://twitter.com/sourcejedi/status/1408
 
 [[Graphs]](#2021-07-16)
 
-2021-07-21: [ZOE method v4][ZOE-v4]. The daily report starts showing incidence by vaccination status again. This time, the intervals for total UK incidence appear wider than the intervals for unvaccinated and vaccinated incidence put together. This is inconsistent again, just the other way round.
+2021-07-21: [ZOE method v4][ZOE-v4].  The confidence intervals no longer match the Wilson score interval calculated from the overall number of tests and positive tests.  So that's good.
+
+The daily report starts showing incidence by vaccination status again. This time, the intervals for total UK incidence appear wider than the intervals for unvaccinated and vaccinated incidence put together. This is inconsistent again, just the other way round.
 
 The announcement of method v4 includes a graph comparing old and new estimates. The intervals for the new estimate on this graph, are different from the UK total graph in the report. They might be consistent with the new graph by vaccination status.
 
 Similarly, the intervals for the old estimate on the comparison graph are different from the old UK total graphs. They are <em>closer</em> to being consistent with the older "by vaccination" graphs, though still visibly inconsistent. It would require some historical revisions.
 
 The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status.  This could be result of method v4 increasing the number of tests several-fold.  (In part, because it went back to including LFT's).
+
+The incidence estimate for England is now calculated by adding up the incidence estimates for each English region.  That part is good.  Sadly, the confidence limits for England are also now calculated by adding up the confidence limits for each English region.  Again, I'm not entirely sure how I would do this myself, but this isn't how confidence limits work.  This should have been declared.  The confidence intervals for England may be more than twice as wide as they should be!
+
+The UK confidence limits are also much wider than they should be, because they are now calculated by adding up the confidence limits for the UK nations, which include England.  To be clear, this issue has still not been resolved, so it affects the latest method (v5) as well as method v4.
+
 
 [[Graphs]](#v3-to-v4)
 
