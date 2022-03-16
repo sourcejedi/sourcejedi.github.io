@@ -106,7 +106,7 @@ The announcement of method v4 includes a graph comparing old and new estimates. 
 
 Similarly, the intervals for the old estimate on the comparison graph are different from the old UK total graphs. They are <em>closer</em> to being consistent with the older "by vaccination" graphs, though still visibly inconsistent. It would require some historical revisions.
 
-The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status. If the two intervals are calculated in the same way, this is the result I would expect. <!-- FIXME you sure? --> Method v4 increased the number of tests several-fold, in part because it went back to including LFT's.
+The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status.  This could be result of method v4 increasing the number of tests several-fold.  (In part, because it went back to including LFT's).
 
 [[Graphs]](#v3-to-v4)
 
