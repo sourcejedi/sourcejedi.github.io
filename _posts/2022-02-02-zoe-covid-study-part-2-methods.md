@@ -36,27 +36,33 @@ If you look at ZOE estimates by publish date, you will see 4 discontinuities. Th
 
 > The ZOE COVID Study has been collecting key information on COVID-19 vaccines and infections since the start of the UK’s vaccination programme. Thanks to this data, ZOE and King's College London (KCL) have been able to assess the relative risk reduction from vaccines [...] and track changes over time in the real world, a.k.a vaccine effectiveness. The relative risk reduction measured in the study can be used to predict an incidence rate in unvaccinated and partially vaccinated users from the incidence in the fully vaccinated group.
 
-Method v4 was already adjusted by vaccination status. In method v5, a different adjustment is used. Neither adjustment was specified, leaving us with several important questions.
+Method v4 was already adjusted by vaccination status. In method v5, a different adjustment is used. Neither adjustment was specified. This leaves us with several important questions.
 
-The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE say the method "effectively applies a weighted average to a cohort".
+The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE emphasized this comparison, so I assume good faith. If you look at other graphs to compare the intervals, you will need more caution. See [ZOE confidence intervals](/2022/02/27/zoe-covid-confidence-intervals.html).
+
+ZOE say the new method "effectively applies a weighted average to a cohort".  They also describe it as applying "a new weighting function".
 
 The main rationale is that "among some of our age cohorts, unvaccinated contributors have all but vanished". To narrow the confidence interval, the new estimate of relative risk reduction must be using larger sample sizes.
 
-I see two possibilities to increase sample sizes. One is to average over a longer time period, where there will be more infections. The other is to change the age groups used in this calculation. Reducing the number of age groups would increase the sample size.
+Q1: I see two possibilities to increase sample sizes. One is to average over a longer time period, where there will be more infections. The other is to change the age groups used in this calculation. Reducing the number of age groups would increase the sample size.
 
-ZOE claim "even if we lost all unvaccinated users from our study", the method can still "calculate the relative risk in the unvaccinated" and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).
+Q1.1: ZOE claim "even if we lost all unvaccinated users from our study", the method can still "calculate the relative risk in the unvaccinated" and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).
 
-Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some suggest ZOE estimates [understate][ZOE-omicron-understate] the Omicron wave.
+Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some suggest ZOE estimates [understate][ZOE-omicron-understate] the Omicron wave.
 
-Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the "future proof" method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.
+Q2: Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the "future proof" method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.
 
 The [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
+
+ZOE periodically invite questions. I submitted a [few short questions][v5-email] on 2022-03-17, but I have not seen any answers or response.
 
 [ZOE-waning]: https://covid.joinzoe.com/post/covid-vaccine-protection-fading
 
 [ZOE-waning-video]: https://covid.joinzoe.com/post/are-covid-vaccines-working-boosters-webinar
 
 [ZOE-omicron-understate]: https://twitter.com/PaulMainwood/status/1494015094182842376
+
+[v5-email]: /assets/for-post/2022-02-02-zoe-covid-study-part-2-methods/2022-03-17 How does the covid estimate (incidence) work.pdf
 
 
 #### 2021-07-21: v4: ["COVID estimates updated as more people are being vaccinated"][v4]
