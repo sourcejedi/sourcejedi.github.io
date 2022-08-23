@@ -40,11 +40,13 @@ I have also put a [few related scripts][my-scripts] up on GitHub.
 
 New data files are added each day.  You can download a different day by changing the date in the URL (in the address bar of your web browser).  Note some older versions use different formats and different definitions.  Here are links to the files added today:
 
-### 3.1 [covid_symptom_study_report_20220131.pdf][covid_symptom_study_report_20220131]
+### 3.1 [covid_symptom_study_report_20220131.pdf][report_20220131]
 
-[covid_symptom_study_report_20220131]: https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf
+[report_20220131]: https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf
 
-"Daily COVID Infections Report", published 2022-01-31. "Analysis by ZOE and King's College London". The report includes:
+Update 2022-08-23: the latest report(s) use a different naming scheme. The report published today is called [zoe_health_study_report_20220823.pdf][report_20220823]
+
+"Daily COVID Infections Report". "Analysis by ZOE and King's College London". The report includes:
 
 * An explicit note that ZOE use a 14 day average for their case estimates.
 * UK incidence estimates \["daily new cases of symptomatic COVID"\], graphed over time:
@@ -56,6 +58,9 @@ New data files are added each day.  You can download a different day by changing
 * Changelog
 
 ...and more. Please remember the disclaimer above. I am not attempting to list what is "wrong" here. E.g. known weirdnesses, unspecified methods, or limitations which might not have been stated *by anyone*.
+
+[report_20220823]: https://storage.googleapis.com/covid-public-data/report/zoe_health_study_report_20220823.pdf
+
 
 ### 3.2 [incidence_20220129.csv][incidence_20220129]
 
