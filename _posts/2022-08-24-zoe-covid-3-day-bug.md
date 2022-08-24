@@ -56,11 +56,22 @@ When 3 very low days enter a 14-day average, the average will dip.  When 3 low d
 
 ### 6. The effect on the daily change in the 14-day average.
 
-The bug caused ZOE "daily new cases" to rise over the previous three days.  Some people were worried that it was the start of a new wave.
+The bug caused ZOE "daily new cases" to rise over the previous three days.  It made some people worry that it was the start of a new wave.
 
 Today, "daily new cases" dropped below the low point from four days ago.
 
 <img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/daily_change.png" alt="">
+
+### 7. An alternative "early warning system".
+
+Previous "Omicron" variants increased this weekly growth rate by 60 percentage points.
+
+Experts noticed significant growth advantages in these variants *before* they caused large waves of infections.
+
+I made a twitter list of [experts you might like to follow](https://twitter.com/i/lists/1521570760950702081).  I chose these experts for a high signal-to-noise ratio, about variants specifically.
+
+Other changes can cause waves, such as seasonality and waning immunity.  However, I think these will change more gradually.  They will not cause a spike that appears to come out of the blue, like the original Omicron variant did.
+
 
 ---
 
