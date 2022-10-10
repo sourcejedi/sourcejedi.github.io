@@ -68,10 +68,12 @@ We can graph the change in cases as a ratio.  When the growth ratio is less than
 
 <img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/daily_change.png" alt="">
 
+<!--
 ### A1. Update for August 25 - the ZOE video.
 
 A day after I wrote this post, ZOE released a Youtube video.  The videos are released every other Thursday.  ZOE said cases had only decreased by 10% in the last 2 weeks.
 
+XXX - this is not correct. I think it would need to have been *exactly* 1.5 days earlier, which of course they would never have done - XXX
 If ZOE had looked 3 days earlier, the data would not have been affected by the bug.  The cases would have decreased by 25% over 2 weeks.
 
 If the bug had not occured, ZOE cases would have decreased by more than 10% over 2 weeks.  If you look at this graph of the 2-week ratio, you might think ZOE cases "should" have decreased by 20%.
@@ -79,8 +81,9 @@ If the bug had not occured, ZOE cases would have decreased by more than 10% over
 <img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/daily_change_14.png" alt="">
 
 The case ratio had increased, but the bug distorted the trends.  This may have caused more concern than necessary.
+-->
 
-### A2. An alternative "early warning system".
+### Appendix: An alternative "early warning system".
 
 Previous "Omicron" variants increased this weekly growth rate by 60 percentage points.
 
