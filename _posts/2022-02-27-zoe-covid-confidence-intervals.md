@@ -47,7 +47,7 @@ Separately, if there were more than enough extra tests to make up for the new ad
 
 The confidence intervals in the graphs linked above are not consistent. The interval for the unvaccinated was about 12,500 wide, but the interval for the UK totals was only about 4,500 wide.
 
-They also do not *change* consistently over time.  Look back at when the graph by vaccination status was first shown in the daily report.  The interval in the unvaccinated was about 8,000 wide, while the interval for the UK total was about 5,500 wide.  The interval for the UK total did not widen, despite a doubling of the interval in the unvaccinated.
+They also do not *change* consistently over time.  Look back at when the graph by vaccination status was first shown in the daily report.  The interval in the unvaccinated was about 8,000 wide, while the interval for the UK total was about 5,500 wide.  The interval for the unvaccinated increased by 50%, but the interval for the UK total only increased by 20%.
 
 [[Graphs]](#2021-06-09)
 
