@@ -44,7 +44,7 @@ New data files are added each day.  You can download a different day by changing
 
 [report_20220131]: https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf
 
-Update 2022-08-23: the latest report(s) use a different naming scheme. The report published today is called [zoe_health_study_report_20220823.pdf][report_20220823]
+Update for 23 August 2022: the latest report(s) use a different naming scheme. The report published on that day is called [zoe_health_study_report_20220823.pdf][report_20220823].
 
 "Daily COVID Infections Report". "Analysis by ZOE and King's College London". The report includes:
 
@@ -68,12 +68,16 @@ Update 2022-08-23: the latest report(s) use a different naming scheme. The repor
 
 Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the specified date.  I interpret the remaining columns as:
 
-* Lower and upper "confidence intervals". These match current ZOE graphs, except for the "by vaccination status" graph. I think it would be polite to call these under-specified; see [ZOE confidence intervals][ZOE-CI].
-* Raw totals without the re-weighting: 
-  * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests if they live in England. This number is the total over the 2 week period. To obtain the daily average, divide by 14.
-  * The number of "active" reporting users. Originally "active" meant at least one report in the last 9 days, but ZOE say they have now widened the definition. This is used as a denominator for the "newly sick".
+* Lower and upper "confidence intervals". These match current ZOE graphs, except for the "by vaccination status" graph. I think it would be polite to call these under-specified. See [ZOE confidence intervals][ZOE-CI].
+* Raw aggregates over the 14-day period, without re-weighting:
+  * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests if they live in England.
+  * The number of "active" reporting users. Originally "active" meant at least one report in the previous 9 days. However ZOE now say they have widened the definition.
   * Total tests, and positive tests. These only include people who were "newly sick".
 * Regional population. Used to convert estimates of case rates into estimates of absolute case numbers.
+
+"Active users" is used as a denominator for the "newly sick".  I interpret it as the number of unique users meeting the definition within the 14-day period, and not a sum total.  Therefore:
+
+avg. % of newly-sick/day = newly_sick ÷ 14 ÷ active_users.
 
 [ZOE-CI]: /2022/02/27/zoe-covid-confidence-intervals.html
 
