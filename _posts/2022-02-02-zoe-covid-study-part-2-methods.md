@@ -4,7 +4,7 @@ date:   2022-02-02
 title:  "ZOE Covid Study - part 2 - the method"
 ---
 
-[ZOE][ZOE] release daily estimates of incidence, or "new cases of symptomatic COVID", for the 7 NHS regions of England.  Here is an introduction to their method, complete with citations.
+[ZOE][ZOE] release daily estimates of incidence, or "new cases of symptomatic COVID", for the 7 NHS regions of England. Here is an introduction to their method, complete with citations.
 
 This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.
 
@@ -19,7 +19,7 @@ See also [ZOE Covid Study - the public data files](/2022/01/31/zoe-covid-study.h
 
 This is not an endorsement of ZOE estimates, or their public communications.
 
-ZOE methods are not fully specified.  I notice various errors in ZOE communications, but I cannot find all the errors.  I have not found much comment from independent experts. 
+ZOE methods are not fully specified. I notice various errors in ZOE communications, but I cannot find all the errors. I have not found much comment from independent experts. 
 
 I am not an expert.
 
@@ -28,7 +28,7 @@ I am not an expert.
 
 If you look at ZOE estimates by publish date, you will see 4 discontinuities. These correspond to method changes. Here is a list, including a link to the announcement of each change. I refer to the different methods as "v1" to "v5".
 
-<!-- Note: dropped down to heading level 4 here. Heading level 3 looks bigger than I want, in my blog theme. -->
+<!-- Note: dropped down to heading level 4 here. Heading level 3 looked bigger than I wanted, in my blog theme. -->
 
 #### 2021-10-07: v5: ["Future-proofing our COVID estimates"][v5]
 
@@ -40,7 +40,7 @@ Method v4 was already adjusted by vaccination status. In method v5, a different 
 
 The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE emphasized this comparison, so I assume good faith. If you look at other graphs to compare the intervals, you will need more caution. See [ZOE confidence intervals](/2022/02/27/zoe-covid-confidence-intervals.html).
 
-ZOE say the new method "effectively applies a weighted average to a cohort".  They also describe it as applying "a new weighting function".
+ZOE say the new method "effectively applies a weighted average to a cohort". They also describe it as applying "a new weighting function".
 
 The main rationale is that "among some of our age cohorts, unvaccinated contributors have all but vanished". To narrow the confidence interval, the new estimate of relative risk reduction must be using larger sample sizes.
 
@@ -48,7 +48,7 @@ Q1: I see two possibilities to increase sample sizes. One is to average over a l
 
 Q1.1: ZOE claim "even if we lost all unvaccinated users from our study", the method can still "calculate the relative risk in the unvaccinated" and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).
 
-Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some suggest ZOE estimates [understate][ZOE-omicron-understate] the Omicron wave.
+Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some commentators suggest ZOE estimates [understate][ZOE-omicron-understate] the Omicron wave.
 
 Q2: Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the "future proof" method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.
 
