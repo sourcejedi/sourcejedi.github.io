@@ -29,7 +29,7 @@ The detailed graphs are also published under "covid-public-data" on Google Cloud
 
 There is an [online file browser][GS-browser], but it is slow.  If you try to download multiple files at once, it says you need to use `gsutil cp`.  See [official instructions to install gsutil][gsutil-install]. Alternatively, some Linux users may prefer to [install gsutil using Snap][google-cloud-sdk-snap].
 
-I have also put a [few related scripts][my-scripts] up on GitHub.
+I have also put a few [related scripts][my-scripts] up on GitHub.
 
 [GS-browser]: https://console.cloud.google.com/storage/browser/covid-public-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 [gsutil-install]: https://cloud.google.com/storage/docs/gsutil_install
@@ -68,18 +68,17 @@ Update for 23 August 2022: the latest report(s) use a different naming scheme. T
 
 Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the specified date.  I interpret the remaining columns as:
 
-* Lower and upper "confidence intervals". These match current ZOE graphs, except for the "by vaccination status" graph. I think it would be polite to call these under-specified. See [ZOE confidence intervals][ZOE-CI].
+* Lower and upper "confidence intervals". These match current ZOE graphs, except for the "by vaccination status" graph. To put it politely, I think these are under-specified. See [ZOE confidence intervals][ZOE-CI].
 * Raw aggregates over the 14-day period, without re-weighting:
-  * "Newly sick". This is a very broad range of symptoms (pre-test data). "Newly sick" users are invited to take PCR tests if they live in England.
-  * The number of "active" reporting users. Originally "active" meant at least one report in the previous 9 days. However ZOE now say they have widened the definition.
+  * "Newly sick" users. This covers a wide range of possible symptoms (pre-test data). "Newly sick" users were invited to take a free PCR test if they live in England. \[Update: PCR invitations stopped at some point. ZOE users continued to take lateral flow tests and submit their results\].
   * Total tests, and positive tests. These only include people who were "newly sick".
+  * The number of "active" reporting users. Originally "active" meant at least one report in the previous 9 days. However ZOE now say they have widened the definition.
 * Regional population. Used to convert estimates of case rates into estimates of absolute case numbers.
 
-"Active users" is used as a denominator for the "newly sick".  I interpret it as the number of unique users meeting the definition within the 14-day period, and not a sum total.  Therefore:
-
-avg. % of newly-sick/day = newly_sick ÷ 14 ÷ active_users.
+Note that "active users" is not the total of the numbers for the individual 14 days. I interpret it as a denominator for "newly sick" ÷ 14. Similar raw aggregate data was previously available in the separate file [incidence_table.csv][incidence_table].
 
 [ZOE-CI]: /2022/02/27/zoe-covid-confidence-intervals.html
+[incidence_table]: /2022/02/02/zoe-covid-study-part-2-methods.html#31-incidence-tablecsv
 
 ### 3.3 [prevalence_history_20220131.csv][prevalence_history_20220131]
 

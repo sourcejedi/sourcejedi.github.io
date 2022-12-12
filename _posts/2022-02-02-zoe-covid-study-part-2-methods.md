@@ -8,9 +8,10 @@ title:  "ZOE Covid Study - part 2 - the method"
 
 This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.
 
-See also [ZOE Covid Study - the public data files](/2022/01/31/zoe-covid-study.html).
+See also [ZOE Covid Study - the public data files][covid-public-data].
 
 [ZOE]: https://en.wikipedia.org/wiki/COVID_Symptom_Study
+[covid-public-data]: /2022/01/31/zoe-covid-study.html
 
 * TOC
 {:toc}
@@ -52,7 +53,7 @@ Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, qu
 
 Q2: Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the "future proof" method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.
 
-The [daily report](/2022/01/31/zoe-covid-study.html#3-main-data-files) had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
+The [daily report][daily-report] had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.
 
 ZOE periodically invite questions. I submitted a [few short questions][v5-email] on 2022-03-17, but I have not seen any answers or response.
 
@@ -61,6 +62,8 @@ ZOE periodically invite questions. I submitted a [few short questions][v5-email]
 [ZOE-waning-video]: https://covid.joinzoe.com/post/are-covid-vaccines-working-boosters-webinar
 
 [ZOE-omicron-understate]: https://twitter.com/PaulMainwood/status/1494015094182842376
+
+[daily-report]: /2022/01/31/zoe-covid-study.html#3-main-data-files
 
 [v5-email]: /assets/for-post/2022-02-02-zoe-covid-study-part-2-methods/2022-03-17 How does the covid estimate (incidence) work.pdf
 
@@ -80,7 +83,7 @@ On the 30th, the daily report showed incidence rates among people with 0, 1, and
 
 Another possible method can be seen in the ONS random survey.  ONS model incidence as a smooth function of age.  The [ONS weekly report][ONS-survey] includes smooth graphs of incidence by single year of age, animated over time.  However, ZOE have not showed any graph like this.
 
-The data files "incidence_20210717.csv" and newer include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, at [latest/incidence table.csv](https://covid-assets.joinzoe.com/latest/incidence%20table.csv)).
+The data files "incidence_20210717.csv" and newer include columns showing *unweighted* totals for testing, "newly sick", and "active users".  (Previously this was only available for the most recent day, in [incidence&nbsp;table.csv](#31-incidence-tablecsv).
 
 Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).
 
@@ -117,22 +120,59 @@ If you compare reports before and after, there might also be a small change to t
 
 ZOE Covid Study has a complex calculation for local areas, to detect "hotspots". The paper explains how local areas in England are interpolated, from (symptomatic) incidence estimates of the 7 NHS regions.
 
-The incidence for the 7 NHS regions in England is "released daily". Therefore these were the same estimates shown on the ZOE website, under "daily new cases".  The method to calculate these was:
+Incidence for the 7 NHS regions in England was "released daily". Therefore these were the same estimates shown on the ZOE website, under "daily new cases".  The incidence calculation is described in several pieces:
 
 1. <b>Users of ZOE's app "are asked to record each day whether they feel physically normal"</b>. If not, they are asked "to log any symptoms and keep a record of any COVID-19 tests and their results". The exact questions are shown in the appendix. They identify 19 different symptoms. There was also a free text entry field.
 2. "Users who logged themselves as healthy at least once in a 9-day period and then reported" ... "any of the symptoms
 asked about in the app" were termed "newly sick".
-3. <b>ZOE calculate "the proportion of users who report as newly sick".</b> The [denominator](https://en.wikipedia.org/wiki/Denominator) is not spelled out. I think the correct denominator is the total users who "logged themselves as healthy at least once in the 9-day period".
-4. Based on "incidence table.csv", this proportion appeared to be termed "avg. % of newly-sick/day", suggesting they use an average over several days. See point 6. The denominator appeared to be termed "active users".
-5. <b>Newly sick users "were sent invitations to book a [PCR] test through the DHSC national testing programme"</b>. This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. "They were then asked to record the result of the test in the app".
-6. "We took <b>14-day averages</b>" "to calculate the percentage of positive tests among newly sick users". Tests are assigned to the date the swab was taken. <b>Note these test-based figures were released "with a 4-day reporting lag"</b>, to make sure enough positive and negative results were available from the swabs.
-7. <b>To estimate incidence rates, the % newly sick (from step 4) and the % positive tests (from step 6) are "combined", by multiplying them together</b>.
-8. <b>In this version, incidence was not stratified or re-weighted e.g. by age or household income</b>.
-9. 95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be.
+3. <b>ZOE calculate "the proportion of users who report as newly sick".</b>
+4. <b>Newly sick users "were sent invitations to book a [PCR] test through the DHSC national testing programme"</b>. This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. "They were then asked to record the result of the test in the app".
+5. "We took <b>14-day averages</b>" "to calculate the percentage of positive tests among newly sick users". Tests are assigned to the date the swab was taken. Test-based estimates were released "with a 4-day reporting lag", to make sure enough positive and negative results were available from the swabs.
+6. <b>To estimate incidence rates, the % newly sick (step 3) and the % positive tests (step 5) are "combined", by multiplying them together</b>. This step is in the supplementary appendix.
+7. <b>In this version, incidence was not stratified or re-weighted e.g. by age or household income</b>.
+8. 95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be.
 
-I was able to reproduce the same incidence estimate from the "newly sick" and testing data in "incidence table.csv".
+The paper itself does not spell out:
 
-In this version, England is just treated as one big region.  This means the incidence for England is *not* the sum of the incidence for each region.
+1. The [denominator](https://en.wikipedia.org/wiki/Denominator) for the proportion of newly sick users.
+2. Whether the proportion of newly sick in step 6 has been averaged over the 14 days.
+
+### 3.1 incidence table.csv
+
+For method v1, I was able to match ZOE incidence calculations from "newly sick" and testing data in [incidence&nbsp;table.csv][incidence table.csv].  This file is separate from [covid-public-data][covid-public-data].  I have not seen anyone else mention it.
+
+[incidence table.csv]: https://github.com/sourcejedi/nova-covid#download-sample
+
+The column `#_total_tests` is a 14-day total - the numbers match other ZOE documents.  We can match the column `%_+ve_tests` using `+ve_tests ÷ total_tests`.
+
+`avg._%_of_newly-sick/day` is provided to 2 decimal places.  If we accept this limited precision, we can match `est._daily_cases` by calculating `avg._%_of_newly-sick/day × (+ve_tests ÷ total_tests) × population`.
+
+The values of `avg._%_of_newly-sick/day` appeared to match the graphs in the [daily report][daily-report]. In particular, the values for England matched the 14-day average on the "newly sick" graph. By comparing the report with the scientific paper above, it appears the denominator is the number of users who logged on a given day, who also logged at least once during the previous 9 days:
+
+> Newly Sick Users by Day (% of Active Users)
+>
+> Active users are those who have been logging regularly in the past 10 days. Newly sick
+> users are active users who haven't reported any symptoms for at least 9 days before
+> reporting one of the following symptoms: [...]
+
+Around Christmas day 2020, we can see the incidence estimate for England is smooth despite sharp changes in the un-averaged graph of newly sick users.  This proves the newly sick proportion used in step 6 is an average over the 14 days.
+
+This helped clarify the scientific paper for me.  Some of the above could be imperfect approximations, and I have not checked as much as I could.
+
+The daily report also had a graph "Positive Test Results by Day (% of Invited Test Takers)", and a 14-day average.  However this did not match `%_+ve_tests`.  I have no explanation how it could differ by so much.
+
+My `est._daily_cases` calculation effectively "took 14-day averages" first, and then calculated proportions.  The paper did not spell out this order of operations, but I think it makes the most sense.
+
+I am not sure how `#_active_users` is aggregated over the 14 days.  It seems an odd name to use for an average, and the values are always shown as whole numbers.  I sometimes thought of it as unique users over the 14 days instead.  That might be consistent with `#_total_tests`, which would need to be de-duplicated somehow.  However I don't know which option would work better.
+
+In method v4 a `#_newly_sick` column was added; the values only make sense as 14-day totals.  The `#_newly_sick` column replaced the original `avg._%_of_newly-sick/day`.  I think ZOE are inviting us to calculate the proportion ourselves, i.e.  `newly_sick ÷ 14 ÷ active_users`.
+
+The transparency provided by all of ZOE's data files would be enhanced, if ZOE could briefly document them or answer relevant questions or officially mention their existence.
+
+
+### 3.2 Other remarks
+
+In this initial method, England is just treated as one big region.  This means the incidence for England is *not* the sum of the incidence for each region.
 
 UK prevalence estimates were published on the ZOE website and in "prevalence_history_*.csv", derived from the 14-day incidence estimates, and a curve of recovery probability estimated from the whole population ("recovery model").
 
