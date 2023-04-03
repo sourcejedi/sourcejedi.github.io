@@ -37,9 +37,15 @@ Running the program [prevalence_digest.py][prevalence_digest_py] produces an out
 
 An 8-day average is also used in files like "lad_prevalence_map_20220214.csv", although in this case there is no public documentation to contradict.
 
-This issue doesn't seem to create any other difficulties, beyond analyzing the region_trend files.  It doesn't affect any other ZOE numbers that I've seen.  The general problem is a [familiar one][off-by-one-error].
+We call this an ["off-by-one error"][off-by-one-error].  You can see it in the [daily report][files-doc], just above the prevalence map .  "Based on data from 652444 contributors that logged from 6 February 2022 to 13 February 2022".  13 minus 6 makes 7.  But if you count from the 6th up to the 13th on the calendar, there are 8 days.
 
 [off-by-one-error]: https://en.wikipedia.org/wiki/Off-by-one_error
+
+652444 is indeed the average number of UK contributors over those 8 days.  You can calculate the average contributors from the last 8 days for the UK.  I checked this by looking at "region.csv", another output file from ["prevalence_digest.py"][prevalence_digest_py].  This file is included in the [sample outputs][out-sample].
+
+[out-sample]: https://github.com/sourcejedi/nova-covid/tree/main/out-sample/prevalence_digest/corrected_prevalence_region_trend_20220214
+
+The issue doesn't seem to affect any other ZOE numbers.  Nor does it create any other difficulties, beyond analyzing the region_trend files.
 
 
 ## 2.2 Local trendlines
