@@ -21,7 +21,11 @@ These quotations require further clarification.
 
 ## 2. How local estimates are smoothed
 
-ZOE have been generous with specific details, including the *un-averaged* local time series.  As a reminder, these are still derived from a [14-day average][files-doc], and the conversion to prevalence adds further smoothing.
+### 2.1 Watch-list estimates
+
+ZOE have been generous with specific details, including the *un-averaged* local time series.  Remember, these are still derived from a [14-day average][files-doc].  The average is then [converted][from_incidence] to a prevalence, by smoothing it again over an even longer period.
+
+[from_incidence]: https://github.com/sourcejedi/nova-covid/tree/main/prevalence_from_incidence
 
 Since 2/14/22, ZOE has published a new set of [covid-public-data](files-doc) starting with "corrected_prevalence_region_trend_20220214.csv".  We can analyze and process these region_trend files.
 
@@ -29,11 +33,16 @@ Running the program [prevalence_digest.py][prevalence_digest_py] produces an out
 
 [prevalence_digest_py]: https://github.com/sourcejedi/nova-covid/blob/efdd098/prevalence_digest.py
 
-<strong>If you want to reproduce the *watch-list* estimates, you have to use an 8-day average.  They do not use a 7-day average as documented.</strong>
+<strong>To reproduce the *watch-list* estimates, you have to use an 8-day average.  They are not averaged over a "week".</strong>
 
-I guess this doesn't create any other difficulties, beyond analyzing the region_trend files.  An 8-day average is also used in files like "lad_prevalence_map_20220214.csv", but in this case there is no public documentation to contradict.  This issue doesn't affect any other ZOE numbers that I've seen, although it is a [familiar problem][off-by-one-error].
+An 8-day average is also used in files like "lad_prevalence_map_20220214.csv", although in this case there is no public documentation to contradict.
 
-[off-by-one-error]: https://en.wikipedia.org/wiki/Off-by-one_error 
+This issue doesn't seem to create any other difficulties, beyond analyzing the region_trend files.  It doesn't affect any other ZOE numbers that I've seen.  The general problem is a [familiar one][off-by-one-error].
+
+[off-by-one-error]: https://en.wikipedia.org/wiki/Off-by-one_error
+
+
+## 2.2 Local trendlines
 
 For the *local trendline*, we can produce the closest match using the 14-day average of LAD estimates.  [prevalence_digest.py][prevalence_digest_py] writes this average to "lad_14d_average.csv".  Limitations apply:
 
