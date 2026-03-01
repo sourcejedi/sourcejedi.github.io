@@ -52,6 +52,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - serve.sh
+  - build.sh
 
 sass:
   quiet_deps: true
@@ -60,3 +63,5 @@ sass:
   # I don't know why that is.
   silence_deprecations:
     - import
+
+keep_files: ['.git', '.nojekyll']
