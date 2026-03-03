@@ -52,3 +52,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+sass:
+  quiet_deps: true
+
+  # quiet_deps doesn't work for minima's main.scss.
+  # I don't know why that is.
+  silence_deprecations:
+    - import
