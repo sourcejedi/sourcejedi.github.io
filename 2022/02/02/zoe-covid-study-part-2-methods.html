@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ZOE Covid Study - part 2 - the method | Blog?</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ZOE Covid Study - part 2 - the method" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ZOE release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations." />
+<meta property="og:description" content="ZOE release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations." />
+<link rel="canonical" href="/2022/02/02/zoe-covid-study-part-2-methods.html" />
+<meta property="og:url" content="/2022/02/02/zoe-covid-study-part-2-methods.html" />
+<meta property="og:site_name" content="Blog?" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ZOE Covid Study - part 2 - the method" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-02T00:00:00+00:00","datePublished":"2022-02-02T00:00:00+00:00","description":"ZOE release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations.","headline":"ZOE Covid Study - part 2 - the method","mainEntityOfPage":{"@type":"WebPage","@id":"/2022/02/02/zoe-covid-study-part-2-methods.html"},"url":"/2022/02/02/zoe-covid-study-part-2-methods.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Blog?" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Blog?</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ZOE Covid Study - part 2 - the method</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-02-02T00:00:00+00:00" itemprop="datePublished">Feb 2, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="https://en.wikipedia.org/wiki/COVID_Symptom_Study">ZOE</a> release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations.</p>
+
+<p>This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.</p>
+
+<p>See also <a href="/2022/01/31/zoe-covid-study.html">ZOE Covid Study - the public data files</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#1-disclaimer" id="markdown-toc-1-disclaimer">1. Disclaimer</a></li>
+  <li><a href="#2-zoe-method-changes" id="markdown-toc-2-zoe-method-changes">2. ZOE method changes</a>    <ul>
+      <li><a href="#2021-10-07-v5-future-proofing-our-covid-estimates" id="markdown-toc-2021-10-07-v5-future-proofing-our-covid-estimates">2021-10-07: v5: “Future-proofing our COVID estimates”</a></li>
+      <li><a href="#2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated" id="markdown-toc-2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">2021-07-21: v4: “COVID estimates updated as more people are being vaccinated”</a></li>
+      <li><a href="#2021-05-12-v3-covid-estimates-revised-after-change-to-methodology" id="markdown-toc-2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">2021-05-12: v3: “COVID estimates revised after change to methodology”</a></li>
+      <li><a href="#2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced" id="markdown-toc-2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced">2021-02-23: v2: “How we calculate COVID-19 incidence has changed and rates have now reduced”</a></li>
+      <li><a href="#v1-see-paper-below" id="markdown-toc-v1-see-paper-below">v1: See paper below</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-original-zoe-paper" id="markdown-toc-3-original-zoe-paper">3. Original “ZOE” paper</a>    <ul>
+      <li><a href="#31-incidence-tablecsv" id="markdown-toc-31-incidence-tablecsv">3.1 incidence table.csv</a></li>
+      <li><a href="#32-other-remarks" id="markdown-toc-32-other-remarks">3.2 Other remarks</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat" id="markdown-toc-4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat">4. 2020-11-04 change to symptom questions, including runny nose and sore throat</a></li>
+  <li><a href="#5-earlier-changes" id="markdown-toc-5-earlier-changes">5. Earlier changes</a>    <ul>
+      <li><a href="#2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk" id="markdown-toc-2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk">2020-07-08: “Data update: New COVID prevalence figures for the UK”</a></li>
+      <li><a href="#2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week" id="markdown-toc-2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week">2020-07-02: “New daily COVID-19 cases in the UK have stopped falling this week”</a></li>
+      <li><a href="#2020-05-22-9900-new-covid-cases-across-england-daily" id="markdown-toc-2020-05-22-9900-new-covid-cases-across-england-daily">2020-05-22: “9,900 new COVID cases across England daily”</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-disclaimer">1. Disclaimer</h2>
+
+<p>This is not an endorsement of ZOE estimates, or their public communications.</p>
+
+<p>ZOE methods are not fully specified. I notice various errors in ZOE communications, but I cannot find all the errors. I have not found much comment from independent experts.</p>
+
+<p>I am not an expert.</p>
+
+<h2 id="2-zoe-method-changes">2. ZOE method changes</h2>
+
+<p>If you look at ZOE estimates by publish date, you will see 4 discontinuities. These correspond to method changes. Here is a list, including a link to the announcement of each change. I refer to the different methods as “v1” to “v5”.</p>
+
+<!-- Note: dropped down to heading level 4 here. Heading level 3 looked bigger than I wanted, in my blog theme. -->
+
+<h4 id="2021-10-07-v5-future-proofing-our-covid-estimates">2021-10-07: v5: <a href="https://covid.joinzoe.com/post/future-proofing-our-covid-estimates">“Future-proofing our COVID estimates”</a></h4>
+
+<blockquote>
+  <p>The ZOE COVID Study has been collecting key information on COVID-19 vaccines and infections since the start of the UK’s vaccination programme. Thanks to this data, ZOE and King’s College London (KCL) have been able to assess the relative risk reduction from vaccines […] and track changes over time in the real world, a.k.a vaccine effectiveness. The relative risk reduction measured in the study can be used to predict an incidence rate in unvaccinated and partially vaccinated users from the incidence in the fully vaccinated group.</p>
+</blockquote>
+
+<p>Method v4 was already adjusted by vaccination status. In method v5, a different adjustment is used. Neither adjustment was specified. This leaves us with several important questions.</p>
+
+<p>The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE emphasized this comparison, so I assume good faith. If you look at other graphs to compare the intervals, you will need more caution. See <a href="/2022/02/27/zoe-covid-confidence-intervals.html">ZOE confidence intervals</a>.</p>
+
+<p>ZOE say the new method “effectively applies a weighted average to a cohort”. They also describe it as applying “a new weighting function”.</p>
+
+<p>The main rationale is that “among some of our age cohorts, unvaccinated contributors have all but vanished”. To narrow the confidence interval, the new estimate of relative risk reduction must be using larger sample sizes.</p>
+
+<p>Q1: I see two possibilities to increase sample sizes. One is to average over a longer time period, where there will be more infections. The other is to change the age groups used in this calculation. Reducing the number of age groups would increase the sample size.</p>
+
+<p>Q1.1: ZOE claim “even if we lost all unvaccinated users from our study”, the method can still “calculate the relative risk in the unvaccinated” and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).</p>
+
+<p>Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some commentators suggest ZOE estimates <a href="https://twitter.com/PaulMainwood/status/1494015094182842376">understate</a> the Omicron wave.</p>
+
+<p>Q2: Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the “future proof” method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.</p>
+
+<p>The <a href="/2022/01/31/zoe-covid-study.html#3-main-data-files">daily report</a> had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.</p>
+
+<p>ZOE periodically invite questions. I submitted a <a href="/assets/for-post/2022-02-02-zoe-covid-study-part-2-methods/2022-03-17 How does the covid estimate (incidence) work.pdf">few short questions</a> on 2022-03-17, but I have not seen any answers or response.</p>
+
+<h4 id="2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">2021-07-21: v4: <a href="https://covid.joinzoe.com/post/covid-estimates-updated-vaccine">“COVID estimates updated as more people are being vaccinated”</a></h4>
+
+<blockquote>
+  <p>The main adjustments we’ve made to our calculations are:</p>
+  <ul>
+    <li>Changing the definition of ‘newly sick’ to include more people in our estimate calculations</li>
+    <li>Inclusion of Lateral Flow Test results</li>
+    <li>Adjustment by both age and vaccination status</li>
+  </ul>
+</blockquote>
+
+<p>Method v3 simply re-weighted the vaccinated and unvaccinated cohorts, to match vaccination in the overall population.  My current guess is that v4 is similarly re-weighted by vaccination status and age group.</p>
+
+<p>On the 30th, the daily report showed incidence rates among people with 0, 1, and 2+ vaccine doses.  Also, ZOE later showed <a href="https://covid.joinzoe.com/post/covid-bounces-back-as-cases-start-to-rise">graphs of incidence rate by age group</a>: 0-17, 18-34, 35-54, 55-74 and 75+.<a href="https://twitter.com/sourcejedi/status/1491512209951895558">[Note]</a>  I assume the graph shows the same age groups used for the adjustment.</p>
+
+<p>Another possible method can be seen in the ONS random survey.  ONS model incidence as a smooth function of age.  The <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/28january2022">ONS weekly report</a> includes smooth graphs of incidence by single year of age, animated over time.  However, ZOE have not showed any graph like this.</p>
+
+<p>The data files “incidence_20210717.csv” and newer include columns showing <em>unweighted</em> totals for testing, “newly sick”, and “active users”.  (Previously this was only available for the most recent day, in <a href="#31-incidence-tablecsv">incidence table.csv</a>.</p>
+
+<p>Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).</p>
+
+<h4 id="2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">2021-05-12: v3: <a href="https://covid.joinzoe.com/post/covid-estimates-revised-after-change-to-methodology">“COVID estimates revised after change to methodology”</a></h4>
+
+<p>Users’ reports are now stratified by their vaccination status (0 versus 1+ doses).  Vaccination was high among app users, which was biasing the estimates down.</p>
+
+<h4 id="2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced">2021-02-23: v2: <a href="https://covid.joinzoe.com/post/covid-rates-calculation-changed">“How we calculate COVID-19 incidence has changed and rates have now reduced”</a></h4>
+
+<p>ZOE start excluding likely vaccine “after-effects”, if they happen in the three days after vaccination.</p>
+
+<p>“You might notice the % positive tests are higher in the new reports - lateral flow test results are not included in this estimate anymore (or the incidence calc) due to different sensitivity.  They are still included in lots of research and analysis we do, please still log them!” - <a href="https://twitter.com/marksgraham_/status/1364261105657257989">Mark Graham</a></p>
+
+<p>If you compare reports before and after, there might also be a small change to the % newly unwell data, even before any vaccination.</p>
+
+<h4 id="v1-see-paper-below">v1: See paper below</h4>
+
+<h2 id="3-original-zoe-paper">3. Original “ZOE” paper</h2>
+
+<p><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(20)30269-3/fulltext">Detecting COVID-19 infection hotspots in England using large-scale self-reported data from a mobile application: a prospective, observational study</a>.</p>
+
+<p>ZOE Covid Study has a complex calculation for local areas, to detect “hotspots”. The paper explains how local areas in England are interpolated, from (symptomatic) incidence estimates of the 7 NHS regions.</p>
+
+<p>Incidence for the 7 NHS regions in England was “released daily”. Therefore these were the same estimates shown on the ZOE website, under “daily new cases”.  The incidence calculation is described in several pieces:</p>
+
+<ol>
+  <li><b>Users of ZOE’s app “are asked to record each day whether they feel physically normal”</b>. If not, they are asked “to log any symptoms and keep a record of any COVID-19 tests and their results”. The exact questions are shown in the appendix. They identify 19 different symptoms. There was also a free text entry field.</li>
+  <li>“Users who logged themselves as healthy at least once in a 9-day period and then reported” … “any of the symptoms
+asked about in the app” were termed “newly sick”.</li>
+  <li><b>ZOE calculate “the proportion of users who report as newly sick”.</b></li>
+  <li><b>Newly sick users “were sent invitations to book a [PCR] test through the DHSC national testing programme”</b>. This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. “They were then asked to record the result of the test in the app”.</li>
+  <li>“We took <b>14-day averages</b>” “to calculate the percentage of positive tests among newly sick users”. Tests are assigned to the date the swab was taken. Test-based estimates were released “with a 4-day reporting lag”, to make sure enough positive and negative results were available from the swabs.</li>
+  <li><b>To estimate incidence rates, the % newly sick (step 3) and the % positive tests (step 5) are “combined”, by multiplying them together</b>. This step is in the supplementary appendix.</li>
+  <li><b>In this version, incidence was not stratified or re-weighted e.g. by age or household income</b>.</li>
+  <li>95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be.</li>
+</ol>
+
+<p>The paper itself does not spell out:</p>
+
+<ol>
+  <li>The <a href="https://en.wikipedia.org/wiki/Denominator">denominator</a> for the proportion of newly sick users.</li>
+  <li>Whether the proportion of newly sick in step 6 has been averaged over the 14 days.</li>
+</ol>
+
+<h3 id="31-incidence-tablecsv">3.1 incidence table.csv</h3>
+
+<p>For method v1, I was able to match ZOE incidence calculations from “newly sick” and testing data in <a href="https://github.com/sourcejedi/nova-covid#download-sample">incidence table.csv</a>.  This file is separate from <a href="/2022/01/31/zoe-covid-study.html">covid-public-data</a>.  I have not seen anyone else mention it.</p>
+
+<p>The column <code class="language-plaintext highlighter-rouge">#_total_tests</code> is a 14-day total - the numbers match other ZOE documents.  We can match the column <code class="language-plaintext highlighter-rouge">%_+ve_tests</code> using <code class="language-plaintext highlighter-rouge">+ve_tests ÷ total_tests</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code> is provided to 2 decimal places.  If we accept this limited precision, we can match <code class="language-plaintext highlighter-rouge">est._daily_cases</code> by calculating <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day × (+ve_tests ÷ total_tests) × population</code>.</p>
+
+<p>The values of <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code> appeared to match the graphs in the <a href="/2022/01/31/zoe-covid-study.html#3-main-data-files">daily report</a>. In particular, the values for England matched the 14-day average on the “newly sick” graph. By comparing the report with the scientific paper above, it appears the denominator is the number of users who logged on a given day, who also logged at least once during the previous 9 days:</p>
+
+<blockquote>
+  <p>Newly Sick Users by Day (% of Active Users)</p>
+
+  <p>Active users are those who have been logging regularly in the past 10 days. Newly sick
+users are active users who haven’t reported any symptoms for at least 9 days before
+reporting one of the following symptoms: […]</p>
+</blockquote>
+
+<p>Around Christmas day 2020, we can see the incidence estimate for England is smooth despite sharp changes in the un-averaged graph of newly sick users.  This proves the newly sick proportion used in step 6 is an average over the 14 days.</p>
+
+<p>This helped clarify the scientific paper for me.  Some of the above could be imperfect approximations, and I have not checked as much as I could.</p>
+
+<p>The daily report also had a graph “Positive Test Results by Day (% of Invited Test Takers)”, and a 14-day average.  However this did not match <code class="language-plaintext highlighter-rouge">%_+ve_tests</code>.  I have no explanation how it could differ by so much.</p>
+
+<p>My <code class="language-plaintext highlighter-rouge">est._daily_cases</code> calculation effectively “took 14-day averages” first, and then calculated proportions.  The paper did not spell out this order of operations, but I think it makes the most sense.</p>
+
+<p>I am not sure how <code class="language-plaintext highlighter-rouge">#_active_users</code> is aggregated over the 14 days.  It seems an odd name to use for an average, and the values are always shown as whole numbers.  I sometimes thought of it as unique users over the 14 days instead.  That might be consistent with <code class="language-plaintext highlighter-rouge">#_total_tests</code>, which would need to be de-duplicated somehow.  However I don’t know which option would work better.</p>
+
+<p>In method v4 a <code class="language-plaintext highlighter-rouge">#_newly_sick</code> column was added; the values only make sense as 14-day totals.  The <code class="language-plaintext highlighter-rouge">#_newly_sick</code> column replaced the original <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code>.  I think ZOE are inviting us to calculate the proportion ourselves, i.e.  <code class="language-plaintext highlighter-rouge">newly_sick ÷ 14 ÷ active_users</code>.</p>
+
+<p>The transparency provided by all of ZOE’s data files would be enhanced, if ZOE could briefly document them or answer relevant questions or officially mention their existence.</p>
+
+<h3 id="32-other-remarks">3.2 Other remarks</h3>
+
+<p>In this initial method, England is just treated as one big region.  This means the incidence for England is <em>not</em> the sum of the incidence for each region.</p>
+
+<p>UK prevalence estimates were published on the ZOE website and in “prevalence_history_*.csv”, derived from the 14-day incidence estimates, and a curve of recovery probability estimated from the whole population (“recovery model”).</p>
+
+<p>Please note that since this incidence (“I<sub>S</sub>”) is not re-weighted, the prevalence derived from it (“P<sub>H</sub>”) is not re-weighted either.<!--FIXME Insert link to followup blog post-->  Do not confuse this with the “symptom-based” prevalence (“P<sub>A</sub>”), which the paper explains is re-weighted.</p>
+
+<p>Briefly, the real point of the paper is to define P<sub>H</sub> for smaller areas, by apportioning it according to P<sub>A</sub>.  The “H” subscript stands for “hybrid”.  However, when you are looking at the level of NHS regions, please remember that particular P<sub>H</sub> is no more of a hybrid than I<sub>S</sub>.</p>
+
+<h2 id="4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat">4. 2020-11-04 change to symptom questions, including runny nose and sore throat</h2>
+
+<p>“Several direct symptom questions were added to the app” on 2020-11-04, according to a <a href="https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(21)00198-X/fulltext">paper</a> published 2021-08-03.</p>
+
+<p>According to the ZOE blog 2021-03-18, any of <a href="https://web.archive.org/web/20210319152354/https://covid.joinzoe.com/post/the-20-symptoms-of-covid-19-to-watch-out-for">20 symptoms</a> were sufficient for ZOE to offer you a PCR test (in England).  These include runny nose and sore throat, which are among the most common early symptoms.  These symptoms were not included in the original ZOE paper (below).</p>
+
+<p>The <a href="https://github.com/zoe/covid-tracker-react-native/commit/39ebcd5a3beea837ca75522fffdd490db049325e#diff-41c1aa97ff22cecb0746ef2c08888371a941110072c69925850807217b017550R53">code</a>
+for the new symptom assessment was finalized on 2020-11-03.  It prompted for an additional 13 symptoms.</p>
+
+<p>The current list of symptom prompts can be seen by using the app.
+Or you can get the idea from the <a href="https://github.com/zoe/covid-tracker-react-native/blob/master/src/core/assessment/dto/AssessmentInfosRequest.ts">latest version of the code</a>.</p>
+
+<h2 id="5-earlier-changes">5. Earlier changes</h2>
+
+<p>These are probably not interesting.  I just had to dig them up to double-check.</p>
+
+<h4 id="2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk">2020-07-08: <a href="https://covid.joinzoe.com/post/data-update-prevalence-covid">“Data update: New COVID prevalence figures for the UK”</a></h4>
+
+<p>ZOE produced a model of recovery from COVID, truncated at 30 days. This is now used to convert incidence to prevalence.  See paper above.  This provides the “swab test based prevalence”.  Previous ZOE prevalence estimates were not based on ZOE incidence.</p>
+
+<h4 id="2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week">2020-07-02: <a href="https://covid.joinzoe.com/post/covid-incidence-stable">“New daily COVID-19 cases in the UK have stopped falling this week”</a></h4>
+
+<p>“Results from these antibody tests provide information about past infections, so removing reported antibody tests from the analysis gives a more accurate reflection of the number of new cases in the population.”</p>
+
+<p>“This means that last week’s incidence and this week’s incidence are not directly comparable. However, COVID Symptom Study app users can view incidence trends directly through the app as we have corrected all of the incidence trend charts for the entire timeline in these plots for this comparison.”</p>
+
+<p>Note, at this time the website was not updated every day.  Weekly blogs, including comparisons against the previous week, began July 11.  The report available to app users was updated daily.</p>
+
+<h4 id="2020-05-22-9900-new-covid-cases-across-england-daily">2020-05-22: <a href="https://covid.joinzoe.com/post/covid-cases-england">“9,900 new COVID cases across England daily”</a></h4>
+
+<p>First estimate of incidence. “Calculated using swab testing and app symptom data collected over the last two weeks”.</p>
+
+  </div><a class="u-url" href="/2022/02/02/zoe-covid-study-part-2-methods.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Blog?</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Blog?</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">sourcejedi</span></a></li><li><a href="https://www.twitter.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">sourcejedi</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

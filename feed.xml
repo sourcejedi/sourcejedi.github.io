@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-03-03T10:56:24+00:00</updated><id>/feed.xml</id><title type="html">Blog?</title><entry><title type="html">ZOE Covid estimates and the 3 day bug</title><link href="/2022/08/24/zoe-covid-3-day-bug.html" rel="alternate" type="text/html" title="ZOE Covid estimates and the 3 day bug" /><published>2022-08-24T00:00:00+01:00</published><updated>2022-08-24T00:00:00+01:00</updated><id>/2022/08/24/zoe-covid-3-day-bug</id><content type="html" xml:base="/2022/08/24/zoe-covid-3-day-bug.html"><![CDATA[<p>Here is a story about the <a href="ZOE-health-study">ZOE Health Study</a>, told through graphs.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#1-daily-percentage-of-contributors-who-report-new-symptoms" id="markdown-toc-1-daily-percentage-of-contributors-who-report-new-symptoms">1. “Daily percentage of contributors who report new symptoms.”</a></li>
+  <li><a href="#2-zooming-in-on-the-wiggle" id="markdown-toc-2-zooming-in-on-the-wiggle">2. Zooming in on the wiggle.</a></li>
+  <li><a href="#3-the-drop-was-caused-by-a-bug-in-the-app" id="markdown-toc-3-the-drop-was-caused-by-a-bug-in-the-app">3. The drop was caused by a bug in the app.</a></li>
+  <li><a href="#4-the-zoe-daily-new-cases-number-is-a-14-day-average" id="markdown-toc-4-the-zoe-daily-new-cases-number-is-a-14-day-average">4. The ZOE “daily new cases” number is a 14 day average.</a></li>
+  <li><a href="#5-the-effect-of-3-low-days-on-a-14-day-average" id="markdown-toc-5-the-effect-of-3-low-days-on-a-14-day-average">5. The effect of 3 low days on a 14-day average.</a></li>
+  <li><a href="#6-the-change-in-the-14-day-average" id="markdown-toc-6-the-change-in-the-14-day-average">6. The change in the 14-day average.</a></li>
+  <li><a href="#appendix-an-alternative-early-warning-system" id="markdown-toc-appendix-an-alternative-early-warning-system">Appendix: An alternative “early warning system”.</a></li>
+</ul>
+
+<h3 id="1-daily-percentage-of-contributors-who-report-new-symptoms">1. “Daily percentage of contributors who report new symptoms.”</h3>
+
+<p>There is a big wiggle in early August.</p>
+
+<p style="max-width: 417px">
+  <img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/newly_symptomatic_contributors.png" alt="Screenshot of a graph in the ZOE app.  Daily percentage of contributors who report new symptoms, with or without a positive COVID test result." />
+</p>
+
+<h3 id="2-zooming-in-on-the-wiggle">2. Zooming in on the wiggle.</h3>
+
+<p>I grabbed the daily data, using the link in the <a href="https://github.com/zoe/covid-tracker-react-native/blob/2.7.1-ota-34/src/core/content/ContentService.ts#L124">app source code</a>.</p>
+
+<p>The wiggle really stands out.  On August 5, 6 and 7, the value drops to just over 0.5%.  Either side of the drop, the value is over 1.5%.</p>
+
+<p><img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/newly_sick_table.png" alt="" /></p>
+
+<h3 id="3-the-drop-was-caused-by-a-bug-in-the-app">3. The drop was caused by a bug in the app.</h3>
+
+<p>On August 5, 6 and 7, there were 5 app reviews from people saying they couldn’t log on the app.  Specifically, that they couldn’t log themselves as “unwell”.</p>
+
+<p><img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/app_review.png" alt="Google Play Apps [Android]. August 5, 2022. Worse since intro of 'usual self'. This app worked really effectively during the height of the first wave of the pandemic, and I used it daily. Now I hardly use it at all as it crashes all the time and it's really frustrating. If you try to add anything to say you are feeling different from your usual self, you get a 'sorry, nope' message and it refuses to log. So you are either going to get false data as people will just say they are fine as that is what will log, or no data at all. Please fix!" /></p>
+
+<h3 id="4-the-zoe-daily-new-cases-number-is-a-14-day-average">4. The ZOE “daily new cases” number is a 14 day average.</h3>
+
+<p>This is the number shown on the <a href="https://health-study.joinzoe.com/data">ZOE website</a>:</p>
+
+<p><img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/cases_screenshot.png" alt="Total number of new daily cases across the UK: 108,841" /></p>
+
+<p>It is described inside the ZOE app, in today’s <a href="https://storage.googleapis.com/covid-public-data/report/zoe_health_study_report_20220824.pdf">COVID Infection Report</a>:</p>
+
+<blockquote style="max-width: 600px">
+  <img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/cases_definition.png" alt="Daily new cases of symptomatic COVID.
+We estimate there have been 108,841 daily new cases of symptomatic COVID in the UK
+on average over the two weeks up to 22 August 2022. This is based on the number of
+newly symptomatic app users per day, and the proportion of these who give positive
+swab tests." title="" /> 
+</blockquote>
+
+<h3 id="5-the-effect-of-3-low-days-on-a-14-day-average">5. The effect of 3 low days on a 14-day average.</h3>
+
+<p>For simplicity, imagine everything is equal. Imagine the testing data is flat.</p>
+
+<p>When 3 very low days enter a 14-day average, the average will dip.  When 3 low days leave the average, the average will jump back.</p>
+
+<p><img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/14_day_average.png" alt="" /></p>
+
+<h3 id="6-the-change-in-the-14-day-average">6. The change in the 14-day average.</h3>
+
+<p>The bug caused ZOE “daily new cases” to rise over the previous three days.  This made some people worried it was the start of a new wave.</p>
+
+<p>Today, “daily new cases” dropped below the low point from four days ago.</p>
+
+<p>We can graph the change in cases as a ratio.  When the growth ratio is less than 1.0, the number of cases is falling.</p>
+
+<p><img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/daily_change.png" alt="" /></p>
+
+<!--
+### A1. Update for August 25 - the ZOE video.
+
+A day after I wrote this post, ZOE released a Youtube video.  The videos are released every other Thursday.  ZOE said cases had only decreased by 10% in the last 2 weeks.
+
+XXX - this is not correct. I think it would need to have been *exactly* 1.5 days earlier, which of course they would never have done - XXX
+If ZOE had looked 3 days earlier, the data would not have been affected by the bug.  The cases would have decreased by 25% over 2 weeks.
+
+If the bug had not occured, ZOE cases would have decreased by more than 10% over 2 weeks.  If you look at this graph of the 2-week ratio, you might think ZOE cases "should" have decreased by 20%.
+
+<img src="/assets/for-post/2022-08-24-zoe-covid-3-day-bug/daily_change_14.png" alt="">
+
+The case ratio had increased, but the bug distorted the trends.  This may have caused more concern than necessary.
+-->
+
+<h3 id="appendix-an-alternative-early-warning-system">Appendix: An alternative “early warning system”.</h3>
+
+<p>Previous “Omicron” variants increased this weekly growth rate by 60 percentage points.</p>
+
+<p>Experts measured significant growth advantages in these variants <em>before</em> they caused large waves of infections.</p>
+
+<p>I made a twitter list of <a href="https://twitter.com/i/lists/1521570760950702081">experts you might like to follow</a>.  I chose these experts for a high signal-to-noise ratio, about variants specifically.</p>
+
+<p>Other factors can cause waves, such as seasonality and waning immunity.  However, I think these will change more gradually.  They will not cause a spike that appears to come out of the blue, like the original Omicron variant did.</p>
+
+<hr />
+
+<p>The scripts and spreadsheets used to produce these graphs are <a href="https://github.com/sourcejedi/nova-covid">available on GitHub</a>.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Here is a story about the ZOE Health Study, told through graphs.]]></summary></entry><entry><title type="html">ZOE Covid Study - possible mistake in the “hotspots” paper</title><link href="/2022/06/01/zoe-covid-pubpeer.html" rel="alternate" type="text/html" title="ZOE Covid Study - possible mistake in the “hotspots” paper" /><published>2022-06-01T00:00:00+01:00</published><updated>2022-06-01T00:00:00+01:00</updated><id>/2022/06/01/zoe-covid-pubpeer</id><content type="html" xml:base="/2022/06/01/zoe-covid-pubpeer.html"><![CDATA[<p>I posted a comment on PubPeer, with <a href="https://pubpeer.com/publications/3C823DD588CE2A33BE78AD80E9CCDD">full details, graphs, and code</a>.</p>
+
+<p>It might not be the easiest to read.  Here are the main points:</p>
+
+<hr />
+<p><br /></p>
+
+<p>ZOE Covid Study publish daily estimates of incidence (“new cases”), based on app users reporting new symptoms and test results.  They also convert it to a prevalence estimate (“active cases”).  This conversion requires a recovery model.  The recovery model tells you how long it takes for a new cases to recover, and stop being active cases.</p>
+
+<p>They explain this in a scientific paper, including specific values for a recovery model.  I tried applying this model to ZOE incidence estimates.  However, the resulting prevalence is about 14% lower than ZOE daily prevalence estimates.</p>
+
+<p>Have ZOE simply changed the recovery model?  No.  The paper shows graphs of incidence and prevalence for England.  The prevalence graph matches ZOE daily prevalence estimates; it is not 14% lower.  The incidence graph also matches ZOE daily incidence estimates.</p>
+
+<p>Did I just make a mistake in my calculation?  I don’t think so.  I re-ran my calculations on a test case, where there is just one day with 100 new cases.  The result is a curve which shows an upside-down version of the recovery model.  If there are 90 active cases on day 2, then 10% of cases are recovering by day 2.  My curve matched the graph of the recovery model shown in the paper.</p>
+
+<p>I think there is a mistake in the paper.  I think the paper probably shows the wrong recovery model.</p>
+
+<p>I also worked out the recovery model ZOE use for daily prevalence estimates.</p>
+
+<p>If the paper showed this alternative recovery model, there would be no problem with my calculation.  The words “most users recover in 7–10 days” would need changing to say “7-11 days”.  The appendix that defines the recovery model might need changing as well.  But as far as I know, none of this would change the main points of the paper.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[I posted a comment on PubPeer, with full details, graphs, and code.]]></summary></entry><entry><title type="html">ZOE Covid Study - confidence intervals</title><link href="/2022/02/27/zoe-covid-confidence-intervals.html" rel="alternate" type="text/html" title="ZOE Covid Study - confidence intervals" /><published>2022-02-27T00:00:00+00:00</published><updated>2022-02-27T00:00:00+00:00</updated><id>/2022/02/27/zoe-covid-confidence-intervals</id><content type="html" xml:base="/2022/02/27/zoe-covid-confidence-intervals.html"><![CDATA[<p>ZOE <a href="https://en.wikipedia.org/wiki/Confidence_intervals">confidence intervals</a> are not always comparable between graphs.  Even in some individual graphs, the interval may be misleading.  For example the interval may appear narrow, where it should have grown wider.</p>
+
+<p>ZOE have not mentioned these limitations.  They no longer provide definitions, which would help an independent expert notice these limitations.  ZOE <a href="/2022/01/31/zoe-covid-study.html">transparency information</a> may help with reverse-engineering some limitations.</p>
+
+<p>I started writing this post as a reminder to myself, to avoid unsafe assumptions.  Perhaps some of the details will help further understanding.  Sadly, it seems to be quite long.  I have split out ZOE method v3 as a more self-contained introduction.  This was the first case where I had a concern.</p>
+
+<p>I am not an expert.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#1-case-study-zoe-method-v3" id="markdown-toc-1-case-study-zoe-method-v3">1. Case study: ZOE method v3</a>    <ul>
+      <li><a href="#11-background-information" id="markdown-toc-11-background-information">1.1. Background information</a></li>
+      <li><a href="#12-problem-with-confidence-intervals" id="markdown-toc-12-problem-with-confidence-intervals">1.2. Problem with confidence intervals</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-timeline" id="markdown-toc-2-timeline">2. Timeline</a></li>
+  <li><a href="#3-graphs" id="markdown-toc-3-graphs">3. Graphs</a>    <ul>
+      <li><a href="#v2-to-v3" id="markdown-toc-v2-to-v3">v2 to v3</a></li>
+      <li><a href="#2021-06-09" id="markdown-toc-2021-06-09">2021-06-09</a></li>
+      <li><a href="#2021-07-16" id="markdown-toc-2021-07-16">2021-07-16</a></li>
+      <li><a href="#v3-to-v4" id="markdown-toc-v3-to-v4">v3 to v4</a></li>
+      <li><a href="#v4-to-v5" id="markdown-toc-v4-to-v5">v4 to v5</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-case-study-zoe-method-v3">1. Case study: ZOE method v3</h2>
+
+<h3 id="11-background-information">1.1. Background information</h3>
+
+<p>The ZOE method “v3”, is illustrated by the graph of new cases by vaccination status.  New cases were estimated separately in the unvaccinated and vaccinated, then added together.  When the unvaccinated estimate became unreliable, so did the overall trend.</p>
+
+<p><a href="#2021-07-16">[Graphs]</a></p>
+
+<blockquote>
+  <p>Changelog</p>
+
+  <p>[…]</p>
+
+  <p>2021-07-16: Removed incidence graph by vaccination status from the report as there are very few unvaccinated users in the infection survey, the Confidence Intervals are very wide and the trend for unvaccinated people is no longer representative.</p>
+</blockquote>
+
+<p>This limitation was not immediately publicised.  ZOE publicity on the 14th and 15th said “we can definitely now say that these new cases have plateaued”, and talked about “the rate of decline” over time.  But the trend was changed a week later, in method “v4”.  For links to each method change, see <a href="/2022/02/02/zoe-covid-study-part-2-methods.html">ZOE Covid Study - part 2 - the method</a>.</p>
+
+<p>Reading the “v4” announcement, we can understand the concern that the trend was “no longer representative”.  This is a separate concern from the confidence interval.  By adding more tests (LFTs), ZOE was able to adjust their sample by age group.  This resulted in a different trend.</p>
+
+<p>Separately, if there were more than enough extra tests to make up for the new adjustment, the random sampling error would also be lower.  The random sampling error is what the confidence intervals are supposed to estimate.</p>
+
+<h3 id="12-problem-with-confidence-intervals">1.2. Problem with confidence intervals</h3>
+
+<p>The confidence intervals in the graphs linked above are not consistent. The interval for the unvaccinated was about 12,500 wide, but the interval for the UK totals was only about 4,500 wide.</p>
+
+<p>They also do not <em>change</em> consistently over time.  Look back at when the graph by vaccination status was first shown in the daily report.  The interval in the unvaccinated was about 8,000 wide, while the interval for the UK total was about 5,500 wide.  The interval for the unvaccinated increased by 50%, but the interval for the UK total only increased by 20%.</p>
+
+<p><a href="#2021-06-09">[Graphs]</a></p>
+
+<p>I am not entirely sure how to combine confidence intervals from the two sub-groups.  However, ZOE’s method “v3” produced misleading confidence intervals on every graph except for the breakdown by vaccination.  I think this should have been highlighted.</p>
+
+<p>It would also help if ZOE defined their method.  This would help  independent commenters understand ZOE estimates.  In this particular case, we can work out the method ourselves.</p>
+
+<p>The “v3” interval does not widen when the unvaccinated sample shrinks.  This is because the interval does not look at the size of the unvaccinated sub-sample.  It only looks at the number of tests and positive tests in the overall sample.  It is the same method as used in “v2”, except scaled to the “v3” estimate instead of the “v2” one.</p>
+
+<p>We can graph the confidence intervals as a percentage of the central estimate.  The line produced by the historical series of intervals for method v3 looks exactly the same as the line for v2.  I have plotted v3 as a dashed line, so we can see the v2 line behind it.</p>
+
+<p><a href="#v2-to-v3">[Graph]</a></p>
+
+<p>For method “v2”, the confidence interval was estimated from the number of tests and the number of positive tests.  See full timeline below.</p>
+
+<h2 id="2-timeline">2. Timeline</h2>
+
+<!-- TODO. Still need to put in more numbers?  Would make it more useful for users of screen readers.  And anyone for whom this stuff doesn't jump out at. Like it didn't for me, for too long :-). -->
+
+<p>2020-10-27: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#3-original-zoe-paper">ZOE method v1</a> - the ZOE paper - is posted in its initial form as a preprint on medrxiv.org.</p>
+
+<p>Method v1 uses 95% <a href="https://en.wikipedia.org/wiki/Confidence_intervals">confidence intervals</a>.  They are calculated from the number of tests and the number of positive tests, using something called the <a href="wilson-score">Wilson score</a>.</p>
+
+<p>I found a helpful <a href="https://www.mikulskibartosz.name/wilson-score-in-python-example/">python function</a> to calculate the Wilson score interval.  ZOE test data for their latest 14-day interval is available from <a href="https://covid-assets.joinzoe.com/latest/incidence%20table.csv">incidence table.csv</a>.  Looking at <a href="https://github.com/sourcejedi/nova-covid">historical downloads</a>, I can reproduce both the central estimate and the confidence intervals.</p>
+
+<p>…</p>
+
+<p>2021-05-12: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">ZOE method v3</a>. Incidence is now estimated separately in vaccinated and unvaccinated people. These are added together to give total UK incidence.</p>
+
+<p>2021-05-27: The label “95% confidence interval” was removed from all graphs.  The official releases no longer say anything about how the confidence intervals work.</p>
+
+<p>Up to the current day, <a href="https://covid-assets.joinzoe.com/">internal website files</a> still label the incidence intervals as 95% upper and lower limits.  These include <a href="https://github.com/sourcejedi/nova-covid">“incidence table.csv”</a>.  Although, if effectively no-one looks at this, I do not expect it to be kept up to date.</p>
+
+<p>On balance, I think the confidence intervals for UK and regional incidence graphs are probably always calculated using a 95% confidence level.</p>
+
+<p>2021-06-08: Confidence intervals are now calculated slightly differently, compared to the original Wilson score.  In a couple of edge cases, there are noticable differences.  For my purposes, the two methods appear equivalent.</p>
+
+<p>2021-06-09: A graph is added to show incidence by vaccination status. The absolute difference between upper and lower confidence intervals is higher for unvaccinated cases (8,000), than it is for the graph showing total UK cases (5,500).</p>
+
+<p>I think there is a problem here, in the interval on the graph of total UK cases. I think it is calculated based on the number of tests overall, instead of looking at the two subsamples separately.  I made a graph of the interval as a percentage of the central estimate, and it appears to be identical between v2 and v3.</p>
+
+<p><a href="#v2-to-v3">[Graphs]</a></p>
+
+<!-- Total UK incidence is not always graphed in the daily report, but it is in the "for app users only" page that links to the report. I've mostly been checking incidence_*.csv.
+
+Contemporary side-by-side comparison: https://twitter.com/sourcejedi/status/1408433707686498305 -->
+
+<p>2021-07-17: The changelog says “Removed incidence graph by vaccination status from the report as there are very few unvaccinated users in the infection survey, <em>the Confidence Intervals are very wide</em> and the trend for unvaccinated people is no longer representative.”  The inconsistency in confidence intervals was also quite large at this point (12,500 v.s. 4,500).</p>
+
+<p><a href="#2021-07-16">[Graphs]</a></p>
+
+<p>2021-07-21: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">ZOE method v4</a>.  The confidence intervals no longer match the Wilson score interval calculated from the overall number of tests and positive tests.  So that’s good.</p>
+
+<p>The daily report starts showing incidence by vaccination status again. This time, the intervals for total UK incidence appear wider than the intervals for unvaccinated and vaccinated incidence put together. This is inconsistent again, just the other way round.</p>
+
+<p>The announcement of method v4 includes a graph comparing old and new estimates. The intervals for the new estimate on this graph, are different from the UK total graph in the report. They might be consistent with the new graph by vaccination status.</p>
+
+<p>Similarly, the intervals for the old estimate on the comparison graph are different from the old UK total graphs. They are <em>closer</em> to being consistent with the older “by vaccination” graphs, though still visibly inconsistent. It would require some historical revisions.</p>
+
+<p>The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status.  This could be result of method v4 increasing the number of tests several-fold.  (In part, because it went back to including LFT’s).</p>
+
+<p>The incidence estimate for England is now calculated by adding up the incidence estimates for each English region.  That part is good.  Sadly, the confidence limits for England are also now calculated by adding up the confidence limits for each English region.  Again, I’m not entirely sure how I would do this myself, but this isn’t how confidence limits work.  This should have been declared.  The confidence intervals for England may be more than twice as wide as they should be!</p>
+
+<p>The UK confidence limits are also much wider than they should be, because they are now calculated by adding up the confidence limits for the UK nations, which include England.  To be clear, this issue has still not been resolved, so it affects the latest method (v5) as well as method v4.</p>
+
+<p><a href="#v3-to-v4">[Graphs]</a></p>
+
+<p>2021-08-26: The graph by vaccination status is changed, to show incidence among the fully vaccinated v.s. total incidence.  The current confidence intervals are similar to the dedicated graph of total UK incidence, but not identical.</p>
+
+<p>2021-10-06: Just before method v5. The confidence intervals remain similar but not identical. Note the graph of total UK incidence was not included in the daily report at this time, although it was viewable through the app.</p>
+
+<p>2021-10-07: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-10-07-v5-future-proofing-our-covid-estimates">ZOE method v5</a>. The purpose of this change is to narrow the confidence interval, making the estimate more sustainable “with unvaccinated users disappearing from our study”. This is illustrated with a graph. The announcement is unclear how this result is achieved.</p>
+
+<p>2021-10-10: Method v5 is stabilized by now, after a little back-and-forth. There is still a graph with incidence among the fully vaccinated, v.s. total incidence. On this graph, the confidence intervals for total incidence are less than half as wide as those on the dedicated graph of total UK incidence.</p>
+
+<p>So although the point of method v5 is narrower confidence intervals, this can only be seen on the graph of incidence by vaccination status.  The graphs for the UK, England etc. don’t take advantage of it.  I was suprised to find the same pattern as in the change to v3.  When ZOE switched to v5, the relative size of the confidence intervals shown remained identical to v4.  I plotted a graph below to show this again.</p>
+
+<p><a href="#v4-to-v5">[Graphs]</a></p>
+
+<p>2021-12-07: I asked ZOE about this last inconsistency, and sent screenshots of both graphs.  ZOE forwarded it to their team of data scientists <a href="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/ZOE-CI-email.html">“to confirm this is correct”</a>.  I have not received any further response.</p>
+
+<h2 id="3-graphs">3. Graphs</h2>
+
+<h3 id="v2-to-v3">v2 to v3</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v2v3.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v2v3-ci.png" /></p>
+
+<h3 id="2021-06-09">2021-06-09</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-06-09-UK.png" alt="" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-06-09-by-vaccination.png" alt="" /></p>
+
+<h3 id="2021-07-16">2021-07-16</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-16-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-16-UK.png" /></p>
+
+<h3 id="v3-to-v4">v3 to v4</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-20-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v3v4.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-by-vaccination.png" /></p>
+
+<h3 id="v4-to-v5">v4 to v5</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5-ci.png" /></p>]]></content><author><name></name></author><summary type="html"><![CDATA[ZOE confidence intervals are not always comparable between graphs. Even in some individual graphs, the interval may be misleading. For example the interval may appear narrow, where it should have grown wider.]]></summary></entry><entry><title type="html">ZOE Covid Study - part 2 - the method</title><link href="/2022/02/02/zoe-covid-study-part-2-methods.html" rel="alternate" type="text/html" title="ZOE Covid Study - part 2 - the method" /><published>2022-02-02T00:00:00+00:00</published><updated>2022-02-02T00:00:00+00:00</updated><id>/2022/02/02/zoe-covid-study-part-2-methods</id><content type="html" xml:base="/2022/02/02/zoe-covid-study-part-2-methods.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/COVID_Symptom_Study">ZOE</a> release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations.</p>
+
+<p>This is presented in reverse chronological order. Sorry. It seemed to make sense at the time.</p>
+
+<p>See also <a href="/2022/01/31/zoe-covid-study.html">ZOE Covid Study - the public data files</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#1-disclaimer" id="markdown-toc-1-disclaimer">1. Disclaimer</a></li>
+  <li><a href="#2-zoe-method-changes" id="markdown-toc-2-zoe-method-changes">2. ZOE method changes</a>    <ul>
+      <li><a href="#2021-10-07-v5-future-proofing-our-covid-estimates" id="markdown-toc-2021-10-07-v5-future-proofing-our-covid-estimates">2021-10-07: v5: “Future-proofing our COVID estimates”</a></li>
+      <li><a href="#2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated" id="markdown-toc-2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">2021-07-21: v4: “COVID estimates updated as more people are being vaccinated”</a></li>
+      <li><a href="#2021-05-12-v3-covid-estimates-revised-after-change-to-methodology" id="markdown-toc-2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">2021-05-12: v3: “COVID estimates revised after change to methodology”</a></li>
+      <li><a href="#2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced" id="markdown-toc-2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced">2021-02-23: v2: “How we calculate COVID-19 incidence has changed and rates have now reduced”</a></li>
+      <li><a href="#v1-see-paper-below" id="markdown-toc-v1-see-paper-below">v1: See paper below</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-original-zoe-paper" id="markdown-toc-3-original-zoe-paper">3. Original “ZOE” paper</a>    <ul>
+      <li><a href="#31-incidence-tablecsv" id="markdown-toc-31-incidence-tablecsv">3.1 incidence table.csv</a></li>
+      <li><a href="#32-other-remarks" id="markdown-toc-32-other-remarks">3.2 Other remarks</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat" id="markdown-toc-4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat">4. 2020-11-04 change to symptom questions, including runny nose and sore throat</a></li>
+  <li><a href="#5-earlier-changes" id="markdown-toc-5-earlier-changes">5. Earlier changes</a>    <ul>
+      <li><a href="#2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk" id="markdown-toc-2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk">2020-07-08: “Data update: New COVID prevalence figures for the UK”</a></li>
+      <li><a href="#2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week" id="markdown-toc-2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week">2020-07-02: “New daily COVID-19 cases in the UK have stopped falling this week”</a></li>
+      <li><a href="#2020-05-22-9900-new-covid-cases-across-england-daily" id="markdown-toc-2020-05-22-9900-new-covid-cases-across-england-daily">2020-05-22: “9,900 new COVID cases across England daily”</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-disclaimer">1. Disclaimer</h2>
+
+<p>This is not an endorsement of ZOE estimates, or their public communications.</p>
+
+<p>ZOE methods are not fully specified. I notice various errors in ZOE communications, but I cannot find all the errors. I have not found much comment from independent experts.</p>
+
+<p>I am not an expert.</p>
+
+<h2 id="2-zoe-method-changes">2. ZOE method changes</h2>
+
+<p>If you look at ZOE estimates by publish date, you will see 4 discontinuities. These correspond to method changes. Here is a list, including a link to the announcement of each change. I refer to the different methods as “v1” to “v5”.</p>
+
+<!-- Note: dropped down to heading level 4 here. Heading level 3 looked bigger than I wanted, in my blog theme. -->
+
+<h4 id="2021-10-07-v5-future-proofing-our-covid-estimates">2021-10-07: v5: <a href="https://covid.joinzoe.com/post/future-proofing-our-covid-estimates">“Future-proofing our COVID estimates”</a></h4>
+
+<blockquote>
+  <p>The ZOE COVID Study has been collecting key information on COVID-19 vaccines and infections since the start of the UK’s vaccination programme. Thanks to this data, ZOE and King’s College London (KCL) have been able to assess the relative risk reduction from vaccines […] and track changes over time in the real world, a.k.a vaccine effectiveness. The relative risk reduction measured in the study can be used to predict an incidence rate in unvaccinated and partially vaccinated users from the incidence in the fully vaccinated group.</p>
+</blockquote>
+
+<p>Method v4 was already adjusted by vaccination status. In method v5, a different adjustment is used. Neither adjustment was specified. This leaves us with several important questions.</p>
+
+<p>The new estimate appears smoother over time. This is consistent with the narrower confidence interval shown. ZOE emphasized this comparison, so I assume good faith. If you look at other graphs to compare the intervals, you will need more caution. See <a href="/2022/02/27/zoe-covid-confidence-intervals.html">ZOE confidence intervals</a>.</p>
+
+<p>ZOE say the new method “effectively applies a weighted average to a cohort”. They also describe it as applying “a new weighting function”.</p>
+
+<p>The main rationale is that “among some of our age cohorts, unvaccinated contributors have all but vanished”. To narrow the confidence interval, the new estimate of relative risk reduction must be using larger sample sizes.</p>
+
+<p>Q1: I see two possibilities to increase sample sizes. One is to average over a longer time period, where there will be more infections. The other is to change the age groups used in this calculation. Reducing the number of age groups would increase the sample size.</p>
+
+<p>Q1.1: ZOE claim “even if we lost all unvaccinated users from our study”, the method can still “calculate the relative risk in the unvaccinated” and estimate overall incidence. I do not know how this fits when the same announcement shows vaccine effectiveness can wane over time (or because of new variants, as mentioned in the ZOE video about waning).</p>
+
+<p>Q1.2: Similarly, how does it respond when the Omicron variant sweeps through, quickly lowering vaccine effectiveness? Does it respond slowly, causing an overestimation of both VE and cases in the unvaccinated? Sadly, the implication here has not been commented on by ZOE, or other experts. Contrawise, some commentators suggest ZOE estimates <a href="https://twitter.com/PaulMainwood/status/1494015094182842376">understate</a> the Omicron wave.</p>
+
+<p>Q2: Considering the timing, and previous ZOE commentary on waning and boosters, one might hope the “future proof” method also supported third doses. However ZOE were not clear on this. They have not mentioned any results for a third dose. An alternative might be to hope that adjusting for age would effectively adjust for the takeup of this booster dose.</p>
+
+<p>The <a href="/2022/01/31/zoe-covid-study.html#3-main-data-files">daily report</a> had already stopped showing incidence rates separately for people with 0 or 1 dose of vaccine. Separate incidence is still shown for 2+ doses.</p>
+
+<p>ZOE periodically invite questions. I submitted a <a href="/assets/for-post/2022-02-02-zoe-covid-study-part-2-methods/2022-03-17 How does the covid estimate (incidence) work.pdf">few short questions</a> on 2022-03-17, but I have not seen any answers or response.</p>
+
+<h4 id="2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">2021-07-21: v4: <a href="https://covid.joinzoe.com/post/covid-estimates-updated-vaccine">“COVID estimates updated as more people are being vaccinated”</a></h4>
+
+<blockquote>
+  <p>The main adjustments we’ve made to our calculations are:</p>
+  <ul>
+    <li>Changing the definition of ‘newly sick’ to include more people in our estimate calculations</li>
+    <li>Inclusion of Lateral Flow Test results</li>
+    <li>Adjustment by both age and vaccination status</li>
+  </ul>
+</blockquote>
+
+<p>Method v3 simply re-weighted the vaccinated and unvaccinated cohorts, to match vaccination in the overall population.  My current guess is that v4 is similarly re-weighted by vaccination status and age group.</p>
+
+<p>On the 30th, the daily report showed incidence rates among people with 0, 1, and 2+ vaccine doses.  Also, ZOE later showed <a href="https://covid.joinzoe.com/post/covid-bounces-back-as-cases-start-to-rise">graphs of incidence rate by age group</a>: 0-17, 18-34, 35-54, 55-74 and 75+.<a href="https://twitter.com/sourcejedi/status/1491512209951895558">[Note]</a>  I assume the graph shows the same age groups used for the adjustment.</p>
+
+<p>Another possible method can be seen in the ONS random survey.  ONS model incidence as a smooth function of age.  The <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/28january2022">ONS weekly report</a> includes smooth graphs of incidence by single year of age, animated over time.  However, ZOE have not showed any graph like this.</p>
+
+<p>The data files “incidence_20210717.csv” and newer include columns showing <em>unweighted</em> totals for testing, “newly sick”, and “active users”.  (Previously this was only available for the most recent day, in <a href="#31-incidence-tablecsv">incidence table.csv</a>.</p>
+
+<p>Starting in this version, England incidence is now equal to the sum of each NHS region. This implies the England incidence is now weighted by region. (By the same test, UK incidence appears to have always been weighted by nation).</p>
+
+<h4 id="2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">2021-05-12: v3: <a href="https://covid.joinzoe.com/post/covid-estimates-revised-after-change-to-methodology">“COVID estimates revised after change to methodology”</a></h4>
+
+<p>Users’ reports are now stratified by their vaccination status (0 versus 1+ doses).  Vaccination was high among app users, which was biasing the estimates down.</p>
+
+<h4 id="2021-02-23-v2-how-we-calculate-covid-19-incidence-has-changed-and-rates-have-now-reduced">2021-02-23: v2: <a href="https://covid.joinzoe.com/post/covid-rates-calculation-changed">“How we calculate COVID-19 incidence has changed and rates have now reduced”</a></h4>
+
+<p>ZOE start excluding likely vaccine “after-effects”, if they happen in the three days after vaccination.</p>
+
+<p>“You might notice the % positive tests are higher in the new reports - lateral flow test results are not included in this estimate anymore (or the incidence calc) due to different sensitivity.  They are still included in lots of research and analysis we do, please still log them!” - <a href="https://twitter.com/marksgraham_/status/1364261105657257989">Mark Graham</a></p>
+
+<p>If you compare reports before and after, there might also be a small change to the % newly unwell data, even before any vaccination.</p>
+
+<h4 id="v1-see-paper-below">v1: See paper below</h4>
+
+<h2 id="3-original-zoe-paper">3. Original “ZOE” paper</h2>
+
+<p><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(20)30269-3/fulltext">Detecting COVID-19 infection hotspots in England using large-scale self-reported data from a mobile application: a prospective, observational study</a>.</p>
+
+<p>ZOE Covid Study has a complex calculation for local areas, to detect “hotspots”. The paper explains how local areas in England are interpolated, from (symptomatic) incidence estimates of the 7 NHS regions.</p>
+
+<p>Incidence for the 7 NHS regions in England was “released daily”. Therefore these were the same estimates shown on the ZOE website, under “daily new cases”.  The incidence calculation is described in several pieces:</p>
+
+<ol>
+  <li><b>Users of ZOE’s app “are asked to record each day whether they feel physically normal”</b>. If not, they are asked “to log any symptoms and keep a record of any COVID-19 tests and their results”. The exact questions are shown in the appendix. They identify 19 different symptoms. There was also a free text entry field.</li>
+  <li>“Users who logged themselves as healthy at least once in a 9-day period and then reported” … “any of the symptoms
+asked about in the app” were termed “newly sick”.</li>
+  <li><b>ZOE calculate “the proportion of users who report as newly sick”.</b></li>
+  <li><b>Newly sick users “were sent invitations to book a [PCR] test through the DHSC national testing programme”</b>. This allowed ZOE users in England (only) to access PCR tests for symptoms that would not otherwise qualify. “They were then asked to record the result of the test in the app”.</li>
+  <li>“We took <b>14-day averages</b>” “to calculate the percentage of positive tests among newly sick users”. Tests are assigned to the date the swab was taken. Test-based estimates were released “with a 4-day reporting lag”, to make sure enough positive and negative results were available from the swabs.</li>
+  <li><b>To estimate incidence rates, the % newly sick (step 3) and the % positive tests (step 5) are “combined”, by multiplying them together</b>. This step is in the supplementary appendix.</li>
+  <li><b>In this version, incidence was not stratified or re-weighted e.g. by age or household income</b>.</li>
+  <li>95% confidence intervals were calculated based on the test data. The more positive tests there were, the narrower the confidence intervals would be.</li>
+</ol>
+
+<p>The paper itself does not spell out:</p>
+
+<ol>
+  <li>The <a href="https://en.wikipedia.org/wiki/Denominator">denominator</a> for the proportion of newly sick users.</li>
+  <li>Whether the proportion of newly sick in step 6 has been averaged over the 14 days.</li>
+</ol>
+
+<h3 id="31-incidence-tablecsv">3.1 incidence table.csv</h3>
+
+<p>For method v1, I was able to match ZOE incidence calculations from “newly sick” and testing data in <a href="https://github.com/sourcejedi/nova-covid#download-sample">incidence table.csv</a>.  This file is separate from <a href="/2022/01/31/zoe-covid-study.html">covid-public-data</a>.  I have not seen anyone else mention it.</p>
+
+<p>The column <code class="language-plaintext highlighter-rouge">#_total_tests</code> is a 14-day total - the numbers match other ZOE documents.  We can match the column <code class="language-plaintext highlighter-rouge">%_+ve_tests</code> using <code class="language-plaintext highlighter-rouge">+ve_tests ÷ total_tests</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code> is provided to 2 decimal places.  If we accept this limited precision, we can match <code class="language-plaintext highlighter-rouge">est._daily_cases</code> by calculating <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day × (+ve_tests ÷ total_tests) × population</code>.</p>
+
+<p>The values of <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code> appeared to match the graphs in the <a href="/2022/01/31/zoe-covid-study.html#3-main-data-files">daily report</a>. In particular, the values for England matched the 14-day average on the “newly sick” graph. By comparing the report with the scientific paper above, it appears the denominator is the number of users who logged on a given day, who also logged at least once during the previous 9 days:</p>
+
+<blockquote>
+  <p>Newly Sick Users by Day (% of Active Users)</p>
+
+  <p>Active users are those who have been logging regularly in the past 10 days. Newly sick
+users are active users who haven’t reported any symptoms for at least 9 days before
+reporting one of the following symptoms: […]</p>
+</blockquote>
+
+<p>Around Christmas day 2020, we can see the incidence estimate for England is smooth despite sharp changes in the un-averaged graph of newly sick users.  This proves the newly sick proportion used in step 6 is an average over the 14 days.</p>
+
+<p>This helped clarify the scientific paper for me.  Some of the above could be imperfect approximations, and I have not checked as much as I could.</p>
+
+<p>The daily report also had a graph “Positive Test Results by Day (% of Invited Test Takers)”, and a 14-day average.  However this did not match <code class="language-plaintext highlighter-rouge">%_+ve_tests</code>.  I have no explanation how it could differ by so much.</p>
+
+<p>My <code class="language-plaintext highlighter-rouge">est._daily_cases</code> calculation effectively “took 14-day averages” first, and then calculated proportions.  The paper did not spell out this order of operations, but I think it makes the most sense.</p>
+
+<p>I am not sure how <code class="language-plaintext highlighter-rouge">#_active_users</code> is aggregated over the 14 days.  It seems an odd name to use for an average, and the values are always shown as whole numbers.  I sometimes thought of it as unique users over the 14 days instead.  That might be consistent with <code class="language-plaintext highlighter-rouge">#_total_tests</code>, which would need to be de-duplicated somehow.  However I don’t know which option would work better.</p>
+
+<p>In method v4 a <code class="language-plaintext highlighter-rouge">#_newly_sick</code> column was added; the values only make sense as 14-day totals.  The <code class="language-plaintext highlighter-rouge">#_newly_sick</code> column replaced the original <code class="language-plaintext highlighter-rouge">avg._%_of_newly-sick/day</code>.  I think ZOE are inviting us to calculate the proportion ourselves, i.e.  <code class="language-plaintext highlighter-rouge">newly_sick ÷ 14 ÷ active_users</code>.</p>
+
+<p>The transparency provided by all of ZOE’s data files would be enhanced, if ZOE could briefly document them or answer relevant questions or officially mention their existence.</p>
+
+<h3 id="32-other-remarks">3.2 Other remarks</h3>
+
+<p>In this initial method, England is just treated as one big region.  This means the incidence for England is <em>not</em> the sum of the incidence for each region.</p>
+
+<p>UK prevalence estimates were published on the ZOE website and in “prevalence_history_*.csv”, derived from the 14-day incidence estimates, and a curve of recovery probability estimated from the whole population (“recovery model”).</p>
+
+<p>Please note that since this incidence (“I<sub>S</sub>”) is not re-weighted, the prevalence derived from it (“P<sub>H</sub>”) is not re-weighted either.<!--FIXME Insert link to followup blog post-->  Do not confuse this with the “symptom-based” prevalence (“P<sub>A</sub>”), which the paper explains is re-weighted.</p>
+
+<p>Briefly, the real point of the paper is to define P<sub>H</sub> for smaller areas, by apportioning it according to P<sub>A</sub>.  The “H” subscript stands for “hybrid”.  However, when you are looking at the level of NHS regions, please remember that particular P<sub>H</sub> is no more of a hybrid than I<sub>S</sub>.</p>
+
+<h2 id="4-2020-11-04-change-to-symptom-questions-including-runny-nose-and-sore-throat">4. 2020-11-04 change to symptom questions, including runny nose and sore throat</h2>
+
+<p>“Several direct symptom questions were added to the app” on 2020-11-04, according to a <a href="https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(21)00198-X/fulltext">paper</a> published 2021-08-03.</p>
+
+<p>According to the ZOE blog 2021-03-18, any of <a href="https://web.archive.org/web/20210319152354/https://covid.joinzoe.com/post/the-20-symptoms-of-covid-19-to-watch-out-for">20 symptoms</a> were sufficient for ZOE to offer you a PCR test (in England).  These include runny nose and sore throat, which are among the most common early symptoms.  These symptoms were not included in the original ZOE paper (below).</p>
+
+<p>The <a href="https://github.com/zoe/covid-tracker-react-native/commit/39ebcd5a3beea837ca75522fffdd490db049325e#diff-41c1aa97ff22cecb0746ef2c08888371a941110072c69925850807217b017550R53">code</a>
+for the new symptom assessment was finalized on 2020-11-03.  It prompted for an additional 13 symptoms.</p>
+
+<p>The current list of symptom prompts can be seen by using the app.
+Or you can get the idea from the <a href="https://github.com/zoe/covid-tracker-react-native/blob/master/src/core/assessment/dto/AssessmentInfosRequest.ts">latest version of the code</a>.</p>
+
+<h2 id="5-earlier-changes">5. Earlier changes</h2>
+
+<p>These are probably not interesting.  I just had to dig them up to double-check.</p>
+
+<h4 id="2020-07-08-data-update-new-covid-prevalence-figures-for-the-uk">2020-07-08: <a href="https://covid.joinzoe.com/post/data-update-prevalence-covid">“Data update: New COVID prevalence figures for the UK”</a></h4>
+
+<p>ZOE produced a model of recovery from COVID, truncated at 30 days. This is now used to convert incidence to prevalence.  See paper above.  This provides the “swab test based prevalence”.  Previous ZOE prevalence estimates were not based on ZOE incidence.</p>
+
+<h4 id="2020-07-02-new-daily-covid-19-cases-in-the-uk-have-stopped-falling-this-week">2020-07-02: <a href="https://covid.joinzoe.com/post/covid-incidence-stable">“New daily COVID-19 cases in the UK have stopped falling this week”</a></h4>
+
+<p>“Results from these antibody tests provide information about past infections, so removing reported antibody tests from the analysis gives a more accurate reflection of the number of new cases in the population.”</p>
+
+<p>“This means that last week’s incidence and this week’s incidence are not directly comparable. However, COVID Symptom Study app users can view incidence trends directly through the app as we have corrected all of the incidence trend charts for the entire timeline in these plots for this comparison.”</p>
+
+<p>Note, at this time the website was not updated every day.  Weekly blogs, including comparisons against the previous week, began July 11.  The report available to app users was updated daily.</p>
+
+<h4 id="2020-05-22-9900-new-covid-cases-across-england-daily">2020-05-22: <a href="https://covid.joinzoe.com/post/covid-cases-england">“9,900 new COVID cases across England daily”</a></h4>
+
+<p>First estimate of incidence. “Calculated using swab testing and app symptom data collected over the last two weeks”.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[ZOE release daily estimates of incidence, or “new cases of symptomatic COVID”, for the 7 NHS regions of England. Here is an introduction to their method, complete with citations.]]></summary></entry><entry><title type="html">ZOE Covid Study - public data files</title><link href="/2022/01/31/zoe-covid-study.html" rel="alternate" type="text/html" title="ZOE Covid Study - public data files" /><published>2022-01-31T00:00:00+00:00</published><updated>2022-01-31T00:00:00+00:00</updated><id>/2022/01/31/zoe-covid-study</id><content type="html" xml:base="/2022/01/31/zoe-covid-study.html"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#1-disclaimer" id="markdown-toc-1-disclaimer">1. Disclaimer</a></li>
+  <li><a href="#2-zoe-data-is-published-on-google-cloud-storage" id="markdown-toc-2-zoe-data-is-published-on-google-cloud-storage">2. ZOE data is published on Google Cloud Storage</a></li>
+  <li><a href="#3-main-data-files" id="markdown-toc-3-main-data-files">3. Main data files</a>    <ul>
+      <li><a href="#31-covid_symptom_study_report_20220131pdf" id="markdown-toc-31-covid_symptom_study_report_20220131pdf">3.1 covid_symptom_study_report_20220131.pdf</a></li>
+      <li><a href="#32-incidence_20220129csv" id="markdown-toc-32-incidence_20220129csv">3.2 incidence_20220129.csv</a></li>
+      <li><a href="#33-prevalence_history_20220131csv" id="markdown-toc-33-prevalence_history_20220131csv">3.3 prevalence_history_20220131.csv</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-all-available-files" id="markdown-toc-4-all-available-files">4. All available files</a></li>
+</ul>
+
+<h2 id="1-disclaimer">1. Disclaimer</h2>
+
+<p>This is not an endorsement of ZOE estimates, or their public communications.</p>
+
+<p>ZOE methods are not fully specified.  I notice some errors in ZOE communications, but I do not find every error.  I have not found much comment from independent experts.</p>
+
+<p>I am not an expert.</p>
+
+<h2 id="2-zoe-data-is-published-on-google-cloud-storage">2. ZOE data is published on Google Cloud Storage</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/COVID_Symptom_Study">ZOE</a> collect COVID-19 test results and symptoms using a survey app.  They estimate cases in the UK, which they show on their website.  More detailed information is shown on a web page “for app users only”, which might motivate people to take part.</p>
+
+<p>The detailed graphs are also published under “covid-public-data” on Google Cloud Storage, along with other data files.  The report published today (31 January, 2022) can be downloaded from this URL:</p>
+
+<p><a href="https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf">https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf</a></p>
+
+<blockquote>
+  <p><img src="/assets/for-post/2022-01-31-zoe-covid-study/covid_symptom_study_report.png" alt="We estimate there have been 187669 daily new cases of symptomatic COVID in the UK on average over the two weeks up to 29 January 2022. This is based on the number of newly symptomatic app users per day, and the proportion of these who give positive swab tests." /></p>
+</blockquote>
+
+<p>There is an <a href="https://console.cloud.google.com/storage/browser/covid-public-data;tab=objects?prefix=&amp;forceOnObjectsSortingFiltering=false">online file browser</a>, but it is slow.  If you try to download multiple files at once, it says you need to use <code class="language-plaintext highlighter-rouge">gsutil cp</code>.  See <a href="https://cloud.google.com/storage/docs/gsutil_install">official instructions to install gsutil</a>. Alternatively, some Linux users may prefer to <a href="https://snapcraft.io/google-cloud-sdk">install gsutil using Snap</a>.</p>
+
+<p>I have also put a few <a href="https://github.com/sourcejedi/nova-covid">related scripts</a> up on GitHub.</p>
+
+<h2 id="3-main-data-files">3. Main data files</h2>
+
+<p>New data files are added each day.  You can download a different day by changing the date in the URL (in the address bar of your web browser).  Note some older versions use different formats and different definitions.  Here are links to the files added today:</p>
+
+<h3 id="31-covid_symptom_study_report_20220131pdf">3.1 <a href="https://storage.googleapis.com/covid-public-data/report/covid_symptom_study_report_20220131.pdf">covid_symptom_study_report_20220131.pdf</a></h3>
+
+<p>Update for 23 August 2022: the latest report(s) use a different naming scheme. The report published on that day is called <a href="https://storage.googleapis.com/covid-public-data/report/zoe_health_study_report_20220823.pdf">zoe_health_study_report_20220823.pdf</a>.</p>
+
+<p>“Daily COVID Infections Report”. “Analysis by ZOE and King’s College London”. The report includes:</p>
+
+<ul>
+  <li>An explicit note that ZOE use a 14 day average for their case estimates.</li>
+  <li>UK incidence estimates [“daily new cases of symptomatic COVID”], graphed over time:
+    <ul>
+      <li>Incidence overall</li>
+      <li>Incidence within people “double vaccinated” (2 doses or more)</li>
+      <li>Incidence rates by UK nation</li>
+      <li>Incidence rates by English region</li>
+    </ul>
+  </li>
+  <li>Incidence of respiratory symptoms: COVID vs non-COVID</li>
+  <li>Changelog</li>
+</ul>
+
+<p>…and more. Please remember the disclaimer above. I am not attempting to list what is “wrong” here. E.g. known weirdnesses, unspecified methods, or limitations which might not have been stated <em>by anyone</em>.</p>
+
+<h3 id="32-incidence_20220129csv">3.2 <a href="https://storage.googleapis.com/covid-public-data/csv/incidence_20220129.csv">incidence_20220129.csv</a></h3>
+
+<p>Incidence time series, estimated using data from test specimens up to 2022-01-29. Each estimate is an average, for the 14-day period ending in the specified date.  I interpret the remaining columns as:</p>
+
+<ul>
+  <li>Lower and upper “confidence intervals”. These match current ZOE graphs, except for the “by vaccination status” graph. To put it politely, I think these are under-specified. See <a href="/2022/02/27/zoe-covid-confidence-intervals.html">ZOE confidence intervals</a>.</li>
+  <li>Raw aggregates over the 14-day period, without re-weighting:
+    <ul>
+      <li>“Newly sick” users. This covers a wide range of possible symptoms (pre-test data). “Newly sick” users were invited to take a free PCR test if they live in England. [Update: PCR invitations stopped at some point. ZOE users continued to take lateral flow tests and submit their results].</li>
+      <li>Total tests, and positive tests. These only include people who were “newly sick”.</li>
+      <li>The number of “active” reporting users. Originally “active” meant at least one report in the previous 9 days. However ZOE now say they have widened the definition.</li>
+    </ul>
+  </li>
+  <li>Regional population. Used to convert estimates of case rates into estimates of absolute case numbers.</li>
+</ul>
+
+<p>Note that “active users” is not the total of the numbers for the individual 14 days. I interpret it as a denominator for “newly sick” ÷ 14. Similar raw aggregate data was previously available in the separate file <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#31-incidence-tablecsv">incidence_table.csv</a>.</p>
+
+<h3 id="33-prevalence_history_20220131csv">3.3 <a href="https://storage.googleapis.com/covid-public-data/csv/RevisedStats/prevalence_history_20220131.csv">prevalence_history_20220131.csv</a></h3>
+
+<p>Prevalence time series [“active cases”] estimated on 2022-01-31.</p>
+
+<p>In a <a href="/2022/02/02/zoe-covid-study-part-2-methods.html">paper from 2020</a>, ZOE derived this prevalence from the 14-day incidence estimates. This calculation uses a curve of recovery probability, estimated from the whole population.</p>
+
+<p>The dates were shifted by one day today, as per the Changelog (see above). So be careful if you compare today’s file to previous ones.</p>
+
+<h2 id="4-all-available-files">4. All available files</h2>
+
+<p>For convenience, here is a full <a href="/assets/for-post/2022-01-31-zoe-covid-study/gsutil-ls-recursive.txt">file list</a>. Obtained using <code class="language-plaintext highlighter-rouge">gsutil ls -r -l gs://covid-public-data</code>.</p>]]></content><author><name></name></author></entry><entry><title type="html">Bug hunting part 1: coredumps</title><link href="/2018/04/21/bug-hunt-part1-coredumps.html" rel="alternate" type="text/html" title="Bug hunting part 1: coredumps" /><published>2018-04-21T17:00:00+01:00</published><updated>2018-04-21T17:00:00+01:00</updated><id>/2018/04/21/bug-hunt-part1-coredumps</id><content type="html" xml:base="/2018/04/21/bug-hunt-part1-coredumps.html"><![CDATA[<p>I want to write about my experience with <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1553979">Fedora bug report 1553979</a>. This post introduces the coredump. I plan to show how useful this was in a future post.</p>
+
+<blockquote>
+  <p>2018-03-10<br />
+Xwayland server crashes unexpectedly.<br />
+<a href="https://retrace.fedoraproject.org/faf/reports/2055378/">https://retrace.fedoraproject.org/faf/reports/2055378/</a></p>
+</blockquote>
+
+<p>The link here goes to a backtrace, captured by <a href="https://abrt.readthedocs.io/en/latest/howitworks.html">ABRT</a> and submitted to “<a href="https://retrace.fedoraproject.org/faf/">Fedora Analysis Framework</a>”. In other words, it shows the chain of function calls leading to the crash.</p>
+
+<p>Unfortunately the information we see in FAF is relatively basic. It’s mostly useful for collecting statistics, like what the most common crashes are, as opposed to analyzing exactly why a crash happened.</p>
+
+<p><em>Ideally,</em> the ABRT app which pops up in Gnome is expected to let users submit a fully detailed report in the Fedora bug database. ABRT saves a “coredump”, which includes most of the processes memory, and additional data e.g. about what files it has open. I think it never publishes the coredump online, but it uses it to generate a <code class="language-plaintext highlighter-rouge">bt full</code> backtrace. This full backtrace includes values of parameters and local variables for each function. ABRT checks with the user if this includes private information, before submitting the backtrace and additional data to the bug database. It also asks the user what they were doing that might have caused the crash.</p>
+
+<p>This full backtrace was not included in this initial bug report, however.</p>
+
+<p>In some cases, even though ABRT was able to generate a backtrace for FAF statistics, it fails some check. ABRT decides that there is not enough information to be useful, so it avoids creating a detailed report in the bug database. I don’t really know how this works. I think one case may be if a debuginfo package for the crashing program is not available, because the installed version of the program is older than the currently available one.</p>
+
+<p>What I do know is that the ABRT app will still show the link to the FAF backtrace, as “Reports: <a href="https://retrace.fedoraproject.org/faf/reports/2055378/">ABRT Server</a>”. This means when some determined users are repeatedly unable to get ABRT create a bug report, they might go to the Fedora bug database, create a bug report themselves, and include a link to the FAF report. Xwayland is quite a critical process, so it’s not surprising if our user was determined to report this crash.</p>
+
+<p>The user seems in luck, as a Fedora developer appears and examines their report.</p>
+
+<p>For some reason this particular FAF backtrace is even missing all the interesting line numbers. The developer had to <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1553979#c4">reconstruct them by looking for a plausible call chain</a>. This still didn’t pin down the problem, so they asked for a full backtrace.</p>
+
+<p>It might have been possible to extract this from ABRT. However the suggested method was to use the original coredump saved by <code class="language-plaintext highlighter-rouge">systemd-coredump</code>.</p>
+
+<blockquote>
+  <p>Xwayland generate a core file in case of a crash, could you please provide a full backtrace from that core file?</p>
+
+  <ol>
+    <li>Make sure you have the debuginfo installed.
+<code class="language-plaintext highlighter-rouge">dnf debuginfo-install xorg-x11-server-Xwayland</code></li>
+    <li>Use <code class="language-plaintext highlighter-rouge">coredumpctl list</code> to get the list of available core files.</li>
+    <li>Find the one for Xwayland in the list</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">coredumpctl gdb &lt;pid&gt;</code> to attach gdb to that core file</li>
+    <li>Run <code class="language-plaintext highlighter-rouge">bt full</code> and post the output in this bug.</li>
+  </ol>
+</blockquote>
+
+<p>Note that both ABRT and <code class="language-plaintext highlighter-rouge">systemd-coredump</code> will delete old coredumps to avoid taking up too much disk space. Fortunately it’s not hard to make your own copy, e.g. <code class="language-plaintext highlighter-rouge">coredumpctl dump &lt;pid&gt; -o 2018-03-10-X.core</code>.</p>
+
+<hr />
+<h2 id="basic-backtrace-in-the-faf-report">Basic backtrace in the FAF report</h2>
+
+<table>
+    <tr>
+    <th>Frame #</th>
+    <th>Function</th>
+      <th>Binary</th>
+    <th>Source or offset</th>
+    <th>Line</th>
+  </tr>
+    <tr>
+      <td>
+  1
+</td>
+<td>
+    _dl_fixup
+</td>
+  <td>/lib64/ld-linux-x86-64.so.2</td>
+<td>
+    <abbr title="0x102f9 Build id: 0fbfb698fb8e...">../elf/dl-runtime.c</abbr>
+</td>
+<td>
+      73
+</td>
+    </tr>
+    <tr>
+      <td>
+  2
+</td>
+<td>
+    _dl_runtime_resolve_xsave
+</td>
+  <td>/lib64/ld-linux-x86-64.so.2</td>
+<td>
+    <abbr title="0x181ba Build id: 0fbfb698fb8e...">../sysdeps/x86_64/dl-trampoline.h</abbr>
+</td>
+<td>
+      126
+</td>
+    </tr>
+    <tr>
+      <td>
+  3
+</td>
+<td>
+    xorg_backtrace
+</td>
+  <td>/usr/bin/Xwayland</td>
+<td>
+    0x18e2cd
+      <br />Build id: 6ff16da59898...
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  4
+</td>
+<td>
+    OsSigHandler
+</td>
+  <td>/usr/bin/Xwayland</td>
+<td>
+    0x191eb9
+      <br />Build id: 6ff16da59898...
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  5
+</td>
+<td>
+    __restore_rt
+</td>
+  <td>/lib64/libpthread.so.0</td>
+<td>
+    <abbr title="0x12af0 Build id: f0701f554a92e5dc038f2f34118ca5e186824d27">??</abbr>
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  6
+</td>
+<td>
+</td>
+  <td>/usr/bin/Xwayland</td>
+<td>
+    0x120010
+      <br />Build id: 6ff16da59898...
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  7
+</td>
+<td>
+    XkbDeviceApplyKeymap
+</td>
+  <td>/usr/bin/Xwayland</td>
+<td>
+    0x123e5c
+      <br />Build id: 6ff16da59898...
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  8
+</td>
+<td>
+    CopyKeyClass
+</td>
+  <td>/usr/bin/Xwayland</td>
+<td>
+    0xfd052
+      <br />Build id: 6ff16da59898...
+</td>
+<td>
+    -</td>
+    </tr>
+    <tr>
+      <td>
+  ...
+</td>
+<td>
+    ...
+</td>
+  <td>...</td>
+<td>
+    ...
+</td>
+<td>
+    ...</td>
+    </tr>
+</table>
+
+<h2 id="full-backtrace">Full backtrace</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ coredumpctl gdb 1564
+
+
+        PID: 1564 (Xwayland)
+        UID: 1000 (brent)
+        GID: 1000 (brent)
+        Signal: 7 (BUS)
+    Timestamp: Mon 2018-03-12 18:25:20 EDT (20min ago)
+Command Line: /usr/bin/Xwayland :0 -rootless -terminate -core -listen 4 -listen 5 -displayfd 6
+    Executable: /usr/bin/Xwayland
+Control Group: /user.slice/user-1000.slice/session-2.scope
+        Unit: session-2.scope
+        Slice: user-1000.slice
+    Session: 2
+    Owner UID: 1000 (brent)
+    Boot ID: be21250582a341c8b4247ba353e39375
+    Machine ID: 0578ab4b5f19406598a5d8ea512ba7a0
+    Hostname: brent-laptop
+    Storage: /var/lib/systemd/coredump/core.Xwayland.1000.be21250582a341c8b4247ba353e39375.1564.1520893520000000.lz4
+    Message: Process 1564 (Xwayland) of user 1000 dumped core.
+...
+
+GNU gdb (GDB) Fedora 8.0.1-36.fc27
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+&lt;http://www.gnu.org/software/gdb/bugs/&gt;.
+Find the GDB manual and other documentation resources online at:
+&lt;http://www.gnu.org/software/gdb/documentation/&gt;.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+...
+
+Core was generated by `/usr/bin/Xwayland :0 -rootless -terminate -core -listen 4 -listen 5 -displayfd'.
+Program terminated with signal SIGBUS, Bus error.
+#0  0x00007f6f027b42f9 in _dl_fixup () from /lib64/ld-linux-x86-64.so.2
+[Current thread is 1 (Thread 0x7f6f02997a80 (LWP 1564))]
+...
+
+(gdb) bt full
+#0  0x00007f6f027b42f9 in _dl_fixup () from /lib64/ld-linux-x86-64.so.2
+No symbol table info available.
+#1  0x00007f6f027bc1ba in _dl_runtime_resolve_xsave () from /lib64/ld-linux-x86-64.so.2
+No symbol table info available.
+#2  0x000000000058e2cd in xorg_backtrace () at backtrace.c:56
+...
+
+#3  0x0000000000591eb9 in OsSigHandler (signo=7, sip=0x7fff5f5c43f0, unused=&lt;optimized out&gt;) at osinit.c:136
+        unused = &lt;optimized out&gt;
+        sip = 0x7fff5f5c43f0
+        signo = 7
+#4  &lt;signal handler called&gt;
+No symbol table info available.
+#5  XkbCopyKeymap (dst=0x12df5c0, src=0x13e0fd0) at xkbUtils.c:1957
+No locals.
+#6  0x0000000000523e5c in XkbCopyKeymap (src=&lt;optimized out&gt;, dst=&lt;optimized out&gt;) at xkbUtils.c:1965
+No locals.
+#7  XkbDeviceApplyKeymap (dst=dst@entry=0x137ebb0, desc=&lt;optimized out&gt;) at xkbUtils.c:2025
+        nkn = {type = 0 '\000', xkbType = 0 '\000', sequenceNumber = 0, time = 0, deviceID = 3 '\003', oldDeviceID = 3 '\003', minKeyCode = 8 '\b', 
+        maxKeyCode = 255 '\377', oldMinKeyCode = 8 '\b', oldMaxKeyCode = 255 '\377', requestMajor = 135 '\207', requestMinor = 9 '\t', 
+        changed = 3, detail = 0 '\000', pad1 = 0 '\000', pad2 = 0, pad3 = 0, pad4 = 0}
+        ret = &lt;optimized out&gt;
+#8  0x00000000004fd052 in CopyKeyClass (device=device@entry=0x1391c50, master=master@entry=0x137ebb0) at exevents.c:233
+        mk = &lt;optimized out&gt;
+#9  0x00000000004fd45a in DeepCopyKeyboardClasses (to=0x137ebb0, from=0x1391c50) at exevents.c:427
+        classes = &lt;optimized out&gt;
+#10 DeepCopyDeviceClasses (from=0x1391c50, to=0x137ebb0, dce=0x7fff5f5c5580) at exevents.c:670
+No locals.
+#11 0x0000000000500446 in ChangeMasterDeviceClasses (device=0x137ebb0, dce=0x7fff5f5c5580) at exevents.c:727
+        slave = 0x1391c50
+        rc = &lt;optimized out&gt;
+#12 0x0000000000500684 in UpdateDeviceState (device=0x137ebb0, event=0x7fff5f5c5580) at exevents.c:807
+No locals.
+#13 0x0000000000500b1c in ProcessDeviceEvent (ev=ev@entry=0x7fff5f5c5580, device=device@entry=0x137ebb0) at exevents.c:1709
+        grab = &lt;optimized out&gt;
+        deactivateDeviceGrab = 0
+        key = 0
+        rootX = 0
+        rootY = 5056574
+        b = &lt;optimized out&gt;
+        ret = 0
+---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---
+        corestate = 16
+        mouse = 0x137e430
+        kbd = 0x137ebb0
+        event = 0x7fff5f5c5580
+        __func__ = "ProcessDeviceEvent"
+#14 0x0000000000501353 in ProcessOtherEvent (ev=0x7fff5f5c5580, device=0x137ebb0) at exevents.c:1873
+No locals.
+#15 0x000000000052e6f2 in ProcessKeyboardEvent (ev=&lt;optimized out&gt;, keybd=0x137ebb0) at xkbPrKeyEv.c:165
+        keyc = &lt;optimized out&gt;
+        xkbi = 0x0
+        backup_proc = 0x52e690 &lt;ProcessKeyboardEvent&gt;
+        event = &lt;optimized out&gt;
+        is_press = &lt;optimized out&gt;
+        is_release = &lt;optimized out&gt;
+#16 0x0000000000470e83 in mieqProcessDeviceEvent (dev=0x1391c50, event=0x7f6f02894010, screen=0x8736c0) at mieq.c:496
+        handler = 0x0
+        master = 0x137ebb0
+        mevent = {any = {header = 255 '\377', type = ET_DeviceChanged, length = 3088, time = 33557482}, device_event = {header = 255 '\377', 
+            type = ET_DeviceChanged, length = 3088, time = 33557482, deviceid = 3, sourceid = 10, detail = {button = 3, key = 3}, touchid = 5, 
+            root_x = 0, root_x_frac = 0, root_y = 0, root_y_frac = 0, buttons = '\000' &lt;repeats 31 times&gt;, valuators = {mask = "\000\000\000\000", 
+            mode = "\000\000\000\000", data = {0 &lt;repeats 36 times&gt;}}, mods = {base = 0, latched = 0, locked = 16, effective = 16}, group = {
+            base = 0 '\000', latched = 0 '\000', locked = 0 '\000', effective = 0 '\000'}, root = 0, corestate = 0, key_repeat = 0, flags = 0, 
+            resource = 0, source_type = EVENT_SOURCE_NORMAL}, changed_event = {header = 255 '\377', type = ET_DeviceChanged, length = 3088, 
+            time = 33557482, deviceid = 3, flags = 10, masterid = 3, sourceid = 5, buttons = {num_buttons = 0, names = {0 &lt;repeats 89 times&gt;, 16, 
+                16, 0 &lt;repeats 165 times&gt;}}, num_valuators = 0, valuators = {{min = 0, max = 0, value = 0, resolution = 0, mode = 0 '\000', 
+                name = 0, scroll = {type = SCROLL_TYPE_NONE, increment = 0, flags = 0}} &lt;repeats 36 times&gt;}, keys = {min_keycode = 8, 
+            max_keycode = 255}}, touch_ownership_event = {header = 255 '\377', type = ET_DeviceChanged, length = 3088, time = 33557482, 
+            deviceid = 3, sourceid = 10, touchid = 3, reason = 5 '\005', resource = 0, flags = 0}, barrier_event = {header = 255 '\377', 
+            type = ET_DeviceChanged, length = 3088, time = 33557482, deviceid = 3, sourceid = 10, barrierid = 3, window = 5, root = 0, dx = 0, 
+            dy = 0, root_x = 0, root_y = 0, dt = 0, event_id = 0, flags = 0}, dga_event = {header = 255 '\377', type = ET_DeviceChanged, 
+            length = 3088, time = 33557482, subtype = 3, detail = 10, dx = 3, dy = 5, screen = 0, state = 0}, raw_event = {header = 255 '\377', 
+            type = ET_DeviceChanged, length = 3088, time = 33557482, deviceid = 3, sourceid = 10, detail = {button = 3, key = 3}, valuators = {
+            mask = "\000\000\000\000", data = {0 &lt;repeats 36 times&gt;}, data_raw = {0, 0, 0, 0, 0, 0, 0, 0, 3.3951932663349407e-313, 
+                0 &lt;repeats 27 times&gt;}}, flags = 0}}
+#17 0x0000000000470f52 in mieqProcessDeviceEvent (dev=&lt;optimized out&gt;, event=&lt;optimized out&gt;, screen=&lt;optimized out&gt;) at mieq.c:498
+No locals.
+---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---
+#18 0x000000000048af20 in ProcXTestFakeInput (client=0x1594bf0) at xtest.c:429
+        stuff = &lt;optimized out&gt;
+        nev = &lt;optimized out&gt;
+        n = &lt;optimized out&gt;
+        type = 2
+        rc = &lt;optimized out&gt;
+        ev = &lt;optimized out&gt;
+        dev = 0x1391c50
+        root = 0xd
+        extension = &lt;optimized out&gt;
+        mask = {last_bit = -64 '\300', has_unaccelerated = -75 '\265', mask = "\257\001\000\000", valuators = {6.9225881497604434e-310, 
+            4.3607893962518447e-317, -4.491207147667509e-276, 4.4606025142872766e-317, 1.2164552319789167e-316, 4.4606025142872766e-317, 
+            1.5918980907331739e-314, 6.9532226533363779e-310, 2.121995791459338e-314, 8.0947715414629834e-320, 6.9225834135790307e-310, 
+            1.2164611607666668e-316, 4.5198982968385597e-317, 0, 4.4605432264097757e-317, 4.4605471789349424e-317, 8.0947715414629834e-320, 
+            8.0947715414629834e-320, 6.922583570139096e-310, 1.5644421373077814e-313, 2.121995791459338e-314, 5.434722104253712e-323, 
+            4.9406564584124654e-324, 4.4605471789349424e-317, 6.9225889864614051e-310, 8.7047935248276338e-315, 4.4571598648670548e-317, 0, 
+            6.9225834162688723e-310, 6.9225889939945229e-310, 6.9225889864614051e-310, 0, 8.624169605215319e-315, 0, 6.9225834162925381e-310, 
+            6.9225889864614051e-310}, unaccelerated = {3.9525251667299724e-323, 4.9406564584124654e-324, 6.9225834207602749e-310, 
+            7.9045100232696527e-315, 1.5810100666919889e-322, 6.1890378171731268e-317, 4.9406564584124654e-324, 1.9762625833649862e-322, 0, 0, 
+            1.3255237805710219e-318, 0, 0, 1.5810100666919889e-322, -4.491207147667509e-276, 1.3978374023851885e-316, 6.9225889864614051e-310, 
+            4.3781014564821219e-317, 6.9532226533563381e-310, 4.2527945511212816e-317, 6.9225890235799642e-310, 4.2342453505138179e-317, 
+            6.9225834140264566e-310, 6.2153458246828815e-317, 2.8914169206972063e-317, 0, -4.491207147667509e-276, 0, 1.1180389363374071e-316, 
+            1.1046604291530595e-316, 1.9762625833649862e-323, 1.1186816169295174e-316, 6.4228533959362051e-323, 0, 2.8835192813484339e-317, 
+            2.1388652953517468e-314}}
+        valuators = {0 &lt;repeats 36 times&gt;}
+        numValuators = 0
+        firstValuator = &lt;optimized out&gt;
+        nevents = &lt;optimized out&gt;
+        i = &lt;optimized out&gt;
+        base = &lt;optimized out&gt;
+        flags = 0
+        need_ptr_update = &lt;optimized out&gt;
+#19 0x0000000000558208 in Dispatch () at dispatch.c:479
+        result = &lt;optimized out&gt;
+        start_tick = 287420
+#20 0x000000000055c250 in dix_main (argc=11, argv=0x7fff5f5c66b8, envp=&lt;optimized out&gt;) at main.c:287
+---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---
+        i = &lt;optimized out&gt;
+        alwaysCheckForInput = {0, 1}
+#21 0x00007f6eff65400a in __libc_start_main () from /lib64/libc.so.6
+No symbol table info available.
+#22 0x0000000000422aaa in _start ()
+No symbol table info available.
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <p>This post was written using <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>]]></content><author><name></name></author><summary type="html"><![CDATA[I want to write about my experience with Fedora bug report 1553979. This post introduces the coredump. I plan to show how useful this was in a future post.]]></summary></entry><entry><title type="html">Migrating to RAID + LVM</title><link href="/2017/09/05/migrate-raid-lvm.html" rel="alternate" type="text/html" title="Migrating to RAID + LVM" /><published>2017-09-05T14:15:00+01:00</published><updated>2017-09-05T14:15:00+01:00</updated><id>/2017/09/05/migrate-raid-lvm</id><content type="html" xml:base="/2017/09/05/migrate-raid-lvm.html"><![CDATA[<p>These are my notes from migrating a Debian Stretch system to RAID1 + LVM.</p>
+
+<p>I found several guides for adding redundant storage to an existing system.
+However none of them did quite what I wanted.</p>
+
+<p>The specific commands are for a BIOS boot system.
+To use UEFI, they would need some adjustment.
+I include /boot inside the LVM.</p>
+
+<h2 id="questions">Questions</h2>
+
+<ol>
+  <li>Can I put /boot on RAID and/or LVM?</li>
+  <li>Can I switch between UEFI and BIOS boot?</li>
+  <li>Can I put EFI System Partition on RAID?</li>
+  <li>Do I need to avoid changing the hostname if I have MD RAID?</li>
+</ol>
+
+<h3 id="q1-can-i-put-boot-on-raid-andor-lvm">Q1: Can I put /boot on RAID and/or LVM?</h3>
+
+<p><a href="https://www.gnu.org/software/grub/manual/grub.html#Changes-from-GRUB-Legacy">GRUB2 claims support for /boot on LVM</a>.
+The Debian wiki <a href="https://wiki.debian.org/DebianInstaller/SoftwareRaidRoot">claims their installer can configure RAID1 + LVM</a>,
+apparently including /boot.  On the other hand when you look at Fedora documentation,
+<a href="https://docs.fedoraproject.org/f26/install-guide/install/Installing_Using_Anaconda.html#sect-installation-gui-manual-partitioning-recommended">they don’t support this</a>.  Perhaps Fedora have reasons to
+consider this a corner case which is not well supported.  The same Fedora section does
+however imply support for /boot on RAID.</p>
+
+<p>Setting it up on Debian, I didn’t see warnings of any issue or caveat.
+That said, if you ever want to use the GRUB2 command line to select and access an LVM volume,
+<a href="https://unix.stackexchange.com/questions/390219/grub-boot-on-lvm-on-md-raid/390229">I found an undocumented bug</a> which affects how you do this.</p>
+
+<h3 id="q2-can-i-switch-between-uefi-and-bios-boot">Q2: Can I switch between UEFI and BIOS boot?</h3>
+
+<p>I’m following the current Fedora installer,
+and using GPT disklabels even though this
+system uses BIOS boot.</p>
+
+<p>When switching from UEFI to BIOS boot,
+grub will need a very small GPT partition.
+This replaces the 31 “reserved sectors” in MBR.
+I use 1MB to keep things simple and even.</p>
+
+<p>This means it’s not <em>too</em> hard to switch between
+grub-efi and grub-pc, if you needed to in future.</p>
+
+<p>If you want to be able to switch from grub-pc to grub-efi,
+just remember you’ll need to leave enough space
+for an EFI System Partition (ESP).</p>
+
+<h3 id="q3-can-i-put-efi-system-partition-on-raid">Q3: Can I put EFI System Partition on RAID?</h3>
+
+<p>To get UEFI to boot from a disk, you need an ESP.
+So how would you set this up for redundancy, when one of the RAID disks fails?</p>
+
+<p>One answer is to depend on specific motherboard firmware support,
+aka fakeRAID.  <a href="https://ata.wiki.kernel.org/index.php/SATA_RAID_FAQ">This is just software RAID</a>
+where the specific format is also supported by the boot firmware.
+(Equally, if you already have a real hardware RAID which is
+supported by firmware, then you’re done).  As far as I could tell
+no-one really likes fakeraid, except the companies who sell it.
+I’d much rather stick with the reliable <code class="language-plaintext highlighter-rouge">mdadm</code>.</p>
+
+<p>The other answer is to just clone the ESP to each disk.
+This assumes the ESP is not changed e.g. for kernel updates.
+I believe this works correctly on Debian.</p>
+
+<p>It’s not so easy on Fedora, as they decided to put <code class="language-plaintext highlighter-rouge">grub.cfg</code> on the ESP.
+<a href="https://developers.redhat.com/blog/2014/07/30/importance-of-standardization-emerging-64-bit-arm-servers/">At the same time as RedHat are promoting UEFI on servers</a>.
+Technically this is more elegant and robust against other types
+of change.  However I haven’t seen any suggestions about replicatating
+updates to multiple ESPs.</p>
+
+<h3 id="q4-do-i-need-to-avoid-changing-the-hostname-if-i-have-md-raid">Q4: Do I need to avoid changing the hostname if I have MD RAID?</h3>
+
+<p>The full “name” of an MD is structured as <code class="language-plaintext highlighter-rouge">hostname:devname</code>.
+<code class="language-plaintext highlighter-rouge">hostname</code> should match any HOMEHOST in /etc/mdadm/mdadm.conf AND
+the same in the initrd.  If not, auto-assembly will rename the array
+to a “remote” name (append <code class="language-plaintext highlighter-rouge">_0</code>).  If you mount based on the
+device name e.g. <code class="language-plaintext highlighter-rouge">/dev/md/0</code>, this is what will break your boot.</p>
+
+<p>names can be updated manually to different values while assembling
+(<code class="language-plaintext highlighter-rouge">-U homehost</code> or <code class="language-plaintext highlighter-rouge">-U name</code>).</p>
+
+<p>An example of updating the device name on Debian:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdadm --stop /dev/md/debian
+mdadm --assemble -U name --name lair /dev/md/lair /dev/vdb1
+
+# write a new ARRAY line for "lair"
+mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+
+# remove old ARRAY line for "debian"
+vi /etc/mdadm/mdadm.conf  
+update-initramfs -u -k all
+</code></pre></div></div>
+
+<p>This can be adapted to change the homehost by instead using
+<code class="language-plaintext highlighter-rouge">hosthost:devname</code>, or <code class="language-plaintext highlighter-rouge">-U homehost --homehost hostname</code>.</p>
+
+<h2 id="process">Process</h2>
+
+<p>Outline:</p>
+
+<ol>
+  <li>Copy the current system to a degraded RAID on the new disk.</li>
+  <li>Boot the system from RAID.</li>
+  <li>Very carefully double-check, then have the RAID swallow the old disk.</li>
+</ol>
+
+<p>I tested this inside a VM.
+On a physical machine, it will show <code class="language-plaintext highlighter-rouge">sda</code> instead of <code class="language-plaintext highlighter-rouge">vda</code>, etc.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+vda    254:0    0   10G  0 disk
+└─vda1 254:1    0   10G  0 part /
+vdb    254:16   0   11G  0 disk
+</code></pre></div></div>
+
+<h3 id="step-1-create-degraded-raid-on-the-new-disk">Step 1: Create degraded RAID on the new disk</h3>
+
+<p>Partition the extra disk with GPT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># fdisk /dev/vdb
+                                                
+Welcome to fdisk (util-linux 2.29.2).             
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+                
+Command (m for help): g                    
+        
+Created a new GPT disklabel (GUID: 1C6EB8C4-B40A-4C9C-98AE-BA7E33F1A549).
+
+Command (m for help): n
+Partition number (1-128, default 1):
+First sector (2048-23068638, default 2048):
+Last sector, +sectors or +size{K,M,G,T,P} (2048-23068638, default 23068638): +9G
+
+Created a new partition 1 of type 'Linux filesystem' and of size 9 GiB.
+
+Command (m for help): n                                                
+Partition number (2-128, default 2):                                   
+First sector (18876416-23068638, default 18876416):                    
+Last sector, +sectors or +size{K,M,G,T,P} (18876416-23068638, default 23068638): +1M                                          
+                                                                
+Created a new partition 2 of type 'Linux filesystem' and of size 1 MiB.
+
+Command (m for help): t
+Partition number (1,2, default 2): 2
+Hex code (type L to list all codes): L
+1 EFI System                     C12A7328-F81F-11D2-BA4B-00A0C93EC93B
+2 MBR partition scheme           024DEE41-33E7-11D3-9D69-0008C781F39F
+3 Intel Fast Flash               D3BFE2DE-3DAF-11DF-BA40-E3A556D89593
+4 BIOS boot                      21686148-6449-6E6F-744E-656564454649
+...
+
+Hex code (type L to list all codes): 4
+
+Changed type of partition 'Linux filesystem' to 'BIOS boot'.
+
+Command (m for help): p
+Disk /dev/vdb: 11 GiB, 11811160064 bytes, 23068672 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 1C6EB8C4-B40A-4C9C-98AE-BA7E33F1A549
+
+Device        Start      End  Sectors Size Type
+/dev/vdb1      2048 18876415 18874368   9G Linux filesystem
+/dev/vdb2  18876416 18878463     2048   1M BIOS boot
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+</code></pre></div></div>
+
+<p>Create a RAID1, in a degraded state as if one of the two disks had been removed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt-get install mdadm
+
+# mdadm --create /dev/md/lair --level=1 --raid-devices=2 missing /dev/vdb1
+mdadm: Note: this array has metadata at the start and
+may not be suitable as a boot device.  If you plan to
+store '/boot' on this device please ensure that
+your boot-loader understands md/v1.x metadata, or use
+--metadata=0.90
+Continue creating array? y
+mdadm: Defaulting to version 1.2 metadata
+mdadm: array /dev/md/debian_root started.
+
+# mdadm --detail /dev/md/lair
+/dev/md/debian_root:
+        Version : 1.2
+Creation Time : Mon Sep  4 09:51:57 2017
+Raid Level : raid1
+Array Size : 9428992 (8.99 GiB 9.66 GB)
+Used Dev Size : 9428992 (8.99 GiB 9.66 GB)
+Raid Devices : 2
+Total Devices : 1
+Persistence : Superblock is persistent
+
+Update Time : Mon Sep  4 09:51:57 2017
+        State : clean, degraded
+Active Devices : 1
+Working Devices : 1
+Failed Devices : 0
+Spare Devices : 0
+
+        Name : debian9-vm:lair  (local to host debian9-vm)
+        UUID : 9dbcb6f5:988d6450:cbac9699:ee8bb59c
+        Events : 0
+
+Number   Major   Minor   RaidDevice State
+-       0        0        0      removed
+1     254       17        1      active sync   /dev/vdb1
+</code></pre></div></div>
+
+<p>Enter the array in <code class="language-plaintext highlighter-rouge">mdadm.conf</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mdadm --detail --scan | tee --append /etc/mdadm/mdadm.conf
+ARRAY /dev/md/lair metadata=1.2 name=debian9-vm:lair UUID=9dbcb6f5:988d6450:cbac9699:ee8bb59c
+</code></pre></div></div>
+
+<p>I configured mdadm with a monthly scrub, and a monitoring daemon.  Finally,
+rebuild the initramfs now we have updated <code class="language-plaintext highlighter-rouge">mdadm.conf</code>.  Apparently this is
+necessary to activate the array at boot time.  (There’s an
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1201962">alternative approach</a> if you use Fedora’s <code class="language-plaintext highlighter-rouge">dracut</code> initramfs,
+which also ignores the homehost).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># dpkg-reconfigure mdadm  
+</code></pre></div></div>
+
+<p>The monitoring daemon sends mail if something happens to the array
+(by default, to <code class="language-plaintext highlighter-rouge">root</code>).  This isn’t necessarily going to reach you.</p>
+
+<p>For the time being, I redirected <code class="language-plaintext highlighter-rouge">root</code> mail to my normal user.
+Note Debian’s MDA does not actually support sending mail to <code class="language-plaintext highlighter-rouge">root</code>.
+It recommends that you always reconfigure you mail server to
+redirect it somewhere more sensible.  It asks if you want to
+change several other settings, but I left those all alone.
+Whenever you have a shell open, Debian will let you know if
+you have any unix mail.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># dpkg-reconfigure exim4-config
+</code></pre></div></div>
+
+<p>Set up LVM on the RAID volume:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># pvcreate /dev/md/lair
+Physical volume "/dev/md/lair" successfully created.
+
+# vgcreate vg_lair /dev/md/lair
+Volume group "vg_lair" successfully created
+
+# lvcreate vg_lair -n lv_debian -L 8G
+Logical volume "lv_debian" created.
+
+# mkfs.ext4 /dev/mapper/vg_lair-lv_debian
+mke2fs 1.43.4 (31-Jan-2017)
+Creating filesystem with 2097152 4k blocks and 524288 inodes
+Filesystem UUID: 5e90a94c-a5b3-4d14-a5d5-d20d6dd97e2a
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables: done 
+Writing inode tables: done 
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done 
+</code></pre></div></div>
+
+<p>Copy the <code class="language-plaintext highlighter-rouge">/</code> filesystem to the Logical Volume.
+(Note that I didn’t have any other filesystems).</p>
+
+<p>Ideally you would do this from a live system,
+to avoid data changing in the middle of the copy!
+You can also shut the system down and enter
+“single user mode”.  E.g. boot to the GRUB menu,
+then edit the line with <code class="language-plaintext highlighter-rouge">linux</code> / <code class="language-plaintext highlighter-rouge">vmlinuz</code> to include
+<code class="language-plaintext highlighter-rouge">systemd.unit=rescue.target</code>, before booting it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mount /dev/mapper/vg_lair-lv_debian /mnt
+# time cp -ax /. /mnt/
+</code></pre></div></div>
+
+<h4 id="step-15-adjust-the-copied-system-for-booting">Step 1.5: Adjust the copied system for booting</h4>
+
+<p>Chroot into the new system.  Update <code class="language-plaintext highlighter-rouge">/etc/fstab</code> so it points to the new
+device.  I use <code class="language-plaintext highlighter-rouge">/dev/mapper/vg_lair-lv_debian</code> just because it’s convenient.
+It should be equally fine to use a UUID.</p>
+
+<p>Make sure fstab doesn’t rely on any filesystems OR swap partitions on the old
+device.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># cd /mnt
+# mount --bind /dev dev
+# mount --bind /proc proc
+# mount --bind /sys sys
+# chroot .
+# vi /etc/fstab
+</code></pre></div></div>
+
+<p>Regenerate the GRUB configuration file on the new system,
+so it refers to the new device.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># update-grub
+</code></pre></div></div>
+
+<p>Apparently we can ignore this message:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/sbin/grub-probe: warning: Couldn't find physical volume `(null)'. Some modules may be missing from core image..
+</code></pre></div></div>
+
+<p>as it just means the RAID is degraded.  You will also see</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WARNING: Failed to connect to lvmetad. Falling back to device scanning.
+</code></pre></div></div>
+
+<p>Now we leave the chroot:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># exit
+</code></pre></div></div>
+
+<p>Next, run os-prober on the original system, and the original GRUB
+will pick up the new configuration as an extra item in its boot menu!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt-get install os-prober
+# update-grub
+</code></pre></div></div>
+
+<p>It is also possible to boot into the RAID manually using the GRUB prompt.
+This would avoid hacking around with chroot - or you might want to resort
+to this if something went wrong.  This requires several more details, and
+a specific sequence to ensure that GRUB scans for LVM on the RAID array.
+For the latter, see “undocumented bug” above.</p>
+
+<h3 id="step-2-reboot-into-the-new-system">Step 2: Reboot into the new system.</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># lsblk
+NAME                    MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+vda                     254:0    0   11G  0 disk  
+vdb                     254:16   0   11G  0 disk  
+├─vdb1                  254:17   0    9G  0 part  
+│ └─md127                 9:127  0    9G  0 raid1 
+│   └─vg_lair-lv_debian 252:0    0    8G  0 lvm   /
+└─vdb2                  254:18   0    1M  0 part 
+</code></pre></div></div>
+
+<p>Install GRUB with the new system.  This is what populates
+the BIOS boot partition.  At this point you could choose
+to only install to the new disk (vdb), keeping the old GRUB
+(on vda).  Then you could have two system disks, each
+independent of the other.  (Except for what we’ve done to
+mdadm.conf… the Arch Wiki suggests updating that in the
+chroot step instead).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt-get install os-prober
+# update-grub
+# dpkg-reconfigure grub-pc
+</code></pre></div></div>
+
+<p>If you had a swap partition which has been moved, you will need
+need to regenerate Debian’s initramfs.  Otherwise it will look
+for hibernation resume image in the wrong place, and there may
+be a delay during boot.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># vi /etc/initramfs-tools/conf.d/resume
+# update-initramfs -u -k all
+</code></pre></div></div>
+
+<h3 id="step-3-overwrite-the-old-system-with-the-raid">Step 3: Overwrite the old system with the RAID</h3>
+
+<p>You should double-check that the new system disk you created
+is independent.  Try booting with the old disk removed before
+continuing.  Then</p>
+
+<p>Replace the old disk’s partitioning with GPT, if necessary.</p>
+
+<p>Create a partition for RAID, using the exact same size.
+You may be prompted to erase an old filesystem signature.
+Also create the necessary BIOS boot partition.</p>
+
+<p>Add the RAID partition.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mdadm --add /dev/md/lair /dev/vda1
+mdadm: added /dev/vda1
+
+# cat /proc/mdstat 
+Personalities : [raid1] [linear] [multipath] [raid0] [raid6] [raid5] [raid4] [raid10] 
+md127 : active raid1 vda1[2] vdb1[1]
+    9428992 blocks super 1.2 [2/1] [_U]
+    [===========&gt;.........]  recovery = 57.4% (5421440/9428992) finish=1.4min speed=46151K/sec
+    
+unused devices: &lt;none&gt;
+
+# cat /sys/class/block/md127/md/sync_speed_max 
+200000 (system)
+
+# mdadm --detail /dev/md/vg_lair
+/dev/md/vg_lair:
+        Version : 1.2
+Creation Time : Mon Sep  4 09:51:57 2017
+    Raid Level : raid1
+    Array Size : 9428992 (8.99 GiB 9.66 GB)
+Used Dev Size : 9428992 (8.99 GiB 9.66 GB)
+Raid Devices : 2
+Total Devices : 2
+    Persistence : Superblock is persistent
+
+    Update Time : Tue Sep  5 12:39:53 2017
+        State : clean, degraded, recovering 
+Active Devices : 1
+Working Devices : 2
+Failed Devices : 0
+Spare Devices : 1
+
+Rebuild Status : 69% complete
+
+        Name : debian9-vm:vg_lair  (local to host debian9-vm)
+        UUID : 9dbcb6f5:988d6450:cbac9699:ee8bb59c
+        Events : 1035
+
+    Number   Major   Minor   RaidDevice State
+    2     254        1        0      spare rebuilding   /dev/vda1
+    1     254       17        1      active sync   /dev/vdb1
+</code></pre></div></div>
+
+<p>Finally, make sure GRUB is installed on both disks.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># dpkg-reconfigure grub-pc
+</code></pre></div></div>
+
+<p>When you test booting with only one disk, remember you will then
+need to manually add the disk back again using <code class="language-plaintext highlighter-rouge">mdadm --add</code>.
+Note that this is exactly the same command as before.  It does
+not check for a matching RAID superblock.  It will immediately
+start overwriting the entire partition.  Type carefully!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[These are my notes from migrating a Debian Stretch system to RAID1 + LVM.]]></summary></entry><entry><title type="html">Installing Icinga Web 2 on Debian Stretch</title><link href="/2017/06/27/install-icingaweb2.html" rel="alternate" type="text/html" title="Installing Icinga Web 2 on Debian Stretch" /><published>2017-06-27T20:25:00+01:00</published><updated>2017-06-27T20:25:00+01:00</updated><id>/2017/06/27/install-icingaweb2</id><content type="html" xml:base="/2017/06/27/install-icingaweb2.html"><![CDATA[<p>Icinga Web 2 is neat, and it’s in Debian Stretch.  It’s not trivial to install like the original Icinga CGI (“Icinga Classic UI”) was.  It’s not that hard, but I had to make some notes.</p>
+
+<h1 id="install-icinga-2">Install Icinga 2</h1>
+
+<p>Icinga comes ready to run, with an example configuration that monitors services on localhost.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install icinga2
+</code></pre></div></div>
+
+<p>If you want to trigger re-checks etc., you will need to enable the <code class="language-plaintext highlighter-rouge">command</code> plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>icinga2 feature enable command
+</code></pre></div></div>
+
+<p>The “checker”, “mainlog”, and “notification” plugins should already be enabled.  However, at one point in my testing they were not.  So you might want to check that.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l /etc/icinga2/features-enabled
+</code></pre></div></div>
+
+<h1 id="install-the-web-server">Install the web server</h1>
+
+<p>You will now be running a web server on your network (and you’re about to install a PHP webapp).  Better keep up with those security updates!</p>
+
+<p>Also, sending passwords (or commands) unprotected is a security problem.  Debian has scripts to help you set up self-signed SSL.  I haven’t shown them here, but they can be surprisingly straightforward to use.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install apache2
+</code></pre></div></div>
+
+<h1 id="install-the-database-server">Install the database server</h1>
+
+<p>The MariaDB package in Debian Stretch does not ask you to make up a password.  Instead, the Debian root user (or users of sudo) are simply granted access to mysql root.  Not <em>quite</em> as elegant as postgres, but it’s a massive improvement.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install mariadb-server
+</code></pre></div></div>
+
+<h1 id="install-icingas-ido-for-mariadb--mysql">Install Icinga’s IDO for mariadb / mysql.</h1>
+
+<p>The install will prompt to enable IDO, and create a DB.  Say yes.
+This might take a minute or so if you’re not using an SSD.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install icinga2-ido-mysql
+</code></pre></div></div>
+
+<p>The install does not actually enable IDO in icinga2, despite what it says.
+<a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865350">Bug report</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>icinga2 feature enable ido-mysql
+systemctl restart icinga2
+</code></pre></div></div>
+
+<h1 id="install-icinga-web-2">Install Icinga Web 2</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install icingaweb2
+</code></pre></div></div>
+
+<h1 id="prepare-to-run-the-wizard">Prepare to run the wizard</h1>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">/etc/php/7.0/apache2/php.ini</code>.
+Uncomment <code class="language-plaintext highlighter-rouge">date.timezone</code> and set it.
+Your current timezone is shown by <code class="language-plaintext highlighter-rouge">timedatectl</code>.  E.g. “Europe/London”.</p>
+
+<p>Create a database to store user passwords and settings.
+If you need to protect against other users with access to the server,
+change the password (IDENTIFIED BY ‘icingaweb2’) to be more secure.
+(One lazy option would be to copy the password from IDO - see below).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql
+
+CREATE DATABASE icingaweb2;
+GRANT ALL PRIVILEGES ON icingaweb2.*
+      TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
+quit
+
+icingacli setup token create
+</code></pre></div></div>
+
+<h1 id="run-the-wizard">Run the wizard</h1>
+
+<p>Browse to <code class="language-plaintext highlighter-rouge">http://localhost/icingaweb2</code>.
+You should see a red box saying “It appears that you did not configure Icinga Web 2 yet” etc.
+Follow the link which starts the wizard.</p>
+
+<p>I like to enable the “doc” module.</p>
+
+<p>The password, database name etc which Debian generated for IDO,
+can be found in <code class="language-plaintext highlighter-rouge">/etc/icinga2/features-available/ido-mysql.conf</code>.</p>
+
+<h1 id="reduce-database-privileges">Reduce database privileges</h1>
+
+<p>This step is a workaround.  The privileges used above are broader than documented.  The wizard did not accept a pre-created database like it says it can (and if I ignored the failed validation, it then didn’t create the  user that it says it did, so you can’t log in).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql
+
+DROP USER 'icingaweb2'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE,
+      DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.*
+      TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
+quit
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Icinga Web 2 is neat, and it’s in Debian Stretch. It’s not trivial to install like the original Icinga CGI (“Icinga Classic UI”) was. It’s not that hard, but I had to make some notes.]]></summary></entry><entry><title type="html">How I installed Jekyll</title><link href="/2017/06/27/installed-jekyll.html" rel="alternate" type="text/html" title="How I installed Jekyll" /><published>2017-06-27T18:31:00+01:00</published><updated>2017-06-27T18:31:00+01:00</updated><id>/2017/06/27/installed-jekyll</id><content type="html" xml:base="/2017/06/27/installed-jekyll.html"><![CDATA[<p>As per the <a href="https://jekyllrb.com/docs/installation/">docs</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+</code></pre></div></div>
+
+<h1 id="dependencies">Dependencies</h1>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">gcc</code></li>
+  <li><code class="language-plaintext highlighter-rouge">make</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ruby-devel</code> / <code class="language-plaintext highlighter-rouge">ruby-dev</code></li>
+</ul>
+
+<p>Additionally, on systems that use RPM:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/usr/lib/rpm/redhat/redhat-hardened-cc1</code></li>
+</ul>
+
+<p>At least that’s what I was missing, on Fedora 25.  <code class="language-plaintext highlighter-rouge">mkmf.log</code> showed the full path.  Pass this path to <code class="language-plaintext highlighter-rouge">dnf install</code>, then you can install jekyll successfully.  Or use <code class="language-plaintext highlighter-rouge">dnf provides</code> to see the necessary package, <code class="language-plaintext highlighter-rouge">redhat-rpm-config</code>.</p>
+
+<h1 id="why-dont-i-install-the-github-pages-gem">Why don’t I install the Github Pages gem?</h1>
+
+<p>I like GitHub Pages for free and convenient hosting, but I’m <em>not</em> using the deployment instructions from jekyll docs.  I can just upload generated HTML to GitHub Pages, like any other static host.</p>
+
+<p>The Jekyll docs page confuses me.  The instructions advocate <a href="https://github.com/github/pages-gem">matching versions of everything including ruby</a>, to avoid compatibility issues.  I like that Github provide their version information.  However if breaking changes are a concern, why would you upgrade gems on someone else’s schedule?  It seems mainly useful to debug a breaking change on Github - some time after you notice a failure - which was caused by Github not implementing <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>.</p>
+
+<p>It’s also useful for people who want to edit on Github.  This is unrelated to the reason given in the Jekyll documentation, which doesn’t mention editing on Github at all.</p>
+
+<p>On top of this, it’s not immediately clear how this gem matches versions of <em>ruby</em>.  What implications does that have?  I can avoid the two issues they documented easily, by not running years-old versions of ruby.</p>
+
+<h1 id="why-dont-i-use-fedora-packages">Why don’t I use Fedora packages?</h1>
+
+<p>Installing a packaged jekyll may not be the best idea.  Fedora packaged jekyll 3.2.1-3.fc25 without the default theme, “minima”.  You would then run an initial <code class="language-plaintext highlighter-rouge">bundle install</code> to get minima.  Bundler ends up <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1464502">installing newer versions of existing gems</a> anyway.  (It doesn’t upgrade jekyll; the reason being that <code class="language-plaintext highlighter-rouge">jekyll new</code> specifies its exact version in the Gemfile).</p>
+
+<p>If your distribution did include all your gems (themes or plugins), presumably you can use jekyll without <code class="language-plaintext highlighter-rouge">bundle install</code>. In more recent versions of jekyll e.g. 3.5, you will have to use <code class="language-plaintext highlighter-rouge">jekyll new --skip-bundle</code>.  You’d then be using jekyll in a different way to its authors.  Package upgrades of the various gems will affect your site, and how it needs to be written.  You won’t have a Gemfile.lock to record which versions worked correctly.</p>
+
+<p>This issue is not so prominent in versions before 3.2, when gem-based themes were introduced.  E.g. using 3.1.6 in Debian Stretch, <code class="language-plaintext highlighter-rouge">jekyll new</code> copied the minima files into the new site.  There was no minima gem, and no Gemfile was created.</p>
+
+<p>Another option I saw suggested was <code class="language-plaintext highlighter-rouge">bundle install --local</code>.  As well as system-installed gems, this also considers versions from your personal gem download <em>cache</em>.  The latter doesn’t make sense to me, so I’m not able to recommend this.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[As per the docs]]></summary></entry><entry><title type="html">New blog?</title><link href="/2017/06/27/new-blog.html" rel="alternate" type="text/html" title="New blog?" /><published>2017-06-27T18:30:00+01:00</published><updated>2017-06-27T18:30:00+01:00</updated><id>/2017/06/27/new-blog</id><content type="html" xml:base="/2017/06/27/new-blog.html"><![CDATA[<p>I got mad at my free blog host again.  So here’s a new site.</p>
+
+<p>(I had a note to publish, which I had already reformatted to Markdown.  But because I’d used line breaks in the source code, i.e. hard-wrapped plain text format, Wordpress.com would display <a href="https://webapps.stackexchange.com/questions/107145/wordpress-markdown-doesnt-re-wrap-paragraphs/107338">unwanted line breaks</a>.)</p>
+
+<p>This may not have been entirely rational on my part.  I do like how you write posts with Jekyll though.</p>
+
+<p>The tradeoff is it’s a static site.  There’ll be no way to comment without Javascript.  On most such sites you can’t even <em>read</em> the comments.  Right now that’s all theoretical, as I haven’t enabled comments.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[I got mad at my free blog host again. So here’s a new site.]]></summary></entry></feed>

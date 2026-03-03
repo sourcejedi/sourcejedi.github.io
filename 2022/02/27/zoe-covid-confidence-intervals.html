@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ZOE Covid Study - confidence intervals | Blog?</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ZOE Covid Study - confidence intervals" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ZOE confidence intervals are not always comparable between graphs. Even in some individual graphs, the interval may be misleading. For example the interval may appear narrow, where it should have grown wider." />
+<meta property="og:description" content="ZOE confidence intervals are not always comparable between graphs. Even in some individual graphs, the interval may be misleading. For example the interval may appear narrow, where it should have grown wider." />
+<link rel="canonical" href="/2022/02/27/zoe-covid-confidence-intervals.html" />
+<meta property="og:url" content="/2022/02/27/zoe-covid-confidence-intervals.html" />
+<meta property="og:site_name" content="Blog?" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ZOE Covid Study - confidence intervals" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-27T00:00:00+00:00","datePublished":"2022-02-27T00:00:00+00:00","description":"ZOE confidence intervals are not always comparable between graphs. Even in some individual graphs, the interval may be misleading. For example the interval may appear narrow, where it should have grown wider.","headline":"ZOE Covid Study - confidence intervals","mainEntityOfPage":{"@type":"WebPage","@id":"/2022/02/27/zoe-covid-confidence-intervals.html"},"url":"/2022/02/27/zoe-covid-confidence-intervals.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Blog?" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Blog?</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ZOE Covid Study - confidence intervals</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-02-27T00:00:00+00:00" itemprop="datePublished">Feb 27, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ZOE <a href="https://en.wikipedia.org/wiki/Confidence_intervals">confidence intervals</a> are not always comparable between graphs.  Even in some individual graphs, the interval may be misleading.  For example the interval may appear narrow, where it should have grown wider.</p>
+
+<p>ZOE have not mentioned these limitations.  They no longer provide definitions, which would help an independent expert notice these limitations.  ZOE <a href="/2022/01/31/zoe-covid-study.html">transparency information</a> may help with reverse-engineering some limitations.</p>
+
+<p>I started writing this post as a reminder to myself, to avoid unsafe assumptions.  Perhaps some of the details will help further understanding.  Sadly, it seems to be quite long.  I have split out ZOE method v3 as a more self-contained introduction.  This was the first case where I had a concern.</p>
+
+<p>I am not an expert.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#1-case-study-zoe-method-v3" id="markdown-toc-1-case-study-zoe-method-v3">1. Case study: ZOE method v3</a>    <ul>
+      <li><a href="#11-background-information" id="markdown-toc-11-background-information">1.1. Background information</a></li>
+      <li><a href="#12-problem-with-confidence-intervals" id="markdown-toc-12-problem-with-confidence-intervals">1.2. Problem with confidence intervals</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-timeline" id="markdown-toc-2-timeline">2. Timeline</a></li>
+  <li><a href="#3-graphs" id="markdown-toc-3-graphs">3. Graphs</a>    <ul>
+      <li><a href="#v2-to-v3" id="markdown-toc-v2-to-v3">v2 to v3</a></li>
+      <li><a href="#2021-06-09" id="markdown-toc-2021-06-09">2021-06-09</a></li>
+      <li><a href="#2021-07-16" id="markdown-toc-2021-07-16">2021-07-16</a></li>
+      <li><a href="#v3-to-v4" id="markdown-toc-v3-to-v4">v3 to v4</a></li>
+      <li><a href="#v4-to-v5" id="markdown-toc-v4-to-v5">v4 to v5</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-case-study-zoe-method-v3">1. Case study: ZOE method v3</h2>
+
+<h3 id="11-background-information">1.1. Background information</h3>
+
+<p>The ZOE method “v3”, is illustrated by the graph of new cases by vaccination status.  New cases were estimated separately in the unvaccinated and vaccinated, then added together.  When the unvaccinated estimate became unreliable, so did the overall trend.</p>
+
+<p><a href="#2021-07-16">[Graphs]</a></p>
+
+<blockquote>
+  <p>Changelog</p>
+
+  <p>[…]</p>
+
+  <p>2021-07-16: Removed incidence graph by vaccination status from the report as there are very few unvaccinated users in the infection survey, the Confidence Intervals are very wide and the trend for unvaccinated people is no longer representative.</p>
+</blockquote>
+
+<p>This limitation was not immediately publicised.  ZOE publicity on the 14th and 15th said “we can definitely now say that these new cases have plateaued”, and talked about “the rate of decline” over time.  But the trend was changed a week later, in method “v4”.  For links to each method change, see <a href="/2022/02/02/zoe-covid-study-part-2-methods.html">ZOE Covid Study - part 2 - the method</a>.</p>
+
+<p>Reading the “v4” announcement, we can understand the concern that the trend was “no longer representative”.  This is a separate concern from the confidence interval.  By adding more tests (LFTs), ZOE was able to adjust their sample by age group.  This resulted in a different trend.</p>
+
+<p>Separately, if there were more than enough extra tests to make up for the new adjustment, the random sampling error would also be lower.  The random sampling error is what the confidence intervals are supposed to estimate.</p>
+
+<h3 id="12-problem-with-confidence-intervals">1.2. Problem with confidence intervals</h3>
+
+<p>The confidence intervals in the graphs linked above are not consistent. The interval for the unvaccinated was about 12,500 wide, but the interval for the UK totals was only about 4,500 wide.</p>
+
+<p>They also do not <em>change</em> consistently over time.  Look back at when the graph by vaccination status was first shown in the daily report.  The interval in the unvaccinated was about 8,000 wide, while the interval for the UK total was about 5,500 wide.  The interval for the unvaccinated increased by 50%, but the interval for the UK total only increased by 20%.</p>
+
+<p><a href="#2021-06-09">[Graphs]</a></p>
+
+<p>I am not entirely sure how to combine confidence intervals from the two sub-groups.  However, ZOE’s method “v3” produced misleading confidence intervals on every graph except for the breakdown by vaccination.  I think this should have been highlighted.</p>
+
+<p>It would also help if ZOE defined their method.  This would help  independent commenters understand ZOE estimates.  In this particular case, we can work out the method ourselves.</p>
+
+<p>The “v3” interval does not widen when the unvaccinated sample shrinks.  This is because the interval does not look at the size of the unvaccinated sub-sample.  It only looks at the number of tests and positive tests in the overall sample.  It is the same method as used in “v2”, except scaled to the “v3” estimate instead of the “v2” one.</p>
+
+<p>We can graph the confidence intervals as a percentage of the central estimate.  The line produced by the historical series of intervals for method v3 looks exactly the same as the line for v2.  I have plotted v3 as a dashed line, so we can see the v2 line behind it.</p>
+
+<p><a href="#v2-to-v3">[Graph]</a></p>
+
+<p>For method “v2”, the confidence interval was estimated from the number of tests and the number of positive tests.  See full timeline below.</p>
+
+<h2 id="2-timeline">2. Timeline</h2>
+
+<!-- TODO. Still need to put in more numbers?  Would make it more useful for users of screen readers.  And anyone for whom this stuff doesn't jump out at. Like it didn't for me, for too long :-). -->
+
+<p>2020-10-27: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#3-original-zoe-paper">ZOE method v1</a> - the ZOE paper - is posted in its initial form as a preprint on medrxiv.org.</p>
+
+<p>Method v1 uses 95% <a href="https://en.wikipedia.org/wiki/Confidence_intervals">confidence intervals</a>.  They are calculated from the number of tests and the number of positive tests, using something called the <a href="wilson-score">Wilson score</a>.</p>
+
+<p>I found a helpful <a href="https://www.mikulskibartosz.name/wilson-score-in-python-example/">python function</a> to calculate the Wilson score interval.  ZOE test data for their latest 14-day interval is available from <a href="https://covid-assets.joinzoe.com/latest/incidence%20table.csv">incidence table.csv</a>.  Looking at <a href="https://github.com/sourcejedi/nova-covid">historical downloads</a>, I can reproduce both the central estimate and the confidence intervals.</p>
+
+<p>…</p>
+
+<p>2021-05-12: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-05-12-v3-covid-estimates-revised-after-change-to-methodology">ZOE method v3</a>. Incidence is now estimated separately in vaccinated and unvaccinated people. These are added together to give total UK incidence.</p>
+
+<p>2021-05-27: The label “95% confidence interval” was removed from all graphs.  The official releases no longer say anything about how the confidence intervals work.</p>
+
+<p>Up to the current day, <a href="https://covid-assets.joinzoe.com/">internal website files</a> still label the incidence intervals as 95% upper and lower limits.  These include <a href="https://github.com/sourcejedi/nova-covid">“incidence table.csv”</a>.  Although, if effectively no-one looks at this, I do not expect it to be kept up to date.</p>
+
+<p>On balance, I think the confidence intervals for UK and regional incidence graphs are probably always calculated using a 95% confidence level.</p>
+
+<p>2021-06-08: Confidence intervals are now calculated slightly differently, compared to the original Wilson score.  In a couple of edge cases, there are noticable differences.  For my purposes, the two methods appear equivalent.</p>
+
+<p>2021-06-09: A graph is added to show incidence by vaccination status. The absolute difference between upper and lower confidence intervals is higher for unvaccinated cases (8,000), than it is for the graph showing total UK cases (5,500).</p>
+
+<p>I think there is a problem here, in the interval on the graph of total UK cases. I think it is calculated based on the number of tests overall, instead of looking at the two subsamples separately.  I made a graph of the interval as a percentage of the central estimate, and it appears to be identical between v2 and v3.</p>
+
+<p><a href="#v2-to-v3">[Graphs]</a></p>
+
+<!-- Total UK incidence is not always graphed in the daily report, but it is in the "for app users only" page that links to the report. I've mostly been checking incidence_*.csv.
+
+Contemporary side-by-side comparison: https://twitter.com/sourcejedi/status/1408433707686498305 -->
+
+<p>2021-07-17: The changelog says “Removed incidence graph by vaccination status from the report as there are very few unvaccinated users in the infection survey, <em>the Confidence Intervals are very wide</em> and the trend for unvaccinated people is no longer representative.”  The inconsistency in confidence intervals was also quite large at this point (12,500 v.s. 4,500).</p>
+
+<p><a href="#2021-07-16">[Graphs]</a></p>
+
+<p>2021-07-21: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-07-21-v4-covid-estimates-updated-as-more-people-are-being-vaccinated">ZOE method v4</a>.  The confidence intervals no longer match the Wilson score interval calculated from the overall number of tests and positive tests.  So that’s good.</p>
+
+<p>The daily report starts showing incidence by vaccination status again. This time, the intervals for total UK incidence appear wider than the intervals for unvaccinated and vaccinated incidence put together. This is inconsistent again, just the other way round.</p>
+
+<p>The announcement of method v4 includes a graph comparing old and new estimates. The intervals for the new estimate on this graph, are different from the UK total graph in the report. They might be consistent with the new graph by vaccination status.</p>
+
+<p>Similarly, the intervals for the old estimate on the comparison graph are different from the old UK total graphs. They are <em>closer</em> to being consistent with the older “by vaccination” graphs, though still visibly inconsistent. It would require some historical revisions.</p>
+
+<p>The new graphs by vaccination status have narrower intervals than the older graphs by vaccination status.  This could be result of method v4 increasing the number of tests several-fold.  (In part, because it went back to including LFT’s).</p>
+
+<p>The incidence estimate for England is now calculated by adding up the incidence estimates for each English region.  That part is good.  Sadly, the confidence limits for England are also now calculated by adding up the confidence limits for each English region.  Again, I’m not entirely sure how I would do this myself, but this isn’t how confidence limits work.  This should have been declared.  The confidence intervals for England may be more than twice as wide as they should be!</p>
+
+<p>The UK confidence limits are also much wider than they should be, because they are now calculated by adding up the confidence limits for the UK nations, which include England.  To be clear, this issue has still not been resolved, so it affects the latest method (v5) as well as method v4.</p>
+
+<p><a href="#v3-to-v4">[Graphs]</a></p>
+
+<p>2021-08-26: The graph by vaccination status is changed, to show incidence among the fully vaccinated v.s. total incidence.  The current confidence intervals are similar to the dedicated graph of total UK incidence, but not identical.</p>
+
+<p>2021-10-06: Just before method v5. The confidence intervals remain similar but not identical. Note the graph of total UK incidence was not included in the daily report at this time, although it was viewable through the app.</p>
+
+<p>2021-10-07: <a href="/2022/02/02/zoe-covid-study-part-2-methods.html#2021-10-07-v5-future-proofing-our-covid-estimates">ZOE method v5</a>. The purpose of this change is to narrow the confidence interval, making the estimate more sustainable “with unvaccinated users disappearing from our study”. This is illustrated with a graph. The announcement is unclear how this result is achieved.</p>
+
+<p>2021-10-10: Method v5 is stabilized by now, after a little back-and-forth. There is still a graph with incidence among the fully vaccinated, v.s. total incidence. On this graph, the confidence intervals for total incidence are less than half as wide as those on the dedicated graph of total UK incidence.</p>
+
+<p>So although the point of method v5 is narrower confidence intervals, this can only be seen on the graph of incidence by vaccination status.  The graphs for the UK, England etc. don’t take advantage of it.  I was suprised to find the same pattern as in the change to v3.  When ZOE switched to v5, the relative size of the confidence intervals shown remained identical to v4.  I plotted a graph below to show this again.</p>
+
+<p><a href="#v4-to-v5">[Graphs]</a></p>
+
+<p>2021-12-07: I asked ZOE about this last inconsistency, and sent screenshots of both graphs.  ZOE forwarded it to their team of data scientists <a href="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/ZOE-CI-email.html">“to confirm this is correct”</a>.  I have not received any further response.</p>
+
+<h2 id="3-graphs">3. Graphs</h2>
+
+<h3 id="v2-to-v3">v2 to v3</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v2v3.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v2v3-ci.png" /></p>
+
+<h3 id="2021-06-09">2021-06-09</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-06-09-UK.png" alt="" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-06-09-by-vaccination.png" alt="" /></p>
+
+<h3 id="2021-07-16">2021-07-16</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-16-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-16-UK.png" /></p>
+
+<h3 id="v3-to-v4">v3 to v4</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-20-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v3v4.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-07-21-by-vaccination.png" /></p>
+
+<h3 id="v4-to-v5">v4 to v5</h3>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-06-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-by-vaccination.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/2021-10-10-UK.png" /></p>
+
+<p><img src="/assets/for-post/2022-02-zoe-covid-study-confidence-intervals/v4v5-ci.png" /></p>
+
+  </div><a class="u-url" href="/2022/02/27/zoe-covid-confidence-intervals.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Blog?</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Blog?</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">sourcejedi</span></a></li><li><a href="https://www.twitter.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">sourcejedi</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
