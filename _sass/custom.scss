@@ -1,0 +1,25 @@
+/*
+ * Reduce width from 800 to 600.  A round number,
+ * and it gives 70-80 characters.
+ *
+ * This is acceptable according to
+ * https://www.tjvantoll.com/2015/12/21/technical-blogs-line-length/
+ */
+$content-width-narrow: 600px;
+
+.wrapper-narrow {
+  max-width: -webkit-calc(#{$content-width-narrow} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width-narrow} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width-narrow} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width-narrow} - (#{$spacing-unit}));
+    padding-right: $spacing-unit * 0.5;
+    padding-left: $spacing-unit * 0.5;
+  }
+}
