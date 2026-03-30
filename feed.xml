@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-03-03T10:56:24+00:00</updated><id>/feed.xml</id><title type="html">Blog?</title><entry><title type="html">ZOE Covid estimates and the 3 day bug</title><link href="/2022/08/24/zoe-covid-3-day-bug.html" rel="alternate" type="text/html" title="ZOE Covid estimates and the 3 day bug" /><published>2022-08-24T00:00:00+01:00</published><updated>2022-08-24T00:00:00+01:00</updated><id>/2022/08/24/zoe-covid-3-day-bug</id><content type="html" xml:base="/2022/08/24/zoe-covid-3-day-bug.html"><![CDATA[<p>Here is a story about the <a href="ZOE-health-study">ZOE Health Study</a>, told through graphs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-03-30T21:51:12+01:00</updated><id>/feed.xml</id><title type="html">Blog?</title><entry><title type="html">Steps for online security</title><link href="/2026/03/30/online-security.html" rel="alternate" type="text/html" title="Steps for online security" /><published>2026-03-30T00:00:00+01:00</published><updated>2026-03-30T00:00:00+01:00</updated><id>/2026/03/30/online-security</id><content type="html" xml:base="/2026/03/30/online-security.html"><![CDATA[<p>For a good guide to online security, read the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware top tips</a>.</p>
+
+<p>I needed to break down some of the individual steps, so I wrote a longer version.  If you want more help with the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware</a> tips, you might find this useful.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="https://docs.google.com/document/d/1Iks6LBUCz_3588yexEzOgpFhOqVPh01vXOdsqdY1Hag/">Security step 1 - Email sign-in</a></li>
+  <li><a href="https://docs.google.com/document/d/1js3EAvRQKoTBvSatdhSFDTuj3MFqEU3VmIrHEYihPqg/">Security step 2 - Your device</a></li>
+  <li><a href="https://docs.google.com/document/d/1Lj5E0srO1DTEspJkLqsV1pSblDBiKrYA8SOysktzjtk/">Security step 3 - Manage your passwords</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data">Cyber Aware top tips - Backing up your data</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[For a good guide to online security, read the Cyber Aware top tips.]]></summary></entry><entry><title type="html">ZOE Covid estimates and the 3 day bug</title><link href="/2022/08/24/zoe-covid-3-day-bug.html" rel="alternate" type="text/html" title="ZOE Covid estimates and the 3 day bug" /><published>2022-08-24T00:00:00+01:00</published><updated>2022-08-24T00:00:00+01:00</updated><id>/2022/08/24/zoe-covid-3-day-bug</id><content type="html" xml:base="/2022/08/24/zoe-covid-3-day-bug.html"><![CDATA[<p>Here is a story about the <a href="ZOE-health-study">ZOE Health Study</a>, told through graphs.</p>
 
 <ul id="markdown-toc">
   <li><a href="#1-daily-percentage-of-contributors-who-report-new-symptoms" id="markdown-toc-1-daily-percentage-of-contributors-who-report-new-symptoms">1. “Daily percentage of contributors who report new symptoms.”</a></li>
@@ -1476,46 +1487,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE,
       DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.*
       TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
 quit
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Icinga Web 2 is neat, and it’s in Debian Stretch. It’s not trivial to install like the original Icinga CGI (“Icinga Classic UI”) was. It’s not that hard, but I had to make some notes.]]></summary></entry><entry><title type="html">How I installed Jekyll</title><link href="/2017/06/27/installed-jekyll.html" rel="alternate" type="text/html" title="How I installed Jekyll" /><published>2017-06-27T18:31:00+01:00</published><updated>2017-06-27T18:31:00+01:00</updated><id>/2017/06/27/installed-jekyll</id><content type="html" xml:base="/2017/06/27/installed-jekyll.html"><![CDATA[<p>As per the <a href="https://jekyllrb.com/docs/installation/">docs</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
-</code></pre></div></div>
-
-<h1 id="dependencies">Dependencies</h1>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">gcc</code></li>
-  <li><code class="language-plaintext highlighter-rouge">make</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ruby-devel</code> / <code class="language-plaintext highlighter-rouge">ruby-dev</code></li>
-</ul>
-
-<p>Additionally, on systems that use RPM:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">/usr/lib/rpm/redhat/redhat-hardened-cc1</code></li>
-</ul>
-
-<p>At least that’s what I was missing, on Fedora 25.  <code class="language-plaintext highlighter-rouge">mkmf.log</code> showed the full path.  Pass this path to <code class="language-plaintext highlighter-rouge">dnf install</code>, then you can install jekyll successfully.  Or use <code class="language-plaintext highlighter-rouge">dnf provides</code> to see the necessary package, <code class="language-plaintext highlighter-rouge">redhat-rpm-config</code>.</p>
-
-<h1 id="why-dont-i-install-the-github-pages-gem">Why don’t I install the Github Pages gem?</h1>
-
-<p>I like GitHub Pages for free and convenient hosting, but I’m <em>not</em> using the deployment instructions from jekyll docs.  I can just upload generated HTML to GitHub Pages, like any other static host.</p>
-
-<p>The Jekyll docs page confuses me.  The instructions advocate <a href="https://github.com/github/pages-gem">matching versions of everything including ruby</a>, to avoid compatibility issues.  I like that Github provide their version information.  However if breaking changes are a concern, why would you upgrade gems on someone else’s schedule?  It seems mainly useful to debug a breaking change on Github - some time after you notice a failure - which was caused by Github not implementing <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>.</p>
-
-<p>It’s also useful for people who want to edit on Github.  This is unrelated to the reason given in the Jekyll documentation, which doesn’t mention editing on Github at all.</p>
-
-<p>On top of this, it’s not immediately clear how this gem matches versions of <em>ruby</em>.  What implications does that have?  I can avoid the two issues they documented easily, by not running years-old versions of ruby.</p>
-
-<h1 id="why-dont-i-use-fedora-packages">Why don’t I use Fedora packages?</h1>
-
-<p>Installing a packaged jekyll may not be the best idea.  Fedora packaged jekyll 3.2.1-3.fc25 without the default theme, “minima”.  You would then run an initial <code class="language-plaintext highlighter-rouge">bundle install</code> to get minima.  Bundler ends up <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1464502">installing newer versions of existing gems</a> anyway.  (It doesn’t upgrade jekyll; the reason being that <code class="language-plaintext highlighter-rouge">jekyll new</code> specifies its exact version in the Gemfile).</p>
-
-<p>If your distribution did include all your gems (themes or plugins), presumably you can use jekyll without <code class="language-plaintext highlighter-rouge">bundle install</code>. In more recent versions of jekyll e.g. 3.5, you will have to use <code class="language-plaintext highlighter-rouge">jekyll new --skip-bundle</code>.  You’d then be using jekyll in a different way to its authors.  Package upgrades of the various gems will affect your site, and how it needs to be written.  You won’t have a Gemfile.lock to record which versions worked correctly.</p>
-
-<p>This issue is not so prominent in versions before 3.2, when gem-based themes were introduced.  E.g. using 3.1.6 in Debian Stretch, <code class="language-plaintext highlighter-rouge">jekyll new</code> copied the minima files into the new site.  There was no minima gem, and no Gemfile was created.</p>
-
-<p>Another option I saw suggested was <code class="language-plaintext highlighter-rouge">bundle install --local</code>.  As well as system-installed gems, this also considers versions from your personal gem download <em>cache</em>.  The latter doesn’t make sense to me, so I’m not able to recommend this.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[As per the docs]]></summary></entry><entry><title type="html">New blog?</title><link href="/2017/06/27/new-blog.html" rel="alternate" type="text/html" title="New blog?" /><published>2017-06-27T18:30:00+01:00</published><updated>2017-06-27T18:30:00+01:00</updated><id>/2017/06/27/new-blog</id><content type="html" xml:base="/2017/06/27/new-blog.html"><![CDATA[<p>I got mad at my free blog host again.  So here’s a new site.</p>
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Icinga Web 2 is neat, and it’s in Debian Stretch. It’s not trivial to install like the original Icinga CGI (“Icinga Classic UI”) was. It’s not that hard, but I had to make some notes.]]></summary></entry><entry><title type="html">New blog?</title><link href="/2017/06/27/new-blog.html" rel="alternate" type="text/html" title="New blog?" /><published>2017-06-27T18:30:00+01:00</published><updated>2017-06-27T18:30:00+01:00</updated><id>/2017/06/27/new-blog</id><content type="html" xml:base="/2017/06/27/new-blog.html"><![CDATA[<p>I got mad at my free blog host again.  So here’s a new site.</p>
 
 <p>(I had a note to publish, which I had already reformatted to Markdown.  But because I’d used line breaks in the source code, i.e. hard-wrapped plain text format, Wordpress.com would display <a href="https://webapps.stackexchange.com/questions/107145/wordpress-markdown-doesnt-re-wrap-paragraphs/107338">unwanted line breaks</a>.)</p>
 
