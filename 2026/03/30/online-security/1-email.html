@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Security part 1 - Email sign-in | Blog?</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Security part 1 - Email sign-in" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="/2026/03/30/online-security/1-email.html" />
+<meta property="og:url" content="/2026/03/30/online-security/1-email.html" />
+<meta property="og:site_name" content="Blog?" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Security part 1 - Email sign-in" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Security part 1 - Email sign-in","url":"/2026/03/30/online-security/1-email.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Blog?" /></head>
+
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Blog?</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper-narrow">
+        
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Security part 1 - Email sign-in</h1>
+  </header>
+
+  <div class="post-content">
+    <p>For a good guide to online security, read the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware “top tips”</a>.</p>
+
+<p>I needed to break down some of the steps.  Here are my own (much longer) notes.  If you need more help with the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware</a> tips, you might find these useful.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#sign-in-to-your-email" id="markdown-toc-sign-in-to-your-email">Sign in to your email</a></li>
+  <li><a href="#avoid-locking-yourself-out" id="markdown-toc-avoid-locking-yourself-out">Avoid locking yourself out</a>    <ul>
+      <li><a href="#using-your-mobile-number-as-a-security-contact" id="markdown-toc-using-your-mobile-number-as-a-security-contact">Using your mobile number as a security contact</a></li>
+      <li><a href="#using-a-passkey-to-sign-in" id="markdown-toc-using-a-passkey-to-sign-in">Using a passkey to sign in</a></li>
+      <li><a href="#make-a-recovery-sheet-for-your-email" id="markdown-toc-make-a-recovery-sheet-for-your-email">Make a recovery sheet for your email</a></li>
+      <li><a href="#practice-your-email-sign-in" id="markdown-toc-practice-your-email-sign-in">Practice your email sign-in</a></li>
+      <li><a href="#find-the-security-settings-for-your-email-account" id="markdown-toc-find-the-security-settings-for-your-email-account">Find the security settings for your email account</a></li>
+    </ul>
+  </li>
+  <li><a href="#protect-your-email-account" id="markdown-toc-protect-your-email-account">Protect your email account</a>    <ul>
+      <li><a href="#option-1-two-step-verification-accounts" id="markdown-toc-option-1-two-step-verification-accounts">Option 1: Two-step verification accounts</a>        <ul>
+          <li><a href="#1-icloud-mail--apple-account" id="markdown-toc-1-icloud-mail--apple-account">1. iCloud Mail / Apple account</a></li>
+          <li><a href="#2-gmail--google-account" id="markdown-toc-2-gmail--google-account">2. Gmail / Google account</a></li>
+          <li><a href="#3-outlookcom--microsoft-account" id="markdown-toc-3-outlookcom--microsoft-account">3. Outlook.com / Microsoft account</a></li>
+        </ul>
+      </li>
+      <li><a href="#option-2:-use-a-strong-and-separate-password" id="markdown-toc-option-2:-use-a-strong-and-separate-password">Option 2: Use a strong and separate password</a></li>
+    </ul>
+  </li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next steps</a></li>
+</ul>
+
+<h2 id="sign-in-to-your-email">Sign in to your email</h2>
+
+<p>Cyber Aware starts with your email account.</p>
+
+<p>Your email account can be used to reset other passwords, for many apps and websites.  Your messages also contain personal info.</p>
+
+<h2 id="avoid-locking-yourself-out">Avoid locking yourself out</h2>
+
+<p>Security is a balancing act.  You want to stop criminals from signing in to your email account.  At the same time, you don’t want to lock yourself out.</p>
+
+<p>To start with, let’s look at making it easier to sign in - and harder to get locked out.</p>
+
+<p>Your email sign-in may automatically recommend one or more options, as listed below.  This would usually happen when you sign in on a new device, or on the website for your email provider.</p>
+
+<h3 id="using-your-mobile-number-as-a-security-contact">Using your mobile number as a security contact</h3>
+
+<p>Google, Microsoft, and Apple accounts want to use your mobile number, as a security contact.  This is very helpful for signing in.</p>
+
+<p>These accounts will confirm what your mobile number is used for, before you enter it.  You can read the screen, and control your information.</p>
+
+<p>For example, you might remember your Android phone asking to use your number for <a href="https://android.stackexchange.com/questions/261842/does-google-use-android-mobile-numbers-for-ad-tracking-purposes-when-does-it-as/">Google adverts</a>.  However, Google explain this is a separate option in your account.[*]</p>
+
+<p>[*] When you say no to personalised ads, it does not remove your Google security contact(s).  Equally, Google does not silently change advertising settings when you add a security contact.  It is safe to add your mobile number as a Google “recovery phone”, and for “two-step verification”.</p>
+
+<h3 id="using-a-passkey-to-sign-in">Using a passkey to sign in</h3>
+
+<p>Some online accounts may want you to sign in using your fingerprint, face, or lock screen PIN.</p>
+
+<p>This method unlocks a <em>passkey</em>, which is saved on your device.  You can save a passkey on more than one device.</p>
+
+<p>Passkeys are a newer, more secure way to sign in.  You can only use a passkey on the genuine website (or app) that it was saved for.  This protects you from fake sign-in pages, which try to steal your account.</p>
+
+<p>A passkey adds a new option to sign in with.  If your account has a password, you can still use the password to sign in, when your passkey is not available.</p>
+
+<p>Certain devices, particularly Apple or Android, might require you to create an online account in order to save passkeys.  Your passkey will be stored securely.  When you lose your devices, passkeys may be harder to recover, e.g. compared to your email account.</p>
+
+<h3 id="make-a-recovery-sheet-for-your-email">Make a recovery sheet for your email</h3>
+
+<p>Keep track of each sign-in detail.  For example:</p>
+
+<ul>
+  <li>the email address, which you sign in with</li>
+  <li>your current password - or the safe place where you recorded it - or a clue to help you remember.</li>
+  <li>the mobile number linked to the account (if any)</li>
+  <li>the device(s) you have saved a <em>passkey</em> on</li>
+</ul>
+
+<p>Grab a pen and paper!  You can write down what you use, at the same time as we work through and confirm each sign-in detail.  Or you can print my <a href="https://docs.google.com/document/d/1ZAxZx4HhLGFB1g8--WEUbBLS4cqpaznN3je9jcyHWpw/">email recovery sheet</a>, and fill in your details.</p>
+
+<p>Keep your recovery sheet in a safe place.  I keep mine next to my passport.</p>
+
+<h3 id="practice-your-email-sign-in">Practice your email sign-in</h3>
+
+<p>Sign in on the website:</p>
+
+<ol>
+  <li>
+    <p>Open your web browser.</p>
+  </li>
+  <li>
+    <p>Open the website for your email provider.</p>
+  </li>
+  <li>
+    <p>Click the “Sign in” button, and follow the instructions.</p>
+  </li>
+</ol>
+
+<p>If you are already signed in, do not sign yourself out.  Instead, practice your sign-in by opening a <em>private browsing session</em>.  Search how to use <em>private browsing</em> on your device / web browser.  Examples:<br />
+<a href="https://support.microsoft.com/en-us/microsoft-edge/browse-inprivate-in-microsoft-edge-cd2c9a48-0bc4-b98e-5e46-ac40c84e27e2">Microsoft Edge (Windows)</a> * <a href="https://support.apple.com/en-us/105030">Safari (iPhone)</a> * <a href="https://support.google.com/chrome/answer/95464?hl=en&amp;co=GENIE.Platform%3DDesktop">Google Chrome</a> * <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">Firefox (desktop)</a></p>
+
+<p>Does your email provider invite you to add a mobile number, or a passkey?</p>
+
+<p>Confirm each sign-in detail on your recovery sheet (above).</p>
+
+<p>If you need to, you can practice the sign-in process more than once.  When you want to try again, sign out of your <em>private browsing tabs</em>, and close <em>all</em> of your private windows or private tabs first.</p>
+
+<p>When you use a new <em>private browsing</em> session, your email provider will not remember your device.  You may be asked for extra security information.</p>
+
+<h3 id="find-the-security-settings-for-your-email-account">Find the security settings for your email account</h3>
+
+<p>When you are signed in to the website, you can manage the settings for your email account.  In the account settings, there will be a section for security.  The security section is where you can change your password, and/or other sign-in options.</p>
+
+<p>Have you added a mobile number (and/or a passkey)?  Is it possible to add one to your email account?</p>
+
+<p>If you’re not sure, we can find your options using the help pages, or a search engine.</p>
+
+<h2 id="protect-your-email-account">Protect your email account</h2>
+
+<p>Now you have found your security settings.  Let’s look at protections for your specific account.</p>
+
+<ul>
+  <li>
+    <p>Some email providers prioritize <em>two-step verification</em> (2SV), and expect you to add one or more backup sign-in methods.</p>
+  </li>
+  <li>
+    <p>Other providers expect that you are more careful with your password.  They do not allow adding as many recovery methods.</p>
+  </li>
+</ul>
+
+<h3 id="option-1-two-step-verification-accounts">Option 1: Two-step verification accounts</h3>
+
+<p>This is a key feature of the accounts below.  If your email account is not listed here, please skip down to <a href="#option-2:-use-a-strong-and-separate-password">option 2</a> instead.</p>
+
+<ol>
+  <li>iCloud Mail  /  Apple account</li>
+  <li>Gmail  /  Google account</li>
+  <li>Outlook.com  /  Microsoft account</li>
+</ol>
+
+<p>These accounts rely heavily on your mobile number.  They <em>may</em> also make use of your already signed-in devices.</p>
+
+<p>In <em>some</em> cases, you can recover a lost mobile number.  Ask your mobile carrier about this <em>in advance</em>.  If you lose your “second step” verification method, you could be blocked from signing back in to your account, <em>even when you have your password.</em></p>
+
+<p>Let’s make a recovery plan, for when you lose your phone.</p>
+
+<h4 id="1-icloud-mail--apple-account">1. iCloud Mail / Apple account</h4>
+
+<p>Apple accounts are protected using <em>two-factor authentication</em> (2FA).  This is required on all new accounts, and to use various Apple features.</p>
+
+<p>When you sign in on a new device, you need to verify using one of your registered Apple devices, or a trusted phone number, as well as your password.</p>
+
+<p>If you can’t sign in, you will need to recover your account.  This takes longer - it could be a week or two.</p>
+
+<p>You can reduce how long it takes to recover, if you prepare now.  In your account settings, you can add a landline phone number, or a <em>recovery contact</em> who uses an Apple device.  In <em>some</em> cases, you can also recover faster if you have added a credit card, or a “primary email address”.</p>
+
+<p>Once you have a recovery plan for your Apple account, make sure you have <em>two-factor authentication</em> turned on.  It will be much harder for criminals to steal your account.</p>
+
+<p>Apple have several help pages for security, and recovery.  They are linked as references here:<br />
+  <a href="https://docs.google.com/document/d/1fjio96bmSSqI0oOMYk8Gdm1iMTXDsOdNGrwtERrzbps/">Avoid getting locked out of your Apple account or iCloud</a></p>
+
+<h4 id="2-gmail--google-account">2. Gmail / Google account</h4>
+
+<p>Google automatically changes accounts to “2-Step Verification” (2SV).  When you sign in on a new device, 2SV requires your registered phone, as well as your password.  Or you might use a passkey saved on your phone.</p>
+
+<p>When you lose your phone, how will you sign in on a new device?  What can you use as a backup?</p>
+
+<p>Even if 2-Step Verification is disabled, Google requires a “second step” whenever they decide a sign-in attempt is “suspicious”.  The best approach is to add multiple backup options, and then make sure 2-Step Verification is turned on.</p>
+
+<ul>
+  <li>
+    <p>Google Help: <a href="https://support.google.com/accounts/answer/7684753?hl=en">Avoid getting locked out of your Google Account</a></p>
+  </li>
+  <li>
+    <p>Google Help: <a href="https://support.google.com/accounts/answer/185839?hl=en&amp;ref_topic=7189195&amp;co=GENIE.Platform%3DDesktop">Turn on 2-Step Verification</a></p>
+  </li>
+  <li>
+    <p>My notes: <a href="https://docs.google.com/document/d/1wXLJ4OgJQfRwekOXa1M8AQ7C9Gt4ivgNHVle2TWw0SM/">Avoid getting locked out of your Google account or Gmail</a></p>
+  </li>
+</ul>
+
+<p>The “avoid getting locked out” help page has a specific section about 2-Step Verification.  It is underneath “Step 2: Set up more ways to sign in”.</p>
+
+<h4 id="3-outlookcom--microsoft-account">3. Outlook.com / Microsoft account</h4>
+
+<p>Most Microsoft users have both a computer, and a mobile number.  Confirm 1) your computer can sign in using a passkey, and 2) your current mobile number is added in your security settings.  Hopefully, you are unlikely to lose both of these at the same time.</p>
+
+<ul>
+  <li>
+    <p>Microsoft Support: <a href="https://support.microsoft.com/en-us/account-billing/signing-in-with-a-passkey-09a49a86-ca47-406c-8acc-ed0e3c852c6d">Signing in with a passkey</a></p>
+  </li>
+  <li>
+    <p>Microsoft Support: <a href="https://support.microsoft.com/en-us/account-billing/change-the-email-address-or-phone-number-for-your-microsoft-account-761a662d-8032-88f4-03f3-c9ba8ba0e00b">Change the phone number</a></p>
+  </li>
+</ul>
+
+<p>If you are a phone-only user, ask your mobile carrier what you will need to recover your mobile number, when you lose your phone.</p>
+
+<p>You now have two options to increase security:</p>
+
+<ol>
+  <li>
+    <p>Use an account with no password at all.  This prevents some very common attacks.</p>
+  </li>
+  <li>
+    <p>Turn on <em>two-step verification</em>.  This means that when you sign in on a new device, you need a second step after your password.</p>
+  </li>
+</ol>
+
+<p>Two-step verification protects against a password attack <em>or</em> a phone number attack.  With two-step verification, you need both your password and your mobile.  This option is recommended by Cyber Aware.</p>
+
+<p>Mobile numbers have become a target for criminals, similar to passwords.  They may trick your carrier into transferring your number.  Or steal the physical SIM card from your phone, if it has one.  Microsoft have some protection against this, but it will not work in every case.  It is safer to turn on two-step verification.</p>
+
+<ul>
+  <li>
+    <p>Microsoft Support: <a href="https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4">How to use two-step verification</a></p>
+  </li>
+  <li>
+    <p>Microsoft Support: <a href="https://support.microsoft.com/en-gb/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43">How to remove (or re-add) your password</a></p>
+  </li>
+  <li>
+    <p>My notes: <a href="https://docs.google.com/document/d/1YyOeZqVk_o0sgaT_MD_CVr-ykM3f1zRuIt4hBo28Mis">Avoid getting locked out of your Microsoft account or Outlook.com</a></p>
+  </li>
+</ul>
+
+<p>Q: Can I avoid linking my mobile number to my Microsoft account?</p>
+
+<p>A: This is not a reliable way to protect your account.  The website repeatedly warns you, and then eventually forces you to “make sure you can receive a security code”.  The mobile number helps make sure you can receive security alerts.</p>
+
+<p>Q: Can I just use a strong password instead?</p>
+
+<p>A: Microsoft does not trust your password on its own.  Most people give the same password to other accounts.  The more accounts it is given to, the more likely it is to get stolen.  When you sign in to your Microsoft account, they try to match your device and location.  However, this does not always work.  Sometimes, Microsoft will ask you for additional verification.  The best approach is to add multiple backup options, and then strengthen your security as above.</p>
+
+<p>Q: I tried to sign in to Outlook.com, using my favourite web browser.  I used my PIN / face / fingerprint, but Microsoft still asked for additional verification.  I am already signed in to Windows with my Microsoft account!  Why does it not let me sign in?</p>
+
+<p>A: If you have a problem with Outlook.com etc, try using Microsoft Edge browser to sign in first.  Also, do not use a private browsing window (Edge InPrivate).  If this works, you should now be able to use the passkey in other web browsers.  It is annoying, but it worked for me.</p>
+
+<h3 id="option-2:-use-a-strong-and-separate-password">Option 2: Use a strong and separate password</h3>
+
+<p>If you have turned on two-step verification for your email, skip this section.  We can set up a secure password manager, before you set a new email password.</p>
+
+<p>If your email is not protected by two-step verification, we should think about your password now.</p>
+
+<p>Most people have used the same password for more than one thing.  This is a problem.  Surprisingly often, one of the less secure websites or apps gets hacked, and leaks everyone’s password.</p>
+
+<p>At this point, you have successfully signed in.  You should have a sheet with your sign-in details.</p>
+
+<p>If you used the same password for other accounts, change it now.  It should be different from any other password.  It should not be easy to guess, e.g. from personal information.</p>
+
+<p>Cyber Aware recommends: use <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words">three random words</a>.</p>
+
+<p>Remember to record the new password!  Keep your email recovery sheet up to date.</p>
+
+<p>Ultimately, you should use a secure <em>password manager</em> (and/or passkeys!).  Even then, an email recovery sheet is still very useful, as an independent backup.  Many other accounts will let you sign in (or help recover) using your email.</p>
+
+<p>This option completes the Cyber Aware tip: <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email">Use a strong and separate password for your email</a>.</p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<ul>
+  <li>
+    <p><a href="https://docs.google.com/document/d/1js3EAvRQKoTBvSatdhSFDTuj3MFqEU3VmIrHEYihPqg/">Security part 2 - Your device</a></p>
+  </li>
+  <li>
+    <p><a href="https://docs.google.com/document/d/1Lj5E0srO1DTEspJkLqsV1pSblDBiKrYA8SOysktzjtk/">Security part 3 - Manage your passwords</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data">Cyber Aware top tips - Backing up your data</a></p>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Blog?</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Blog?</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">sourcejedi</span></a></li><li><a href="https://www.twitter.com/sourcejedi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">sourcejedi</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
