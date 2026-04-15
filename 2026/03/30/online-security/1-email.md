@@ -79,14 +79,21 @@ Now sign in on the website:
 
 If you are already signed in, do not sign yourself out.  Instead, practice your sign-in by opening a *private browsing session*.  Search how to use *private browsing* on your device and web browser.  For example:
 
-* [Microsoft Edge (Windows PC)](https://support.microsoft.com/en-us/microsoft-edge/browse-inprivate-in-microsoft-edge-cd2c9a48-0bc4-b98e-5e46-ac40c84e27e2)
-* [Apple Safari (iPhone)](https://support.apple.com/en-us/105030)
-* [Google Chrome](https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop)
-* [Mozilla Firefox (laptop or desktop)](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)
+* [Microsoft Edge (Windows PC)][private-windows-edge]
+* [Apple Safari (iPhone)][private-iphone-safari]
+* [Google Chrome][private-chrome-any-device]
+* [Mozilla Firefox (laptop or desktop)][private-firefox-desktop]
 
-Did your email provider invite you to add a mobile number?  Or save a passkey on your Apple or Android device?
+[private-windows-edge]: https://support.microsoft.com/en-us/microsoft-edge/browse-inprivate-in-microsoft-edge-cd2c9a48-0bc4-b98e-5e46-ac40c84e27e2
+[private-iphone-safari]: https://support.apple.com/en-us/105030
+[private-chrome-any-device]: https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop
+[private-firefox-desktop]: https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history
+
+If you do not have your original security info, go through the sign-in process and look for options to reset your password and/or recover your account.
 
 Confirm each sign-in detail you use on your recovery sheet (above).
+
+Does this process invite you to add a mobile number?  Or save a passkey on your Apple or Android device?
 
 If you need to, you can practice the sign-in process more than once.  When you want to try it again, sign out of your *private browsing tabs*, and close *all* of your private windows or private tabs first.
 
@@ -148,43 +155,82 @@ Even if 2-Step Verification is turned off, Google requires a "second step" whene
 
 #### 3\. Outlook.com / Microsoft account
 
-You *probably* already have a backup option for your Microsoft account.  However, Microsoft have made it annoyingly complex to confirm this.  And they're not paying me to fix it.
+When you open your detailed security settings, the Microsoft account requires you to receive security codes.[^msa-contact-forced]
 
-The most general guidance is to make sure your current mobile number is added in your account settings.  Then, ask your mobile carrier what you will need to recover your mobile number, when you lose your phone.
+Microsoft say that "for increased security, you can no longer add a phone number."[^msa-no-phone]  In general: "we will start phasing out SMS as a method of authentication and account recovery for personal Microsoft accounts."[^msa-sms-phaseout]
 
-Reference: [Change the email address or phone number for your Microsoft account](https://support.microsoft.com/en-us/account-billing/change-the-email-address-or-phone-number-for-your-microsoft-account-761a662d-8032-88f4-03f3-c9ba8ba0e00b)
+To manage security settings for an Outlook.com email address, you can add a separate email address.
 
-You now have two options to increase security:
+[^msa-contact-forced]:
+    * "How to fix "make sure you can receive a security code" when signing in to my Microsoft account [...] After seven days from the first notice you'll have to verify or add new security info before you can sign in again." -- [Troubleshoot Microsoft verification code issues][msa-contact-forced].  [Archived][msa-contact-forced-saved] from the original on 2026-03-15.
 
-1. Use an account with no password at all.  This prevents some very common attacks.
+    * "We will ask for an email address or phone number that we can send a verification code to." -- [Help us secure your account][msa-contact-forced2].  [Archived][msa-contact-forced2-saved] from the original on 2026-03-13.
 
-2. Turn on *two-step verification*.  This means that when you sign in on a new device, you need a second step after your password.
+    * "When you create a new Microsoft account, whether via your Xbox console or online, you're asked to add security info. When you do so, you’ll receive a security code at the phone number or email address you provided." -- [Add security info to your Microsoft account][msa-contact-forced3].  [Archived][msa-contact-forced3-saved] from the original on 2025-10-06.
 
-Two-step verification protects against a password attack *or* a phone number attack.  With two-step verification, you need both your password and your mobile.  This option is recommended by Cyber Aware.
+    * More specifically, Microsoft forces you to add at least one piece of "security info" which they can send a _security alert_ to.  This "could be a phone number or email address".  Notice that a passkey cannot recieve alerts.  In theory, Microsoft Authenticator could be used as an alternative, but it was not accepted when I tried.  There is a critical procedure which requires this contact information.  See:  [What does "Security info change is still pending" mean?][msa-contact-forced4]
 
-Mobile numbers have become a target for criminals, similar to passwords.  They may trick your carrier into transferring your number.  Or steal the physical SIM card from your phone, if it has one.  Microsoft have some protection against this, but it will not work in every case.  It is safer to turn on two-step verification.
+[msa-contact-forced]:    https://support.microsoft.com/en-gb/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48
+[msa-contact-forced-saved]:    https://web.archive.org/web/20260315134739/https://support.microsoft.com/en-gb/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48
 
-- Microsoft Support: [How to use two-step verification](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
+[msa-contact-forced2]:    https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c
+[msa-contact-forced2-saved]:    https://web.archive.org/web/20260313002247/https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c
 
-- Microsoft Support: [How to remove (or re-add) your password](https://support.microsoft.com/en-gb/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
+[msa-contact-forced3]:    https://support.xbox.com/en-US/help/account-profile/signin-security/add-security-contact-information
+[msa-contact-forced3-saved]:    https://web.archive.org/web/20251006113422/https://support.xbox.com/en-US/help/account-profile/signin-security/add-security-contact-information
 
-- My notes: [Avoid getting locked out of your Microsoft account or Outlook.com](https://docs.google.com/document/d/1YyOeZqVk_o0sgaT_MD_CVr-ykM3f1zRuIt4hBo28Mis)
+[msa-contact-forced4]:    https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52
 
-Q: Can I avoid linking my mobile number to my Microsoft account?
 
-The website repeatedly warns you, and then eventually forces you, to "make sure you can receive a security code".  The mobile number helps make sure you can receive security alerts.
+[^msa-no-phone]:    See notes in [Microsoft account security info & verification codes][msa-no-phone].  [Archived][msa-no-phone-saved] from the original on 2026-04-15.
+[msa-no-phone]:    https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452
+[msa-no-phone-saved]:    https://web.archive.org/web/20260415152634/https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452
 
-If you have already completed security and recovery plans for a separate system (e.g. Apple or Google email) then you may be able to link that system to Microsoft as well as or instead of a mobile number.  Otherwise, you should start by protecting your Outlook.com email.
+[^msa-sms-phaseout]:    See note in [How to use two-step verification with your Microsoft account][msa-sms-phaseout].    [Archived][msa-sms-phaseout-saved] from the original on 2026-04-06.
+[msa-sms-phaseout]:    https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4
+[msa-sms-phaseout-saved]:    https://web.archive.org/web/20260406070047/https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4
 
-Microsoft explains how they will use your number, before you enter it.  Please try it and read the screen.
+Microsoft do not offer any other options.  They have not announced any plans about the required security codes.  I have found it very hard to provide guidance for Microsoft.  In an ideal world, Microsoft would already provide guidance that everyone can follow.
 
-Q: Can I just use a strong password instead?
+Many people already use a free Google account (above).  If necessary, you can create a `gmail.com` email address for an existing account.
 
-A: Microsoft does not trust your password on its own.  Most people give the same password to other accounts.  The more accounts it is given to, the more likely it is to get stolen.  When you sign in to your Microsoft account, they try to match your device and location.  However, this does not always work.  Sometimes, Microsoft will ask you for additional verification.  The best approach is to make a recovery plan, and then strengthen your security as above.
+iPhone users should already have an Apple account (above).  You can add an `icloud.com` email address to your existing account.
 
-Q: I tried to sign in to Outlook.com, using my favourite web browser.  I used my PIN / face / fingerprint, but Microsoft still asked for additional verification.  I am already signed in to Windows with my Microsoft account!  Why does it not let me sign in?
+To manage your Microsoft account security settings, including linking a separate email address:
 
-A: If you have a problem with Outlook.com etc, try using Microsoft Edge browser to sign in first.  Also, do not use a private browsing window (Edge InPrivate).  If this works, you should now be able to use the passkey in other web browsers.  It is annoying, but it worked for me.
+1. Open your web browser.
+
+2. Open Outlook.com or Microsoft.com.
+
+3. Click or tap the account icon, in the top-right of the website.  Note: this is not the icon in the browser tool bar.
+
+4. If you are not signed in to your account, select "Sign in".
+
+5. When you are signed in, click or tap on the account icon, and then  "My Microsoft account".
+
+6. In the "Security" section, select either "Manage how I sign in", or "Additional security options".
+
+You can link a new email address by selecting "Add a new way to sign in or verify".
+
+For recovery purposes, your other email will be your primary account.  This means the simplest way to proceed is to go back to the beginning, and secure this other email account.
+
+In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler for us to manage all your passwords, accounts, and options for two-step verification.
+
+If you are ready now, there are two options to secure your Microsoft account:
+
+_Cyber Aware_ says to turn on two-step verification for Microsoft account, following the Microsoft guide.
+
+ - [How to use two-step verification with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
+
+Microsoft want you to "increase the security of your account by removing your password and signing in with a passwordless method instead."  If your sign-in settings currently show a password, you will need to install the Microsoft Authenticator app on your phone, before you can go passwordless.
+
+ - [How to go passwordless with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
+
+Either of these will provide a great improvement, by reducing the risks of stolen passwords.
+
+I would not turn on both options at once.  It would make it harder to sign in - and easier to get locked out.
+
+If your recovery plan relies on an already-added mobile number, you should ask your mobile carrier what you will need to recover the phone number, when you lose your phone.
 
 ### Option 2: Use a strong and separate password {#strong-and-separate-password}
 
@@ -221,3 +267,5 @@ This option completes the Cyber Aware tip: [Use a strong and separate password f
 
 - [Cyber Aware top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
 -->
+
+## Footnotes
