@@ -32,6 +32,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -68,3 +69,5 @@ keep_files: ['.git', '.nojekyll']
 
 header_pages:
   - about.md
+
+google_site_verification: "f-br5hK_AXBHVuLbIOEqQdK8b5N1kVsM4WGjtpdlBao"
