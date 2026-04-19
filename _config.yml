@@ -24,8 +24,11 @@ title: Blog?
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sourcejedi
 github_username:  sourcejedi
+mastodon:
+ - username: sourcejedi
+   instance: mastodon.social
+rss: rss
 
 # Build settings
 markdown: kramdown
