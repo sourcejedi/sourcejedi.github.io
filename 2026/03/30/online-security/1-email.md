@@ -119,7 +119,7 @@ Two-step verification is a key feature of the accounts below.  If your email acc
 2. Gmail &nbsp;/&nbsp; Google account
 3. Outlook.com &nbsp;/&nbsp; Microsoft account
 
-These accounts rely heavily on your mobile number.  They might also make use of an already signed-in device.
+These accounts rely heavily on a mobile phone.  They might also make use of an already signed-in device.
 
 Let’s make a recovery plan, for when your phone is lost or broken.
 
@@ -155,82 +155,52 @@ Even if 2-Step Verification is turned off, Google requires a "second step" whene
 
 #### 3\. Outlook.com / Microsoft account
 
-When you open your detailed security settings, the Microsoft account requires you to receive security codes.[^msa-contact-forced]
+In order to turn on two-step verification, Microsoft requires an alternative contact method.
 
-Microsoft say that "for increased security, you can no longer add a phone number."[^msa-no-phone]  In general: "we will start phasing out SMS as a method of authentication and account recovery for personal Microsoft accounts."[^msa-sms-phaseout]
+Contact info is also required to use various basic security features.
 
-To manage security settings for an Outlook.com email address, you can add a separate email address.
+As of 2026, Microsoft tell you to add a "verified email", which is separate from your Outlook.com account.  They are phasing out the use of phone numbers.
 
-[^msa-contact-forced]:
-    * "How to fix "make sure you can receive a security code" when signing in to my Microsoft account [...] After seven days from the first notice you'll have to verify or add new security info before you can sign in again." -- [Troubleshoot Microsoft verification code issues][msa-contact-forced].  [Archived][msa-contact-forced-saved] from the original on 2026-03-15.
+Microsoft have already removed the official method to update your phone number.  For the moment, you may be able to use your current mobile number, as one of your backup methods.
 
-    * "We will ask for an email address or phone number that we can send a verification code to." -- [Help us secure your account][msa-contact-forced2].  [Archived][msa-contact-forced2-saved] from the original on 2026-03-13.
+ * Reference: [Microsoft to stop sending SMS codes for personal accounts](https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1)
 
-    * "When you create a new Microsoft account, whether via your Xbox console or online, you're asked to add security info. When you do so, you’ll receive a security code at the phone number or email address you provided." -- [Add security info to your Microsoft account][msa-contact-forced3].  [Archived][msa-contact-forced3-saved] from the original on 2025-10-06.
+ * My notes: [Do Microsoft accounts require a recovery email address or a mobile number?]({% post_url 2026-04-20-microsoft-contact-info %})
 
-    * More specifically, Microsoft forces you to add at least one piece of "security info" which they can send a _security alert_ to.  This "could be a phone number or email address".  Notice that a passkey cannot recieve alerts.  In theory, Microsoft Authenticator could be used as an alternative, but it was not accepted when I tried.  There is a critical procedure which requires this contact information.  See:  [What does "Security info change is still pending" mean?][msa-contact-forced4]
+You could create a [new Gmail account][gmail-create-new], for free.  Or, you can [add a Gmail address][gmail-create] to an existing Google account.  Many people already have a Google account, e.g. because they use an Android phone.
 
-[msa-contact-forced]:    https://support.microsoft.com/en-gb/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48
-[msa-contact-forced-saved]:    https://web.archive.org/web/20260315134739/https://support.microsoft.com/en-gb/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48
-
-[msa-contact-forced2]:    https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c
-[msa-contact-forced2-saved]:    https://web.archive.org/web/20260313002247/https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c
-
-[msa-contact-forced3]:    https://support.xbox.com/en-US/help/account-profile/signin-security/add-security-contact-information
-[msa-contact-forced3-saved]:    https://web.archive.org/web/20251006113422/https://support.xbox.com/en-US/help/account-profile/signin-security/add-security-contact-information
-
-[msa-contact-forced4]:    https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52
+If you use an iPhone, you could create an [iCloud Mail][icloud-mail-create] address.
 
 
-[^msa-no-phone]:    See notes in [Microsoft account security info & verification codes][msa-no-phone].  [Archived][msa-no-phone-saved] from the original on 2026-04-15.
-[msa-no-phone]:    https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452
-[msa-no-phone-saved]:    https://web.archive.org/web/20260415152634/https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452
+[gmail-create]:  https://support.google.com/accounts/answer/76194
+[gmail-create-new]:  https://support.google.com/mail/answer/56256?hl=en
+[icloud-mail-create]:  https://support.apple.com/en-gb/guide/icloud/mmdd8d1c5c/1.0/icloud/1.0
 
-[^msa-sms-phaseout]:    See note in [How to use two-step verification with your Microsoft account][msa-sms-phaseout].    [Archived][msa-sms-phaseout-saved] from the original on 2026-04-06.
-[msa-sms-phaseout]:    https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4
-[msa-sms-phaseout-saved]:    https://web.archive.org/web/20260406070047/https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4
+Once you have an alternative email address you can add, or to verify your current contact info, see:
 
-Microsoft do not offer any other options.  They have not announced any plans about the required security codes.  I have found it very hard to provide guidance for Microsoft.  In an ideal world, Microsoft would already provide guidance that everyone can follow.
+ * [Microsoft account security info & verification codes](https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452)
 
-Many people already use a free Google account (above).  If necessary, you can create a `gmail.com` email address for an existing account.
+Now the simplest way to proceed is to go back to the beginning, and secure your *other* email account.
 
-iPhone users should already have an Apple account (above).  You can add an `icloud.com` email address to your existing account.
+In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage all your accounts, passwords, and options for two-step verification.
 
-To manage your Microsoft account security settings, including linking a separate email address:
+If you have made your recovery plans now, there are two options to secure your Microsoft account:
 
-1. Open your web browser.
+1. _Cyber Aware_ says to turn on two-step verification for Microsoft account, following the Microsoft guide:
 
-2. Open Outlook.com or Microsoft.com.
+   [How to use two-step verification with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
 
-3. Click or tap the account icon, in the top-right of the website.  Note: this is not the icon in the browser tool bar.
+2. Microsoft says you could "increase the security of your account by removing your password and signing in with a passwordless method instead."
 
-4. If you are not signed in to your account, select "Sign in".
+   If your sign-in settings currently show a password, you will need to install the Microsoft Authenticator app on your phone, before you can go passwordless:
 
-5. When you are signed in, click or tap on the account icon, and then  "My Microsoft account".
+   [How to go passwordless with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
 
-6. In the "Security" section, select either "Manage how I sign in", or "Additional security options".
+Either option would be a great improvement, because they reduce the risk of stolen passwords.
 
-You can link a new email address by selecting "Add a new way to sign in or verify".
+If you use *both* options, you will need to take extra care.  It will make it harder to sign in, and easier to get locked out.
 
-For recovery purposes, your other email will be your primary account.  This means the simplest way to proceed is to go back to the beginning, and secure this other email account.
-
-In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler for us to manage all your passwords, accounts, and options for two-step verification.
-
-If you are ready now, there are two options to secure your Microsoft account:
-
-_Cyber Aware_ says to turn on two-step verification for Microsoft account, following the Microsoft guide.
-
- - [How to use two-step verification with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
-
-Microsoft want you to "increase the security of your account by removing your password and signing in with a passwordless method instead."  If your sign-in settings currently show a password, you will need to install the Microsoft Authenticator app on your phone, before you can go passwordless.
-
- - [How to go passwordless with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
-
-Either of these will provide a great improvement, by reducing the risks of stolen passwords.
-
-I would not turn on both options at once.  It would make it harder to sign in - and easier to get locked out.
-
-If your recovery plan relies on an already-added mobile number, you should ask your mobile carrier what you will need to recover the phone number, when you lose your phone.
+If your recovery plan relies heavily on a mobile number, you should ask your mobile carrier what you will need to recover the phone number, before you lose your phone.
 
 ### Option 2: Use a strong and separate password {#strong-and-separate-password}
 
@@ -267,5 +237,3 @@ This option completes the Cyber Aware tip: [Use a strong and separate password f
 
 - [Cyber Aware top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
 -->
-
-## Footnotes

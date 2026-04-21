@@ -1,25 +1,25 @@
 ---
 layout: post-narrow
-title:  "Do Microsoft accounts require a recovery email address or mobile number?"
+title:  "Do Microsoft accounts require a recovery email address or a mobile number?"
 ---
 
 _Shortly after I finished writing up their security and recovery system, Microsoft decided to [change it][SMS-phase-out].  So I went back again and checked how everything works.  These are my test results._
 
 [SMS-phase-out]: https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1
 
-Every Microsoft account has at least one email address (or phone number).  If you don't have an existing address, you can create one on Outlook.com.
+A personal Microsoft account requires at least one email address (or phone number).  If you don't have an existing email address, you can create one on Outlook.com.
 
-When you create an Outlook.com account, it tends not to ask for any other contact information.  However, Microsoft will require you to add security contact info later on.
+When you create an Outlook.com account, it tends not to ask for any other contact information.  However, Microsoft will require you to add alternative contact info later on.
 
 Video example: [How To Create a Microsoft Account][YT-AldoJames-Create-MSA], by Aldo Jones (2025-12-30).
 
 [YT-AldoJames-Create-MSA]: https://www.youtube.com/watch?v=iS6WC9qeJTQ
 
-At the end of Aldo's video, he opens the Privacy section in Microsoft account.  This required him to add contact info, before he could actually open the Privacy section.
+At the end of Aldo's video, he opens the Privacy section in Microsoft account.  Before he can actually use the Privacy section, he is required to add contact info.
 
 The same requirement applies to the "Manage how I sign in" page, in the Security section.
 
-You can pass this requirement by adding a recovery email address, or creating your account using a non-Microsoft email.
+You can pass this requirement by adding a recovery email address, or using a non-Microsoft email when you create your account.
 
 
 **Contents**
@@ -101,7 +101,7 @@ If you create a Microsoft account using an existing email address, your address 
 
 In addition, you can add one or more alternative email addresses as contact info.
 
-Microsoft say you can no longer add a phone number.  If you have already added a mobile number to your account, you can still use that number at the moment.  However, Microsoft is phasing out the use of phone numbers:
+Microsoft say you can no longer add a phone number.  If you have already added a mobile number to your account, you can still use that number at the moment.  However, Microsoft is phasing out the use of phone numbers.
 
 Sources:
 
@@ -172,7 +172,7 @@ If you want to know more about your settings, you could use the Microsoft Privac
 See: [Why does my Outlook.com account say "Share or use my details with Microsoft Partners"?](https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part)
 
 
-<!--
+<!-- CUT TEXT
 
 Note: in this case, Edge kept me permanently signed in to the Microsoft account website.
 
