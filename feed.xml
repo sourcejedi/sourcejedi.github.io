@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-20T16:34:32+01:00</updated><id>/feed.xml</id><title type="html">Blog?</title><entry><title type="html">Do Microsoft accounts require a recovery email address or mobile number?</title><link href="/2026/04/20/microsoft-contact-info.html" rel="alternate" type="text/html" title="Do Microsoft accounts require a recovery email address or mobile number?" /><published>2026-04-20T00:00:00+01:00</published><updated>2026-04-20T00:00:00+01:00</updated><id>/2026/04/20/microsoft-contact-info</id><content type="html" xml:base="/2026/04/20/microsoft-contact-info.html"><![CDATA[<p><em>Shortly after I finished writing up their security and recovery system, Microsoft decided to <a href="https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1">change it</a>.  So I went back again and checked how everything works.  These are my test results.</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-21T21:09:16+01:00</updated><id>/feed.xml</id><title type="html">Blog?</title><entry><title type="html">Do Microsoft accounts require a recovery email address or a mobile number?</title><link href="/2026/04/20/microsoft-contact-info.html" rel="alternate" type="text/html" title="Do Microsoft accounts require a recovery email address or a mobile number?" /><published>2026-04-20T00:00:00+01:00</published><updated>2026-04-20T00:00:00+01:00</updated><id>/2026/04/20/microsoft-contact-info</id><content type="html" xml:base="/2026/04/20/microsoft-contact-info.html"><![CDATA[<p><em>Shortly after I finished writing up their security and recovery system, Microsoft decided to <a href="https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1">change it</a>.  So I went back again and checked how everything works.  These are my test results.</em></p>
 
-<p>Every Microsoft account has at least one email address (or phone number).  If you don’t have an existing address, you can create one on Outlook.com.</p>
+<p>A personal Microsoft account requires at least one email address (or phone number).  If you don’t have an existing email address, you can create one on Outlook.com.</p>
 
-<p>When you create an Outlook.com account, it tends not to ask for any other contact information.  However, Microsoft will require you to add security contact info later on.</p>
+<p>When you create an Outlook.com account, it tends not to ask for any other contact information.  However, Microsoft will require you to add alternative contact info later on.</p>
 
 <p>Video example: <a href="https://www.youtube.com/watch?v=iS6WC9qeJTQ">How To Create a Microsoft Account</a>, by Aldo Jones (2025-12-30).</p>
 
-<p>At the end of Aldo’s video, he opens the Privacy section in Microsoft account.  This required him to add contact info, before he could actually open the Privacy section.</p>
+<p>At the end of Aldo’s video, he opens the Privacy section in Microsoft account.  Before he can actually use the Privacy section, he is required to add contact info.</p>
 
 <p>The same requirement applies to the “Manage how I sign in” page, in the Security section.</p>
 
-<p>You can pass this requirement by adding a recovery email address, or creating your account using a non-Microsoft email.</p>
+<p>You can pass this requirement by adding a recovery email address, or using a non-Microsoft email when you create your account.</p>
 
 <p><strong>Contents</strong></p>
 
@@ -98,7 +98,7 @@
 
 <p>In addition, you can add one or more alternative email addresses as contact info.</p>
 
-<p>Microsoft say you can no longer add a phone number.  If you have already added a mobile number to your account, you can still use that number at the moment.  However, Microsoft is phasing out the use of phone numbers:</p>
+<p>Microsoft say you can no longer add a phone number.  If you have already added a mobile number to your account, you can still use that number at the moment.  However, Microsoft is phasing out the use of phone numbers.</p>
 
 <p>Sources:</p>
 
@@ -165,7 +165,7 @@
 
 <p>See: <a href="https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part">Why does my Outlook.com account say “Share or use my details with Microsoft Partners”?</a></p>
 
-<!--
+<!-- CUT TEXT
 
 Note: in this case, Edge kept me permanently signed in to the Microsoft account website.
 
