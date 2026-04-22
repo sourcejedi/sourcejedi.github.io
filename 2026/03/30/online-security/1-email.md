@@ -28,7 +28,7 @@ Your email provider may automatically suggest one or more options, as described 
 
 ### Using your mobile number as a security contact
 
-Google, Microsoft, and Apple accounts want to use your mobile number, as a security contact.  This is very helpful for signing in.
+Apple and Google accounts want to use your mobile number, as a security contact.  This is very helpful for signing in.
 
 These accounts will confirm what your mobile number is used for, before you enter it.  You can read the screen, and control how they use your number.
 
