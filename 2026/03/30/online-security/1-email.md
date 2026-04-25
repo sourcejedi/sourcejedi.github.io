@@ -5,14 +5,14 @@ title:  "Security part 1 - Email sign-in"
 
 For a good guide to online security, read the [Cyber Aware "top tips"][cyber-aware].
 
-I needed to break down some of the steps.  Here are my own (much longer) notes.  If you need more help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
+I needed to break down some of the steps.  Here are my own (somewhat longer) notes.  If you need more help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
 
 [cyber-aware]: https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online
 
 * TOC
 {:toc}
 
-## Sign in to your email
+## Your email sign-in
 
 Cyber Aware starts with your email account.
 
@@ -22,7 +22,7 @@ Your email is important.  It can be used to reset passwords on many other apps a
 
 Security is a balancing act.  You want to stop criminals from signing in to your email account.  At the same time, you don’t want to lock yourself out.
 
-To start with, let's look at making it easier to sign in - and harder to get locked out.
+To start with, let's look at making it easier to sign in -- and harder to get locked out.
 
 Your email provider may automatically suggest one or more options, as described below.  These suggestions are usually shown when you sign in on a new device, or on the website for your email provider.
 
@@ -34,7 +34,7 @@ These accounts will confirm what your mobile number is used for, before you ente
 
 For example, an Android phone may have asked to use your number for [Google adverts][android-number-tracking].  However, as Google explain, this is a separate option in your account.
 
-You can add a security contact in Google Account, without changing advertising settings.  Equally, when you turn off personalised ads, it does not remove your Google security contact(s).  It is safe to add your mobile number as a Google "recovery phone", and for "two-step verification".
+You can add a security contact in your Google account, without changing advertising settings.  Equally, when you turn off personalised ads, it does not remove your Google security contact(s).  It is safe to add your mobile number as a Google "recovery phone", and for "two-step verification".
 
 [android-number-tracking]: https://android.stackexchange.com/questions/261842/does-google-use-android-mobile-numbers-for-ad-tracking-purposes-when-does-it-as/
 
@@ -48,16 +48,16 @@ Passkeys are a newer, more secure way to sign in.  You can only use a passkey on
 
 Adding a passkey does not remove other sign-in options.  For an important account, it is best to add as many options as possible to verify your identity.
 
-Apple and Android devices make it easy to save passkeys.  They also back up passkeys to your Apple or Google account - encrypted using your lock screen PIN.  Passkeys can be synchronized between Apple devices, or between Android and other devices using Google Chrome.
+Apple and Android devices make it easy to save passkeys.  They also back up passkeys to your Apple or Google account -- encrypted using your lock screen PIN.  Passkeys can be synchronized between Apple devices, or between Android and other devices using Google Chrome.
 
-We don't need to use passkeys with other devices, at least at this point in this guide.  Other types of device might need an extra step to set up, or might not support passkeys at all.
+At this point in the process, we don't need to save passkeys on other devices.  Other devices might need an extra step to set up, or might not support passkeys at all.
 
 ### Writing down your password (and other details)
 
 Keep track of each sign-in detail.  For example:
 
 * the email address, which you sign in with.
-* your current password - or the safe place where you recorded it - or a clue to help you remember.
+* your current password -- or the safe place where you recorded it -- or a clue to help you remember.
 * the mobile number linked to the account (if any).
 * the device(s) you have saved a *passkey* on.
 
@@ -119,11 +119,9 @@ Two-step verification is a key feature of the accounts below.  If your email acc
 2. Gmail &nbsp;/&nbsp; Google account
 3. Outlook.com &nbsp;/&nbsp; Microsoft account
 
-These accounts rely heavily on a mobile phone.  They might also make use of an already signed-in device.
+These accounts rely heavily on a mobile phone.  They might also be able to use another signed-in device.
 
-Let’s make a recovery plan, for when your phone is lost or broken.
-
-In *some* cases, you can recover a lost mobile number.  Ask your mobile carrier how, *before you lose your phone*.  If you lose your “second step” verification methods, you could be blocked from signing back in to your account, *even when you have your password.*
+We should have a recovery plan, for when your phone is lost or broken.
 
 #### 1\. iCloud Mail / Apple account
 
@@ -131,13 +129,15 @@ Apple accounts are protected using *two-factor authentication* (2FA).  This is r
 
 When you sign in on a new device, you need to verify using one of your registered Apple devices, or a registered phone number, as well as your password.
 
-You can add multiple Apple devices and phone numbers.  For example, you can add an iPad, a Macbook, and a landline phone number.  However, you can only link an iPad or an iPhone to a single Apple account.
+You can add multiple Apple devices and phone numbers.  For example, you can add an iPad, a Macbook, and a landline phone number.
 
-If you lose access to all your "trusted" devices and phone numbers, you will need to recover your account.  This takes longer - it could be a week or two.
+Note that an iPad or iPhone can only be linked to one Apple account.
+
+If you lose access to all your "trusted" devices and phone numbers, you will need to recover your account.  This takes longer -- it could be a week or two.
 
 Once you understand how account recovery will work, make sure you have *two-factor authentication* turned on.  It will be much harder for criminals to steal your account.
 
-Apple have several help pages for security, and recovery.  They are linked as references in my notes here: [Avoid getting locked out of your Apple account or iCloud](https://docs.google.com/document/d/1fjio96bmSSqI0oOMYk8Gdm1iMTXDsOdNGrwtERrzbps/)
+Apple have several help pages for security, and recovery.  These are linked as references in my notes here: [Avoid getting locked out of your Apple account or iCloud](https://docs.google.com/document/d/1fjio96bmSSqI0oOMYk8Gdm1iMTXDsOdNGrwtERrzbps/)
 
 #### 2\. Gmail / Google account
 
@@ -155,17 +155,19 @@ Even if 2-Step Verification is turned off, Google requires a "second step" whene
 
 #### 3\. Outlook.com / Microsoft account
 
-In order to turn on two-step verification, Microsoft requires an alternative contact method.
+In order to turn on two-step verification for Microsoft account, you need an alternative contact method.
 
 Contact info is also required to use various basic security features.
 
 As of 2026, Microsoft tell you to add a "verified email", which is separate from your Outlook.com account.  They are phasing out the use of phone numbers.
 
-Microsoft have already removed the official method to update your phone number.  For the moment, you may be able to use your current mobile number, as one of your backup methods.
+Microsoft already removed the official method to update your phone number.  For the moment, you may be able to use your current mobile number, as one of your backup methods.
 
  * Reference: [Microsoft to stop sending SMS codes for personal accounts](https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1)
 
  * My notes: [Do Microsoft accounts require a recovery email address or a mobile number?]({% post_url 2026-04-20-microsoft-contact-info %})
+
+What can you use as your recovery email address?
 
 You could create a [new Gmail account][gmail-create-new], for free.  Or, you can [add a Gmail address][gmail-create] to an existing Google account.  Many people already have a Google account, e.g. because they use an Android phone.
 
@@ -186,7 +188,7 @@ In the steps after that, we can create recovery and security plans for a passwor
 
 If you have made your recovery plans now, there are two options to secure your Microsoft account:
 
-1. _Cyber Aware_ says to turn on two-step verification for Microsoft account, following the Microsoft guide:
+1. Cyber Aware says to turn on two-step verification, following the Microsoft guide:
 
    [How to use two-step verification with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
 
@@ -224,7 +226,7 @@ This option completes the Cyber Aware tip: [Use a strong and separate password f
 
 ## Next steps
 
-- [Security part 2 \- Your device](https://docs.google.com/document/d/1js3EAvRQKoTBvSatdhSFDTuj3MFqEU3VmIrHEYihPqg/)
+- [Security part 2 - Your device]({% link 2026/03/30/online-security/2-device.md %})
 
 - [Security part 3 \- Manage your passwords](https://docs.google.com/document/d/1Lj5E0srO1DTEspJkLqsV1pSblDBiKrYA8SOysktzjtk/)
 
