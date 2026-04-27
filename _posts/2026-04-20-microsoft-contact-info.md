@@ -3,7 +3,7 @@ layout: post-narrow
 title:  "Do Microsoft accounts require a recovery email address or a mobile number?"
 ---
 
-_Shortly after I finished writing up their security and recovery system, Microsoft decided to [change it][SMS-phase-out].  So I went back again and checked how everything works.  These are my test results._
+_Shortly after I finished writing up Microsoft's security and recovery system, they decided to [change it][SMS-phase-out].  So I went back again and checked how everything works.  These are my test results._
 
 [SMS-phase-out]: https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1
 
@@ -52,14 +52,14 @@ Microsoft will remind you to add contact info.  If you skip past this, it may al
 
 Microsoft can require you to add contact info when you use a security feature.
 
-This can happen when you sign in on a new device.  I saw this happen, a few days after I created my test account.
+This can happen when you sign in on a new device.  I saw this myself, a few days after I created my test account.
 
 Currently, contact info is also required to turn on two-step verification - a top tip from [Cyber Aware][cyber-aware-2sv] experts - or to "go passwordless", as per [Microsoft security guidance][MSA-secure].
 
 [cyber-aware-2sv]:    https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email
 [MSA-secure]:    https://support.microsoft.com/en-us/account-billing/how-to-help-keep-your-microsoft-account-secure-628538c2-7006-33bb-5ef4-c917657362b9
 
-Microsoft understands this could raise concerns.  In certain cases, Microsoft lets you skip the requirement temporarily.  You can repeat this for up to seven days.  After seven days, when you sign in on a new device, you will need to add contact info.
+Microsoft understands this could raise concerns.  When you need to sign in, Microsoft may let you skip the requirement temporarily.  You can repeat this for up to seven days.  After seven days, when you sign in on a new device, you will need to add contact info.
 
 You can be required to add contact info due to events beyond your control.  For example, network changes can affect how Microsoft detects your location.  This can trigger the security system (below).
 
@@ -103,7 +103,7 @@ In addition, you can add one or more alternative email addresses as contact info
 
 Microsoft say you can no longer add a phone number.  If you have already added a mobile number to your account, you can still use that number at the moment.  However, Microsoft is phasing out the use of phone numbers.
 
-Sources:
+References:
 
 * [Microsoft account security info & verification codes](https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452)
 
@@ -156,8 +156,21 @@ If someone hacked your Outlook.com email, they could delete any alerts that were
 
 From a user's point of view, SMS may work equally well.  However, Microsoft say SMS security has been slower to improve.  There are also cost issues, which include criminals using premium numbers.
 
-More specifically, a key part of the security system is based on alerts.  You can see the process here: [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
+More specifically, there is a key part of the security system which is based on alerts.  You can see the process here: [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
+## If my contact information stops working, will I lose my account?
+
+There are other ways to sign in, which do not use contact info.  You can add passkeys, or a password, etc.
+
+However, it is still recommended to keep your contact info up to date.  This helps secure your account (see above).
+
+As long as you have at least one other sign-in method, you will be able to update your contact info.
+
+When you need to replace all your contact info, you might have to go through a recovery process.  In these cases, the change will take 30 days to apply.  You can avoid this delay if you can provide certain kinds of verification, or by using a "trusted device" (a device and browser where you have signed in before).
+
+References:
+
+* [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
 ## Sidenote: What do they do with my *main* email address?
 
