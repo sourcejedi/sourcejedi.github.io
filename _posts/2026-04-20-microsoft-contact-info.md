@@ -30,20 +30,24 @@ You can pass this requirement by adding a recovery email address, or using a non
 
 ## Can you use a Windows PC without adding contact information?
 
-It appears possible to avoid the requirement above, if you follow these steps:
+It appears possible to avoid the requirement above, for the "Manage how I sign in" page.
 
-1. Create an Outlook.com account during Windows setup, or in the Settings app.
-2. Use this account to sign in to Windows.
-3. Open the _Edge_ browser app (non-private mode).
-4. Open [account.microsoft.com][MSA]
+Create your Microsoft account during Windows setup, or in the Settings app.  Then follow these steps:
 
-[MSA]: https://account.microsoft.com/account
+1. Use your Microsoft account to sign in to Windows.
+2. Open the Settings app.
+3. In the nagivation menu, select "Accounts".
+4. Scroll down and select "Your accounts".
+5. In the list of accouts, click or tap your Microsoft account.
+6. Select "Manage".
 
-In other words, this allowed me to open the "Manage how I sign in" and Privacy pages, without adding alternative contact info.
+This opened the Microsoft account page in Edge, and automatically signed me in.  It allowed me to open the "Manage how I sign in" page, without adding alternative contact info.
 
 Aldo could not do this, because he used a Mac instead of a Windows PC.
 
-However, adding contact info is still required before you can use certain security features (below).
+Initially, I could open the Privacy page without adding contact info.  After two weeks time, I noticed the Privacy page would require contact info.  This did not affect the "Manage how I sign in" page, however.
+
+Adding contact info is also required before you can use certain security features (below).
 
 Microsoft will remind you to add contact info.  If you skip past this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup, respectively).
 
