@@ -38,18 +38,18 @@ Create your Microsoft account during Windows setup, or in the Settings app.  The
 2. Open the Settings app.
 3. In the nagivation menu, select "Accounts".
 4. Scroll down and select "Your accounts".
-5. In the list of accouts, click or tap your Microsoft account.
+5. In the list of accounts, click or tap your Microsoft account.
 6. Select "Manage".
 
 This opened the Microsoft account page in Edge, and automatically signed me in.  It allowed me to open the "Manage how I sign in" page, without adding alternative contact info.
 
 Aldo could not do this, because he used a Mac instead of a Windows PC.
 
-Initially, I could open the Privacy page without adding contact info.  After two weeks time, I noticed the Privacy page would require contact info.  This did not affect the "Manage how I sign in" page, however.
+*Update:* Initially, I could open the Privacy page without adding contact info.  Two weeks later (on the 2nd of May), I noticed the Privacy page required contact info.  This did not affect the "Manage how I sign in" page, however.
 
 Adding contact info is also required before you can use certain security features (below).
 
-Microsoft will remind you to add contact info.  If you skip past this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup, respectively).
+Microsoft will show reminders to add contact info.  If you don't do this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup, respectively).
 
 
 ## How can they force me to add contact information?
