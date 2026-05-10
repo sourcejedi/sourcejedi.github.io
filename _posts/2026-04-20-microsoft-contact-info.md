@@ -142,6 +142,10 @@ I simulated losing the alternative email address for this test account, and reco
 
 At the end of Aldo's 2025 video (above), the Privacy page required him to add an alternative email address, or a mobile number.  There were no other options.
 
+<!-- The emphasis of a contact method which is phone/email, different from an Authenticator app, is also consistent with phrasing in MSA pages in Xbox support.  However, these have not been updated - they still recommend adding a phone number.
+
+Link: https://support.xbox.com/en-US/help/family-online-safety/online-safety/update-security-information
+-->
 
 ## I don't want to add contact information.  Could I write down a Recovery Code instead?
 
