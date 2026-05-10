@@ -168,13 +168,15 @@ More specifically, there is a key part of the security system which is based on 
 
 ## If my contact information stops working, will I lose my account?
 
-There are other ways to sign in, which do not use contact info.  You can add passkeys, or a password, etc.
+There are several other ways to sign in, which do not use contact info.  For example, you may have added your account to a Windows PC.
 
 However, it is still recommended to keep your contact info up to date.  This helps secure your account (see above).
 
 As long as you have at least one other sign-in method, you will be able to update your contact info.
 
-When you need to replace all your contact info, you might have to go through a recovery process.  In these cases, the change will take 30 days to apply.  You can avoid this delay if you can provide certain kinds of verification, or by using a "trusted device" (a device and browser where you have signed in before).
+When you need to replace all your existing contact info, you might have to go through a recovery process.  The recovery process will take 30 days to replace your contact info.
+
+During the 30 day recovery process, you might not be able to sign in on a new device, if you don't have the right kind of verification.  You may be able to sign back in on a "trusted device" (a device and browser where you have signed in before).
 
 References:
 
