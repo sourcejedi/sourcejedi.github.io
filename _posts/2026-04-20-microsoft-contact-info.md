@@ -11,7 +11,7 @@ A personal Microsoft account requires at least one email address (or phone numbe
 
 When you create an Outlook.com account, it tends not to ask for any other contact information.  However, Microsoft will require you to add alternative contact info later on.
 
-Video example: [How To Create a Microsoft Account][YT-AldoJames-Create-MSA], by Aldo Jones (2025-12-30).
+Video example: [How To Create a Microsoft Account][YT-AldoJames-Create-MSA], by Aldo James (2025-12-30).
 
 [YT-AldoJames-Create-MSA]: https://www.youtube.com/watch?v=iS6WC9qeJTQ
 
