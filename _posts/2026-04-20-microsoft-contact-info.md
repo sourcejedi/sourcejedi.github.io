@@ -56,7 +56,7 @@ Microsoft will show reminders to add contact info.  If you don't do this, it may
 
 Microsoft can require you to add contact info when you use a security feature.
 
-This can happen when you sign in on a new device.  I saw this myself, a few days after I created my test account.
+This can happen when you try to sign in on a new device.  I saw this myself, a few days after I created my test account.
 
 Currently, contact info is also required to turn on two-step verification - a top tip from [Cyber Aware][cyber-aware-2sv] experts - or to "go passwordless", as per [Microsoft security guidance][MSA-secure].
 
@@ -179,6 +179,8 @@ When you need to replace all your existing contact info, you might have to go th
 During the 30 day recovery process, you might not be able to sign in on a new device, if you don't have the right kind of verification.  You may be able to sign back in on a "trusted device" (a device and browser where you have signed in before).
 
 References:
+
+* [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48)
 
 * [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
