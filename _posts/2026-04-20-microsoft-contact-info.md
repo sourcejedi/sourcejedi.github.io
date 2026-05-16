@@ -174,13 +174,13 @@ However, it is still recommended to keep your contact info up to date.  This hel
 
 As long as you have at least one other sign-in method, you will be able to update your contact info.
 
-When you need to replace all your existing contact info, you might have to go through a recovery process.  The recovery process will take 30 days to replace your contact info.
+If all of your contact info is out of date, it may take 30 days to replace it.  During this recovery period, you might not be able to sign in on a new device.
 
-During the 30 day recovery process, you might not be able to sign in on a new device, if you don't have the right kind of verification.  You may be able to sign back in on a "trusted device" (a device and browser where you have signed in before).
+<!-- TODO: the passkey question. -->
 
 References:
 
-* [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48)
+* [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48).  See "I've lost access to my Microsoft account security info".
 
 * [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
