@@ -15,7 +15,7 @@ Video example: [How To Create a Microsoft Account][YT-AldoJames-Create-MSA], by 
 
 [YT-AldoJames-Create-MSA]: https://www.youtube.com/watch?v=iS6WC9qeJTQ
 
-At the end of Aldo's video, he opens the Privacy section in Microsoft account.  Before he can actually use the Privacy section, he is required to add contact info.
+At the end of this video, Aldo opens the Privacy section in Microsoft account.  Before he can actually use the Privacy section, he is required to add contact info.
 
 The same requirement applies to the "Manage how I sign in" page, in the Security section.
 
@@ -32,7 +32,7 @@ You can pass this requirement by adding a recovery email address, or using a non
 
 It appears possible to avoid the requirement above, for the "Manage how I sign in" page.
 
-Create your Microsoft account during Windows setup, or in the Settings app.  Then follow these steps:
+Create your Microsoft account in the Settings app, or during Windows setup.  Then follow these steps:
 
 1. Use your Microsoft account to sign in to Windows.
 2. Open the Settings app.
@@ -56,7 +56,7 @@ Microsoft will show reminders to add contact info.  If you don't do this, it may
 
 Microsoft can require you to add contact info when you use a security feature.
 
-This can happen when you try to sign in on a new device.  I saw this myself, a few days after I created my test account.
+When you want to sign in on a new device, Microsoft can require contact info.  I saw this myself, a few days after I created my test account.
 
 Currently, contact info is also required to turn on two-step verification - a top tip from [Cyber Aware][cyber-aware-2sv] experts - or to "go passwordless", as per [Microsoft security guidance][MSA-secure].
 
@@ -136,9 +136,9 @@ If you try to sign in to Authenticator, you are required to add contact info.  T
 
 (Also, when I tried to add "Use an app" on the "Manage how I sign in" page, without having added contact information, it simply refreshed the page without doing anything.  So I don't expect you can do that, either.)
 
-Once I had added an alternative email address to my test account, I was not able to remove it.  It said that I needed to add a new alternative email address first.  There was no other alternative.  Even though I had added Microsoft Authenticator to my account (as well as a non-Microsoft authenticator app, and a passkey).
+Once I had added a recovery email address to my test account, I was not able to remove it.  It said that I needed to add a new email address first.  There was no other alternative.  Even though I had added Microsoft Authenticator to my account (as well as a non-Microsoft authenticator app, and a passkey).
 
-I simulated losing the alternative email address for this test account, and recovering the account using a saved "Microsoft Account Recovery Code".  I was required to add a new alternative email address.  There was no other alternative.
+I simulated losing the recovery email address for my test account, and recovering the account using a saved "Microsoft account recovery code".  I was required to add a new email address.  There was no other option.
 
 At the end of Aldo's 2025 video (above), the Privacy page required him to add an alternative email address, or a mobile number.  There were no other options.
 
@@ -147,13 +147,13 @@ At the end of Aldo's 2025 video (above), the Privacy page required him to add an
 Link: https://support.xbox.com/en-US/help/family-online-safety/online-safety/update-security-information
 -->
 
-## I don't want to add contact information.  Could I write down a Recovery Code instead?
+## I don't want to add contact information.  Could I write down a recovery code instead?
 
 Based on my testing, this is not possible.
 
-I have tried generating a Microsoft Account Recovery Code (in "Manage how I sign in") without adding contact info.  This failed, saying there was a "temporary problem".
+I have tried generating a Microsoft account recovery code (in "Manage how I sign in") without adding contact info.  This failed, saying there was a "temporary problem".
 
-On a different account which does have contact information, there was no problem generating a recovery code.
+On a different account, which does have contact information, there was no problem generating a recovery code.
 
 
 ## Why is contact information required by Microsoft account (even though I have an Outlook.com email)?
