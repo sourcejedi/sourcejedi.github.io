@@ -19,7 +19,7 @@ At the end of this video, Aldo opens the Privacy section in Microsoft account.  
 
 The same requirement applies to the "Manage how I sign in" page, in the Security section.
 
-You can pass this requirement by adding a recovery email address, or using a non-Microsoft email when you create your account.
+You can pass this requirement by adding a recovery email address, or by using a non-Microsoft email when you create your account.
 
 
 **Contents**
@@ -30,11 +30,11 @@ You can pass this requirement by adding a recovery email address, or using a non
 
 ## Can you use a Windows PC without adding contact information?
 
-It appears possible to avoid the requirement above, for the "Manage how I sign in" page.
+It appears possible to avoid the requirement above, for the "Manage how I sign in" page.  However, there are some important limitations.
 
-Create your Microsoft account in the Settings app, or during Windows setup.  Then follow these steps:
+You can create your Microsoft account in the Settings app, or during Windows setup.  Then follow these steps:
 
-1. Use your Microsoft account to sign in to Windows.
+1. Sign in to Windows with your Microsoft account.
 2. Open the Settings app.
 3. In the nagivation menu, select "Accounts".
 4. Scroll down and select "Your accounts".
@@ -47,9 +47,9 @@ Aldo could not do this, because he used a Mac instead of a Windows PC.
 
 *Update:* Initially, I could open the Privacy page without adding contact info.  Two weeks later (on the 2nd of May), I noticed the Privacy page required contact info.  This did not affect the "Manage how I sign in" page, however.
 
-Adding contact info is also required before you can use certain security features (below).
+Adding contact info is required before you can use certain security features (below).
 
-Microsoft will show reminders to add contact info.  If you don't do this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup, respectively).
+Microsoft will show reminders to add contact info.  If you don't do this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup).
 
 
 ## How can they force me to add contact information?
@@ -65,13 +65,11 @@ Currently, contact info is also required to turn on two-step verification - a to
 
 Microsoft understands this could raise concerns.  When you need to sign in, Microsoft may let you skip the requirement temporarily.  You can repeat this for up to seven days.  After seven days, when you sign in on a new device, you will need to add contact info.
 
-You can be required to add contact info due to events beyond your control.  For example, network changes can affect how Microsoft detects your location.  This can trigger the security system (below).
-
 References:
 
 * [Help us secure your account](https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c) -- "If you see a message that says 'Let's protect your account' or 'Help us secure your account', it's because we need you to add some information to your account..."
 
-* [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48)  -- Under "How to fix "make sure you can receive a security code" when signing in to my Microsoft account."
+* [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48)  -- Under 'How to fix "make sure you can receive a security code" when signing in to my Microsoft account'.
 
 
 ## What do they do with my contact information?
@@ -130,9 +128,9 @@ Microsoft also say you can use the email address of a trusted contact.  This cou
 
 ## Can I use Microsoft Authenticator as the contact information for my account?
 
-No.  At the moment, adding the Microsoft Authenticator app does not remove the requirement for an recovery email address (or mobile number).
+No.  Adding the Microsoft Authenticator app did not remove the requirement for an recovery email address (or mobile number).
 
-If you try to sign in to Authenticator, you are required to add contact info.  The same thing happens if you turn on two-step verification, or "go passwordless".
+When I tried to sign in to Authenticator, I was required to add contact info.  The same thing happened if I tried to turn on two-step verification, or "go passwordless".
 
 (Also, when I tried to add "Use an app" on the "Manage how I sign in" page, without having added contact information, it simply refreshed the page without doing anything.  So I don't expect you can do that, either.)
 
@@ -166,9 +164,10 @@ From a user's point of view, SMS may work equally well.  However, Microsoft say 
 
 More specifically, there is a key part of the security system which is based on alerts.  You can see the process here: [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
+
 ## If my contact information stops working, will I lose my account?
 
-There are several other ways to sign in, which do not use contact info.  For example, you may have added your account to a Windows PC.
+You can have another sign-in method, which does not use contact info.  For example, you may have added your account to a Windows PC.
 
 However, it is still recommended to keep your contact info up to date.  This helps secure your account (see above).
 
@@ -176,13 +175,29 @@ As long as you have at least one other sign-in method, you will be able to updat
 
 If all of your contact info is out of date, it may take 30 days to replace it.  During this recovery period, you might not be able to sign in on a new device.
 
-<!-- TODO: the passkey question. -->
-
 References:
 
 * [Troubleshoot Microsoft verification code issues](https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48).  See "I've lost access to my Microsoft account security info".
 
-* [What does “Security info change is still pending” mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
+* [What does "Security info change is still pending" mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
+
+
+<!-- TODO:
+## Why could it take 30 days to update my contact information?
+-->
+
+<!--
+## Can I use a passkey to fix outdated contact info?
+
+Passkeys are very useful.  However, they are not guaranteed to avoid the 30-day recovery period.
+
+Microsoft claim that when you sign in with a passkey, it avoids the need to receive a verification code.  In this case, you could immediately replace any outdated contact info.
+
+When I tested it, certain passkeys did not avoid the need for a verification code.  I'm not sure what I can do about this, other than reporting what I have seen.  It would be helpful if Microsoft could clarify.
+
+See: [If you use a passkey to sign in, does Microsoft still ask for a verification code?](https://webapps.stackexchange.com/questions/182396/if-you-use-a-passkey-to-sign-in-does-microsoft-still-ask-for-a-verification-cod/182397#182397)
+-->
+
 
 ## Sidenote: What do they do with my *main* email address?
 
