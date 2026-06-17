@@ -90,7 +90,7 @@ See also (more recently updated): [What happens if there's an unusual sign-in to
 
 [microsoft-alert]: https://support.microsoft.com/en-us/account-billing/what-happens-if-there-s-an-unusual-sign-in-to-your-account-eba43e04-d348-b914-1e95-fb5052d3d8f0
 
-When I add security contact info to an existing account, Microsoft says "we won't use this to spam you—just to keep your account more secure".  I tested this using "Manage how I sign in", in the Security section.
+When I add security contact info to an existing account, Microsoft says "we won't use this to spam you—just to keep your account more secure".  This was in the "Manage how I sign in" page.
 
 Once you add contact info, it is not possible to remove it unless you add (and verify) alternative contact info.
 
@@ -181,22 +181,7 @@ References:
 
 * [What does "Security info change is still pending" mean?](https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52)
 
-
-<!-- TODO:
-## Why could it take 30 days to update my contact information?
--->
-
-<!--
-## Can I use a passkey to fix outdated contact info?
-
-Passkeys are very useful.  However, they are not guaranteed to avoid the 30-day recovery period.
-
-Microsoft claim that when you sign in with a passkey, it avoids the need to receive a verification code.  In this case, you could immediately replace any outdated contact info.
-
-When I tested it, certain passkeys did not avoid the need for a verification code.  I'm not sure what I can do about this, other than reporting what I have seen.  It would be helpful if Microsoft could clarify.
-
-See: [If you use a passkey to sign in, does Microsoft still ask for a verification code?](https://webapps.stackexchange.com/questions/182396/if-you-use-a-passkey-to-sign-in-does-microsoft-still-ask-for-a-verification-cod/182397#182397)
--->
+* My analysis: [Avoid getting locked out of your Microsoft account or Outlook.com](https://docs.google.com/document/d/1NqAE3S8OUXGeBoIgqqnYi-5q3NS_t0R4j5OX-s9pvkw/edit?tab=t.0#heading=h.jf4k0voou6o3)
 
 
 ## Sidenote: What do they do with my *main* email address?
@@ -207,20 +192,6 @@ Microsoft shows one or more options for this, during the account creation proces
 
 In the EU or UK, for example, it could be illegal to share contact info on an "opt-out" basis.  As far as I know, Microsoft do not break this law in the EU.
 
-If you want to know more about your settings, you could use the Microsoft Privacy Request form.  Microsoft explained that, as of 31/05/2025, it might not be possible to know your current settings without asking them.  This is because the online system does not always mean what it appears to say.  I look forward to reading future updates from Microsoft.
+If you want to know more about your settings, you could use the Microsoft Privacy Request form.  Microsoft explained that, as of 2025-05-31, it might not be possible to know your current settings without asking them.  This is because the online system does not always mean what it appears to say.  I look forward to reading future updates from Microsoft.
 
-See: [Why does my Outlook.com account say "Share or use my details with Microsoft Partners"?](https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part)
-
-
-<!-- CUT TEXT
-
-Note: in this case, Edge kept me permanently signed in to the Microsoft account website.
-
-It seems possible to start using Microsoft Windows without adding contact info to your account.  However, at some point, if you want to keep using the same account on a new PC, phone, or other device, you may be forced to add contact info.
-
-Contact info is still required when you use certain features:
-
- * Turn on two-step verification (in "Manage how I sign in").
- * "Go passwordless" (in "Manage how I sign in").
- * Sign in to the Microsoft Authenticator app.
--->
+My analysis: [Why does my Outlook.com account say "Share or use my details with Microsoft Partners"?](https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part)
