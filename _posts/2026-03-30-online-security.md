@@ -5,7 +5,7 @@ title:  "Steps for online security"
 
 For a good guide to online security, read the [Cyber Aware "top tips"][cyber-aware].
 
-I needed to break down some of the steps.  Here are my own (somewhat longer) notes.  If you need more help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
+I needed to break down some steps.  Here are my own (somewhat longer) notes.  If you need more help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
 
 ## Contents
 

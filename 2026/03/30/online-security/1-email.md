@@ -5,7 +5,7 @@ title:  "Security part 1 - Email sign-in"
 
 For a good guide to online security, read the [Cyber Aware "top tips"][cyber-aware].
 
-I needed to break down some of the steps.  Here are my own (somewhat longer) notes.  If you need more help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
+I needed to break down some steps.  Here are my (somewhat longer) notes.  If you need help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
 
 [cyber-aware]: https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online
 
@@ -26,13 +26,13 @@ To start with, let's look at making it easier to sign in -- and harder to get lo
 
 Your email provider may automatically suggest one or more options, as described below.  These suggestions are usually shown when you sign in on a new device, or on the website for your email provider.
 
-### Using your mobile number as a security contact
+### Using your mobile phone as a security contact
 
-Apple and Google accounts want to use your mobile number, as a security contact.  This is very helpful for signing in.
+If you use an Apple or Google account, they want to use your mobile number as a security contact.  This is very helpful for signing in.
 
 These accounts will confirm what your mobile number is used for, before you enter it.  You can read the screen, and control how they use your number.
 
-For example, an Android phone may have asked to use your number for [Google adverts][android-number-tracking].  However, as Google explain, this is a separate option in your account.
+An Android phone may have asked to use your number for [Google adverts][android-number-tracking].  However, as Google explain, this is a separate option in your account.
 
 You can add a security contact in your Google account, without changing advertising settings.  Equally, when you turn off personalised ads, it does not remove your Google security contact(s).  It is safe to add your mobile number as a Google "recovery phone", and for "two-step verification".
 
@@ -50,7 +50,9 @@ Adding a passkey does not remove other sign-in options.  For an important accoun
 
 Apple and Android devices make it easy to save passkeys.  They also back up passkeys to your Apple or Google account -- encrypted using your lock screen PIN.  Passkeys can be synchronized between Apple devices, or between Android and other devices using Google Chrome.
 
-At this point in the process, we don't need to save passkeys on other devices.  Other devices might need an extra step to set up, or might not support passkeys at all.
+When you have a passkey on your phone, you can often use it to sign in on other devices.
+
+At this point in the process, we don't need to save passkeys on other devices.  Other devices might need an extra step to set up, or might not support using passkeys at all.
 
 ### Writing down your password (and other details)
 
@@ -75,9 +77,15 @@ Now sign in on the website:
 
 2. Open the website for your email provider.
 
-3. Tap "Sign in" or "Log in", and follow the instructions.
+3. If you are already signed in, <strong>do not sign out</strong>.  Go to the next section.
 
-If you are already signed in, do not sign yourself out.  Instead, practice your sign-in by opening a *private browsing session*.  Search how to use *private browsing* on your device and web browser.  For example:
+4. Tap "Sign in" or "Log in".
+
+5. Follow the instructions.  If you do not have the sign-in details you need, see below.
+
+#### If you are already signed in
+
+You can practice your sign-in again, by opening a *private browsing session*.  Search how to use *private browsing* on your device and web browser.  For example:
 
 * [Microsoft Edge (Windows PC)][private-windows-edge]
 * [Apple Safari (iPhone)][private-iphone-safari]
@@ -89,7 +97,19 @@ If you are already signed in, do not sign yourself out.  Instead, practice your 
 [private-chrome-any-device]: https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop
 [private-firefox-desktop]: https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history
 
-If you do not have your original security info, go through the sign-in process and look for options to reset your password and/or recover your account.
+#### If you do not have the sign-in details you need
+
+Go through the sign-in process, and look carefully for alternative options.
+
+* Is there an option to use a passkey?
+
+* Do you have another device?  If you try on your other device, does it show a saved passkey or password?
+
+* If you are already signed in somewhere, check that first.  See if you can update your sign-in details.  (See next section).
+
+* Otherwise, you may need to reset your password and/or recover your account.
+
+#### When you succeed
 
 Confirm each sign-in detail you use on your recovery sheet (above).
 
@@ -121,9 +141,12 @@ Two-step verification is a key feature of the accounts below.  If your email acc
 
 These accounts rely heavily on a mobile phone.  They might also be able to use another signed-in device.
 
-We should have a recovery plan, for when your phone is lost or broken.
+We should have a recovery plan, e.g. for when your phone is lost or broken.
 
-#### 1\. iCloud Mail / Apple account
+If your recovery plan relies heavily on a mobile number, you should ask your mobile carrier what you will need to recover the phone number, before you lose your phone.
+
+#### 1. iCloud Mail / Apple account
+{: #apple}
 
 Apple accounts are protected using *two-factor authentication* (2FA).  This is required on all new accounts, and to use various Apple features.
 
@@ -135,11 +158,12 @@ Note that an iPad or iPhone can only be linked to one Apple account.
 
 If you lose access to all your "trusted" devices and phone numbers, you will need to recover your account.  This takes longer -- it could be a week or two.
 
-Once you understand how account recovery will work, make sure you have *two-factor authentication* turned on.  It will be much harder for criminals to steal your account.
+Once you understand how account recovery will work, check your security settings for *two-factor authentication*.  This will make it much harder for criminals to steal your account.
 
 Apple have several help pages for security, and recovery.  These are linked as references in my notes here: [Avoid getting locked out of your Apple account or iCloud](https://docs.google.com/document/d/1fjio96bmSSqI0oOMYk8Gdm1iMTXDsOdNGrwtERrzbps/)
 
-#### 2\. Gmail / Google account
+#### 2. Gmail / Google account
+{: #google}
 
 Google likes to automatically change your account to "2-Step Verification" (2SV).  When you sign in on a new device, 2SV requires your registered phone, as well as your password.  Or you might use a passkey saved on your phone.
 
@@ -153,21 +177,20 @@ Even if 2-Step Verification is turned off, Google requires a "second step" whene
 
  - My notes: [Avoid getting locked out of your Google account or Gmail](https://docs.google.com/document/d/1wXLJ4OgJQfRwekOXa1M8AQ7C9Gt4ivgNHVle2TWw0SM/)
 
-#### 3\. Outlook.com / Microsoft account
+#### 3. Outlook.com / Microsoft account
+{: #microsoft}
 
-In order to turn on two-step verification for Microsoft account, you need an alternative contact method.
-
-Contact info is also required to use various basic security features.
+In order to sign in on a different device, Microsoft require you to add a contact method to your account.  You can use this to recieve a verification code.
 
 As of 2026, Microsoft tell you to add a "verified email", which is separate from your Outlook.com account.  They are phasing out the use of phone numbers.
 
-Microsoft already removed the official method to update your phone number.  For the moment, you may be able to use your current mobile number, as one of your backup methods.
+Microsoft already removed the ability to update your phone number.  For the moment, you may be able to use your current mobile number, as one of your backup methods.
 
  * Reference: [Microsoft to stop sending SMS codes for personal accounts](https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1)
 
  * My notes: [Do Microsoft accounts require a recovery email address or a mobile number?]({% post_url 2026-04-20-microsoft-contact-info %})
 
-What can you use as your recovery email address?
+What can you use for your linked email address?
 
 You could create a [new Gmail account][gmail-create-new], for free.  Or, you can [add a Gmail address][gmail-create] to an existing Google account.  Many people already have a Google account, e.g. because they use an Android phone.
 
@@ -182,27 +205,26 @@ Once you have an alternative email address you can add, or to verify your curren
 
  * [Microsoft account security info & verification codes](https://support.microsoft.com/en-us/account-billing/microsoft-account-security-info-verification-codes-bf2505ca-cae5-c5b4-77d1-69d3343a5452)
 
-Now the simplest way to proceed is to go back to the beginning, and secure your *other* email account.
+Now the simplest way to proceed is to secure your *other* email account first, going back to the start of this guide.
 
-In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage all your accounts, passwords, and options for two-step verification.
+In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage each account, password, and two-step verification.
 
 If you have made your recovery plans now, there are two options to secure your Microsoft account:
 
 1. Cyber Aware says to turn on two-step verification, following the Microsoft guide:
 
-   [How to use two-step verification with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
+   [How to use two-step verification with your Microsoft account](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
 
 2. Microsoft says you could "increase the security of your account by removing your password and signing in with a passwordless method instead."
 
    If your sign-in settings currently show a password, you will need to install the Microsoft Authenticator app on your phone, before you can go passwordless:
 
-   [How to go passwordless with your Microsoft account - Microsoft Support](https://support.microsoft.com/en-us/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
+   [How to go passwordless with your Microsoft account](https://support.microsoft.com/en-us/account-billing/how-to-go-passwordless-with-your-microsoft-account-674ce301-3574-4387-a93d-916751764c43)
 
-Either option would be a great improvement, because they reduce the risk of stolen passwords.
+Either option will provide a great improvement, by reducing the risk of stolen passwords.
 
 If you use *both* options, you will need to take extra care.  It will make it harder to sign in, and easier to get locked out.
 
-If your recovery plan relies heavily on a mobile number, you should ask your mobile carrier what you will need to recover the phone number, before you lose your phone.
 
 ### Option 2: Use a strong and separate password {#strong-and-separate-password}
 
