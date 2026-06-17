@@ -225,6 +225,7 @@ Either option will provide a great improvement, by reducing the risk of stolen p
 
 If you use *both* options, you will need to take extra care.  It will make it harder to sign in, and easier to get locked out.
 
+Longer notes: [Avoid getting locked out of your Microsoft account or Outlook.com](https://docs.google.com/document/d/1NqAE3S8OUXGeBoIgqqnYi-5q3NS_t0R4j5OX-s9pvkw/)
 
 ### Option 2: Use a strong and separate password {#strong-and-separate-password}
 
