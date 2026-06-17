@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-05-16T11:25:52+01:00</updated><id>/feed.xml</id><title type="html">Maybe Blog</title><entry><title type="html">Do Microsoft accounts require a recovery email address or a mobile number?</title><link href="/2026/04/20/microsoft-contact-info.html" rel="alternate" type="text/html" title="Do Microsoft accounts require a recovery email address or a mobile number?" /><published>2026-04-20T00:00:00+01:00</published><updated>2026-04-20T00:00:00+01:00</updated><id>/2026/04/20/microsoft-contact-info</id><content type="html" xml:base="/2026/04/20/microsoft-contact-info.html"><![CDATA[<p><em>Shortly after I finished writing up Microsoft’s security and recovery system, they decided to <a href="https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1">change it</a>.  So I went back again and checked how everything works.  These are my test results.</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-06-17T16:27:28+01:00</updated><id>/feed.xml</id><title type="html">Maybe Blog</title><entry><title type="html">Do Microsoft accounts require a recovery email address or a mobile number?</title><link href="/2026/04/20/microsoft-contact-info.html" rel="alternate" type="text/html" title="Do Microsoft accounts require a recovery email address or a mobile number?" /><published>2026-04-20T00:00:00+01:00</published><updated>2026-04-20T00:00:00+01:00</updated><id>/2026/04/20/microsoft-contact-info</id><content type="html" xml:base="/2026/04/20/microsoft-contact-info.html"><![CDATA[<p><em>Shortly after I finished writing up Microsoft’s security and recovery system, they decided to <a href="https://support.microsoft.com/en-us/account-billing/microsoft-to-stop-sending-sms-codes-for-personal-accounts-31b80825-bdd0-4bf2-926b-dca3c35ee4c1">change it</a>.  So I went back again and checked how everything works.  These are my test results.</em></p>
 
 <p>A personal Microsoft account requires at least one email address (or phone number).  If you don’t have an existing email address, you can create one on Outlook.com.</p>
 
@@ -10,7 +10,7 @@
 
 <p>The same requirement applies to the “Manage how I sign in” page, in the Security section.</p>
 
-<p>You can pass this requirement by adding a recovery email address, or using a non-Microsoft email when you create your account.</p>
+<p>You can pass this requirement by adding a recovery email address, or by using a non-Microsoft email when you create your account.</p>
 
 <p><strong>Contents</strong></p>
 
@@ -29,12 +29,12 @@
 
 <h2 id="can-you-use-a-windows-pc-without-adding-contact-information">Can you use a Windows PC without adding contact information?</h2>
 
-<p>It appears possible to avoid the requirement above, for the “Manage how I sign in” page.</p>
+<p>It appears possible to avoid the requirement above, for the “Manage how I sign in” page.  However, there are some important limitations.</p>
 
-<p>Create your Microsoft account in the Settings app, or during Windows setup.  Then follow these steps:</p>
+<p>You can create your Microsoft account in the Settings app, or during Windows setup.  Then follow these steps:</p>
 
 <ol>
-  <li>Use your Microsoft account to sign in to Windows.</li>
+  <li>Sign in to Windows with your Microsoft account.</li>
   <li>Open the Settings app.</li>
   <li>In the nagivation menu, select “Accounts”.</li>
   <li>Scroll down and select “Your accounts”.</li>
@@ -48,9 +48,9 @@
 
 <p><em>Update:</em> Initially, I could open the Privacy page without adding contact info.  Two weeks later (on the 2nd of May), I noticed the Privacy page required contact info.  This did not affect the “Manage how I sign in” page, however.</p>
 
-<p>Adding contact info is also required before you can use certain security features (below).</p>
+<p>Adding contact info is required before you can use certain security features (below).</p>
 
-<p>Microsoft will show reminders to add contact info.  If you don’t do this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup, respectively).</p>
+<p>Microsoft will show reminders to add contact info.  If you don’t do this, it may also prevent you from recovering your data, when your PC breaks, or needs to be repaired.  (Using OneDrive backup, and Bitlocker recovery key backup).</p>
 
 <h2 id="how-can-they-force-me-to-add-contact-information">How can they force me to add contact information?</h2>
 
@@ -62,8 +62,6 @@
 
 <p>Microsoft understands this could raise concerns.  When you need to sign in, Microsoft may let you skip the requirement temporarily.  You can repeat this for up to seven days.  After seven days, when you sign in on a new device, you will need to add contact info.</p>
 
-<p>You can be required to add contact info due to events beyond your control.  For example, network changes can affect how Microsoft detects your location.  This can trigger the security system (below).</p>
-
 <p>References:</p>
 
 <ul>
@@ -71,7 +69,7 @@
     <p><a href="https://support.microsoft.com/en-us/account-billing/help-us-secure-your-account-548970dd-45df-49ca-a21c-c87e47bd421c">Help us secure your account</a> – “If you see a message that says ‘Let’s protect your account’ or ‘Help us secure your account’, it’s because we need you to add some information to your account…”</p>
   </li>
   <li>
-    <p><a href="https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48">Troubleshoot Microsoft verification code issues</a>  – Under “How to fix “make sure you can receive a security code” when signing in to my Microsoft account.”</p>
+    <p><a href="https://support.microsoft.com/en-us/account-billing/troubleshoot-microsoft-verification-code-issues-409090c4-92b5-42b9-8ae6-bcc97e62fc48">Troubleshoot Microsoft verification code issues</a>  – Under ‘How to fix “make sure you can receive a security code” when signing in to my Microsoft account’.</p>
   </li>
 </ul>
 
@@ -93,7 +91,7 @@
 
 <p>See also (more recently updated): <a href="https://support.microsoft.com/en-us/account-billing/what-happens-if-there-s-an-unusual-sign-in-to-your-account-eba43e04-d348-b914-1e95-fb5052d3d8f0">What happens if there’s an unusual sign-in to your account</a>.</p>
 
-<p>When I add security contact info to an existing account, Microsoft says “we won’t use this to spam you—just to keep your account more secure”.  I tested this using “Manage how I sign in”, in the Security section.</p>
+<p>When I add security contact info to an existing account, Microsoft says “we won’t use this to spam you—just to keep your account more secure”.  This was in the “Manage how I sign in” page.</p>
 
 <p>Once you add contact info, it is not possible to remove it unless you add (and verify) alternative contact info.</p>
 
@@ -130,9 +128,9 @@
 
 <h2 id="can-i-use-microsoft-authenticator-as-the-contact-information-for-my-account">Can I use Microsoft Authenticator as the contact information for my account?</h2>
 
-<p>No.  At the moment, adding the Microsoft Authenticator app does not remove the requirement for an recovery email address (or mobile number).</p>
+<p>No.  Adding the Microsoft Authenticator app did not remove the requirement for an recovery email address (or mobile number).</p>
 
-<p>If you try to sign in to Authenticator, you are required to add contact info.  The same thing happens if you turn on two-step verification, or “go passwordless”.</p>
+<p>When I tried to sign in to Authenticator, I was required to add contact info.  The same thing happened if I tried to turn on two-step verification, or “go passwordless”.</p>
 
 <p>(Also, when I tried to add “Use an app” on the “Manage how I sign in” page, without having added contact information, it simply refreshed the page without doing anything.  So I don’t expect you can do that, either.)</p>
 
@@ -167,15 +165,13 @@ Link: https://support.xbox.com/en-US/help/family-online-safety/online-safety/upd
 
 <h2 id="if-my-contact-information-stops-working-will-i-lose-my-account">If my contact information stops working, will I lose my account?</h2>
 
-<p>There are several other ways to sign in, which do not use contact info.  For example, you may have added your account to a Windows PC.</p>
+<p>You can have another sign-in method, which does not use contact info.  For example, you may have added your account to a Windows PC.</p>
 
 <p>However, it is still recommended to keep your contact info up to date.  This helps secure your account (see above).</p>
 
 <p>As long as you have at least one other sign-in method, you will be able to update your contact info.</p>
 
 <p>If all of your contact info is out of date, it may take 30 days to replace it.  During this recovery period, you might not be able to sign in on a new device.</p>
-
-<!-- TODO: the passkey question. -->
 
 <p>References:</p>
 
@@ -185,6 +181,9 @@ Link: https://support.xbox.com/en-US/help/family-online-safety/online-safety/upd
   </li>
   <li>
     <p><a href="https://support.microsoft.com/en-us/account-billing/what-does-security-info-change-is-still-pending-mean-cbd0f64f-02d9-45d2-90c3-2375e5a72e52">What does “Security info change is still pending” mean?</a></p>
+  </li>
+  <li>
+    <p>My analysis: <a href="https://docs.google.com/document/d/1NqAE3S8OUXGeBoIgqqnYi-5q3NS_t0R4j5OX-s9pvkw/edit?tab=t.0#heading=h.jf4k0voou6o3">Avoid getting locked out of your Microsoft account or Outlook.com</a></p>
   </li>
 </ul>
 
@@ -196,24 +195,11 @@ Link: https://support.xbox.com/en-US/help/family-online-safety/online-safety/upd
 
 <p>In the EU or UK, for example, it could be illegal to share contact info on an “opt-out” basis.  As far as I know, Microsoft do not break this law in the EU.</p>
 
-<p>If you want to know more about your settings, you could use the Microsoft Privacy Request form.  Microsoft explained that, as of 31/05/2025, it might not be possible to know your current settings without asking them.  This is because the online system does not always mean what it appears to say.  I look forward to reading future updates from Microsoft.</p>
+<p>If you want to know more about your settings, you could use the Microsoft Privacy Request form.  Microsoft explained that, as of 2025-05-31, it might not be possible to know your current settings without asking them.  This is because the online system does not always mean what it appears to say.  I look forward to reading future updates from Microsoft.</p>
 
-<p>See: <a href="https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part">Why does my Outlook.com account say “Share or use my details with Microsoft Partners”?</a></p>
+<p>My analysis: <a href="https://webapps.stackexchange.com/questions/181341/why-does-my-outlook-com-account-say-share-or-use-my-details-with-microsoft-part">Why does my Outlook.com account say “Share or use my details with Microsoft Partners”?</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Shortly after I finished writing up Microsoft’s security and recovery system, they decided to change it. So I went back again and checked how everything works. These are my test results.]]></summary></entry><entry><title type="html">Steps for online security</title><link href="/2026/03/30/online-security.html" rel="alternate" type="text/html" title="Steps for online security" /><published>2026-03-30T00:00:00+01:00</published><updated>2026-03-30T00:00:00+01:00</updated><id>/2026/03/30/online-security</id><content type="html" xml:base="/2026/03/30/online-security.html"><![CDATA[<p>For a good guide to online security, read the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware “top tips”</a>.</p>
 
-<!-- CUT TEXT
-
-Note: in this case, Edge kept me permanently signed in to the Microsoft account website.
-
-It seems possible to start using Microsoft Windows without adding contact info to your account.  However, at some point, if you want to keep using the same account on a new PC, phone, or other device, you may be forced to add contact info.
-
-Contact info is still required when you use certain features:
-
- * Turn on two-step verification (in "Manage how I sign in").
- * "Go passwordless" (in "Manage how I sign in").
- * Sign in to the Microsoft Authenticator app.
--->]]></content><author><name></name></author><summary type="html"><![CDATA[Shortly after I finished writing up Microsoft’s security and recovery system, they decided to change it. So I went back again and checked how everything works. These are my test results.]]></summary></entry><entry><title type="html">Steps for online security</title><link href="/2026/03/30/online-security.html" rel="alternate" type="text/html" title="Steps for online security" /><published>2026-03-30T00:00:00+01:00</published><updated>2026-03-30T00:00:00+01:00</updated><id>/2026/03/30/online-security</id><content type="html" xml:base="/2026/03/30/online-security.html"><![CDATA[<p>For a good guide to online security, read the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware “top tips”</a>.</p>
-
-<p>I needed to break down some of the steps.  Here are my own (somewhat longer) notes.  If you need more help with the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware</a> tips, you might find these useful.</p>
+<p>I needed to break down some steps.  Here are my own (somewhat longer) notes.  If you need more help with the <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">Cyber Aware</a> tips, you might find these useful.</p>
 
 <h2 id="contents">Contents</h2>
 
