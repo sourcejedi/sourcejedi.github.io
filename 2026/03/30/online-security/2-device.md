@@ -16,13 +16,11 @@ You may write down the code, in a safe place.  This may also be useful for a lov
 
 [Android Enthusiasts: I am sorry for anyone who does not have the PIN for their device](http://android.stackexchange.com/questions/259274/forgot-lock-screen-pin)
 
-That is how smartphones work.  PC's are slightly different.  In theory, you might add a backup option for unlocking a PC.
+That is how smartphones work.  PC's are slightly different.  You may be able to add a backup option to unlock your PC.
 
 However, you can keep things simple by using the same PIN to unlock all your devices.
 
-A secure device can save passkeys and passwords for any number of online accounts.  You only need to memorize one lock code for  your device.
-
-
+A secure device can save your passkeys and passwords, for any number of online accounts.  You only need to memorize one lock code for  your device.
 
 ### Option: Unlock using your fingerprint, face, etc
 

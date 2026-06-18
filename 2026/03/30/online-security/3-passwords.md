@@ -1,28 +1,38 @@
-# Security part 3 \- Passwords
+---
+layout: page-narrow
+title:  "Security part 3 - Passwords"
+---
 
-In part 1, we looked at your [email account](https://docs.google.com/document/d/1Iks6LBUCz_3588yexEzOgpFhOqVPh01vXOdsqdY1Hag/).
+In part 1, we looked at your [email account]({% link 2026/03/30/online-security/1-email.md %}).
 
 For some email providers, you need more than just a password.  People give the same password to different accounts.  Criminals can then target the weakest system, and steal the password.  In response, popular email providers use additional verification methods.
 
-In part 2, we looked at securing your [device](https://docs.google.com/document/d/1js3EAvRQKoTBvSatdhSFDTuj3MFqEU3VmIrHEYihPqg/).
+In part 2, we looked at securing your [device]({% link 2026/03/30/online-security/2-device.md %}).
 
 Your device comes with a *password manager*.  This will let you save passwords for different accounts.  It is specifically designed to improve your security.
 
 See also: [Cyber Aware \- Why you should use a password manager](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/password-managers).
 
-# Back up your passwords \- with apps and/or paper
+
+**Contents**
+
+* toc
+{:toc}
+
+
+# Back up your passwords -- with apps and/or paper
 
 When you enter a password in a website, your web browser should offer to save it.
 
 If you remember the steps to secure your email, this section will look very similar:
 
-  1\) Find your online password manager account  
-  2\) Protect your online password manager  
-  3\) Set a strong, unique password  
-  4\) Make paper notes  
-  Why using a password manager is safer
+1. Find your online password manager account
+2. Protect your online password manager
+3. Set a strong, unique password
+4. Make paper notes
+5. Why using a password manager is safer
 
-### 1\) Find your online password manager account
+### 1. Find your online password manager account
 
 Your web browser (or phone) should back up your saved passwords.  It uses an online account.  It might be the same account as your email.
 
@@ -45,21 +55,25 @@ You may use alternative password apps.  Passwords can be transferred between all
 
 Avoid Samsung Pass, or any other software which cannot transfer passwords to a different system.
 
-### 2\) Protect your online password manager
+### 2. Protect your online password manager
 
 Your password manager account is a *primary account*, one which helps control other online accounts.  Check the security settings for your account.
 
-* Does your account suggest two-step verification *using a mobile number*?  \[[Google](https://docs.google.com/document/d/1eR25YiybTCD6UgwKFL5uAx7KMxIOPKTUFGg55sY3tAE/edit#heading=h.7wnvf4rn4vok) / [Apple](https://docs.google.com/document/d/1eR25YiybTCD6UgwKFL5uAx7KMxIOPKTUFGg55sY3tAE/edit#heading=h.qyb396enlci7) / [Microsoft](https://docs.google.com/document/d/1eR25YiybTCD6UgwKFL5uAx7KMxIOPKTUFGg55sY3tAE/edit#heading=h.stcjhk7jxzsc)\]
+* Does your account suggest two-step verification *using a mobile number?*  \[[Google][email-google] / [Apple][email-apple]\]
+
+[email-apple]:  {%link 2026/03/30/online-security/1-email.md %}#apple
+[email-google]:  {% link 2026/03/30/online-security/1-email.md %}#google
+[email-microsoft]:  {% link 2026/03/30/online-security/1-email.md %}#microsoft
 
 * Some password managers do not necessarily need two-factor authentication, due to their encryption.  \[[1Password](https://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0#heading=h.xyen9zn7i31q)\]
 
 * Some password managers may need a code from your email, when signing in on a new device.  \[[Bitwarden](https://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0#heading=h.954f7cihxpzy)\]  If you use Bitwarden, you should set up “two-step login” manually, which allows you to print or write down the “recovery code”.
 
-* If you do not check these settings, you might end up relying on email (or another online account) as a backup for “two-step verification” or similar checks.  This is also a concern for *Lastpass* users.  I think this is dangerous \- you could easily get locked out.  A password manager should help you sign in to email.  Therefore, a good password manager should not rely on email.
+* If you do not check these settings, you might end up relying on email (or another online account) as a backup for “two-step verification” or similar checks.  This is also a concern for [Microsoft][email-microsoft] and *Lastpass* users.  I think this is dangerous - you could easily get locked out.  A password manager should help you sign in to email.  Therefore, a good password manager should not rely on email.
 
 A good password manager will explain exactly how you sign in on a new device.  This helps you understand its security, and plan for [recovery](http://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0) at the same time.
 
-### 3\) Set a strong, unique password
+### 3. Set a strong, unique password
 
 Most password managers use a password.  So you have a “primary” password: one that helps protect other passwords.
 
@@ -69,7 +83,7 @@ Set a password which is not used for any other online account.  It should not be
 
 Cyber Aware recommends: use [three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words).
 
-### 4\) Make paper notes
+### 4. Make paper notes
 
 Make a note on paper, with all the information you need to recover your passwords.
 
@@ -81,11 +95,11 @@ Traditionally, many online accounts also treat your email and/or phone as primar
 
 Keep notes for your email in the same place as well.  And ideally, for your mobile phone number too.
 
-### Why using a password manager is safer
+### 5. Why using a password manager is safer
 
 You need a trusted system, that will let you save different passwords for different accounts.
 
-When you sign in to a website, you are already trusting your web browser.  You already need your device to have good security.  
+When you sign in to a website, you are already trusting your web browser.  You already need your device to have good security.
 
 A good password manager helps you improve security.  This doesn’t mean you can’t try a different option later.  Apple, Google, and Microsoft all support copying passwords to or from another system.  (I prefer the Firefox web browser, for example).
 

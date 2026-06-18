@@ -207,7 +207,7 @@ Once you have an alternative email address you can add, or to verify your curren
 
 Now the simplest way to proceed is to secure your *other* email account first, going back to the start of this guide.
 
-In the steps after that, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage each account, password, and two-step verification.
+In the steps after this one, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage each account, password, and two-step verification.
 
 If you have made your recovery plans now, there are two options to secure your Microsoft account:
 
