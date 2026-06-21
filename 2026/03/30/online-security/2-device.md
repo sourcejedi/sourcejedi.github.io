@@ -38,6 +38,6 @@ If your device does not have security updates, criminals could hijack your devic
 
 ## Next steps
 
-- [Security part 3 \- Manage your passwords](https://docs.google.com/document/d/1Lj5E0srO1DTEspJkLqsV1pSblDBiKrYA8SOysktzjtk/)
+- [Security part 3 - Manage your passwords]({% link 2026/03/30/online-security/3-passwords.md %})
 
 - [Cyber Aware top tips \- Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)

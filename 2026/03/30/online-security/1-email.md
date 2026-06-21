@@ -60,8 +60,8 @@ Keep track of each sign-in detail.  For example:
 
 * the email address, which you sign in with.
 * your current password -- or the safe place where you recorded it -- or a clue to help you remember.
+* and / or the device(s) you have saved a *passkey* on.
 * the mobile number linked to the account (if any).
-* the device(s) you have saved a *passkey* on.
 
 Grab a pen and paper!  You can write down what you use, at the same time as we work through and confirm each sign-in detail.  Or you can print my [email recovery sheet][email-recovery-sheet], and fill in your details.
 
@@ -207,9 +207,9 @@ Once you have an alternative email address you can add, or to verify your curren
 
 Now the simplest way to proceed is to secure your *other* email account first, going back to the start of this guide.
 
-In the steps after this one, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage each account, password, and two-step verification.
+In the following steps, we can create recovery and security plans for a password manager, passkeys, etc.  This will make it simpler to manage each account, password, and two-step verification.
 
-If you have made your recovery plans now, there are two options to secure your Microsoft account:
+If you are ready to continue now, there are two options to secure your Microsoft account:
 
 1. Cyber Aware says to turn on two-step verification, following the Microsoft guide:
 
@@ -251,14 +251,6 @@ This option completes the Cyber Aware tip: [Use a strong and separate password f
 
 - [Security part 2 - Your device]({% link 2026/03/30/online-security/2-device.md %})
 
-- [Security part 3 \- Manage your passwords](https://docs.google.com/document/d/1Lj5E0srO1DTEspJkLqsV1pSblDBiKrYA8SOysktzjtk/)
-
-- [Cyber Aware top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
-
-<!--
-- [Security part 2 - Your device]({% link 2026/03/30/online-security/2-device.md %})
-
 - [Security part 3 - Manage your passwords]({% link 2026/03/30/online-security/3-passwords.md %})
 
 - [Cyber Aware top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
--->

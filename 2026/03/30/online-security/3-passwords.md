@@ -27,7 +27,7 @@ When you enter a password in a website, your web browser should offer to save it
 If you remember the steps to secure your email, this section will look very similar:
 
 1. Find your online password manager account
-2. Protect your online password manager
+2. Make it easy to sign in
 3. Set a strong, unique password
 4. Make paper notes
 5. Why using a password manager is safer
@@ -55,23 +55,26 @@ You may use alternative password apps.  Passwords can be transferred between all
 
 Avoid Samsung Pass, or any other software which cannot transfer passwords to a different system.
 
-### 2. Protect your online password manager
+### 2. Make it easy to sign in
 
-Your password manager account is a *primary account*, one which helps control other online accounts.  Check the security settings for your account.
+Your password manager account is a *primary account*, one which helps recover other online accounts.  Check the security settings for your password manager account.
 
-* Does your account suggest two-step verification *using a mobile number?*  \[[Google][email-google] / [Apple][email-apple]\]
+* \[Google\] or \[Apple\] account - these were covered in [part 1][email].  Work through [part 1][email] for the password manager account, if you have not already.
 
-[email-apple]:  {%link 2026/03/30/online-security/1-email.md %}#apple
-[email-google]:  {% link 2026/03/30/online-security/1-email.md %}#google
-[email-microsoft]:  {% link 2026/03/30/online-security/1-email.md %}#microsoft
+* \[Microsoft\] account - this was also mentioned in [part 1][email].  Microsoft assume you have an alternate email account.  In [part 1][email], you secured your non-Microsoft email.  You should now re-apply [part 1][email] to secure your Microsoft account.  (If you want to avoid being dependent on the alternate email account, see my [extended notes][avoid-microsoft]).
+
+[email]: {%link 2026/03/30/online-security/1-email.md %}
+[avoid-microsoft]: https://docs.google.com/document/d/1NqAE3S8OUXGeBoIgqqnYi-5q3NS_t0R4j5OX-s9pvkw/edit?tab=t.0
 
 * Some password managers do not necessarily need two-factor authentication, due to their encryption.  \[[1Password](https://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0#heading=h.xyen9zn7i31q)\]
 
-* Some password managers may need a code from your email, when signing in on a new device.  \[[Bitwarden](https://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0#heading=h.954f7cihxpzy)\]  If you use Bitwarden, you should set up “two-step login” manually, which allows you to print or write down the “recovery code”.
-
-* If you do not check these settings, you might end up relying on email (or another online account) as a backup for “two-step verification” or similar checks.  This is also a concern for [Microsoft][email-microsoft] and *Lastpass* users.  I think this is dangerous - you could easily get locked out.  A password manager should help you sign in to email.  Therefore, a good password manager should not rely on email.
+* Some password managers may need a code from your email, when signing in on a new device.  \[[Bitwarden](https://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0#heading=h.954f7cihxpzy)\]  If you use Bitwarden, you should set up “two-step login” manually, which allows you to print or write down a "recovery code".
 
 A good password manager will explain exactly how you sign in on a new device.  This helps you understand its security, and plan for [recovery](http://docs.google.com/document/d/1cwtBgv9F7rfeNwwHQZsXgg_3ymZn--K5MTOkVUnSDBA/edit?tab=t.0) at the same time.
+
+Note: most online accounts are registered with an email address.  This applies equally to password managers.  Many password managers assume you have a working email address.
+
+If you rely on your password manager to store your email password (or passkey, verification codes, etc), you could get locked out.  It is safest to keep an independent copy of your email sign-in details.
 
 ### 3. Set a strong, unique password
 
@@ -119,7 +122,7 @@ When you have a reliable way to record passwords, you can use different password
 
 For example, your email account is important.  If you have re-used this password on any other account, now is the time to fix it\!  Go back to your email account settings, and change the password.  It should be different from any other password.  It should not be easy to guess, e.g. from personal information.
 
-Note: You might use an Orange password manager, and also an Orange email, for example.  These services may use a single online account, with a single password.  So you may have already set a unique password for your email.
+Note: You might use an Orange password manager, and also an Orange email, for example.  These services may use a single online account, with a single password.  So you might have already set a unique password for your email.
 
 When you have time available, look through the rest of your passwords.  Start with the online accounts that are most important for you, e.g.:
 
@@ -132,4 +135,3 @@ When you have time available, look through the rest of your passwords.  Start wi
 There is always more you could learn.  We have gone through most of the Cyber Aware top tips, but there is one final tip:
 
 - [Cyber Aware top tips \- Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
-
