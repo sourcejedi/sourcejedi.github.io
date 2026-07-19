@@ -229,11 +229,11 @@ Longer notes: [Avoid getting locked out of your Microsoft account or Outlook.com
 
 ### Option 2: Use a strong and separate password {#strong-and-separate-password}
 
-If you have turned on two-step verification for your email, skip this section.  We can set up a secure password manager first, and then set a new email password.
+If you have turned on two-step verification for your email, you can skip this section.  We can set up a secure password manager first, and set a new email password later.
 
 If your email is not protected by two-step verification, we should think about your password now.
 
-Most people have used the same password for more than one thing.  This is a problem.  Surprisingly often, one of the less secure websites or apps gets hacked, and leaks everyone’s password.
+Most people have used the same password for more than one thing.  This is a problem.  Surprisingly often, one of the less secure websites or apps get hacked, and leak everyone's password.
 
 At this point, you have successfully signed in.  You should have a sheet with your sign-in details written on it.
 
@@ -243,7 +243,7 @@ Cyber Aware recommends: use [three random words](https://www.ncsc.gov.uk/collect
 
 Remember to record the new password!  Keep your email recovery sheet up to date.
 
-Ultimately, you should use a secure *password manager* (and/or passkeys!).  Even then, an email recovery sheet is still very useful, as an independent backup.  Many other accounts will let you sign in (or help recover) using your email.
+Ultimately, you should use a secure *password manager* (and/or passkeys!).  Even then, an email recovery sheet is still very useful.  Some password managers depend on your email.  It can also provide an independent backup.  Many other accounts will let you sign in (or help recover) using your email.
 
 This option completes the Cyber Aware tip: [Use a strong and separate password for your email](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email).
 
