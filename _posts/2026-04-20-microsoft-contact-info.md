@@ -58,7 +58,7 @@ Microsoft can require you to add contact info when you use a security feature.
 
 When you want to sign in on a new device, Microsoft can require contact info.  I saw this myself, a few days after I created my test account.
 
-Currently, contact info is also required to turn on two-step verification - a top tip from [Cyber Aware][cyber-aware-2sv] experts - or to "go passwordless", as per [Microsoft security guidance][MSA-secure].
+Currently, contact info is also required to turn on two-step verification - a top tip from [security experts][cyber-aware-2sv] - or to "go passwordless", as per [Microsoft guidance][MSA-secure].
 
 [cyber-aware-2sv]:    https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email
 [MSA-secure]:    https://support.microsoft.com/en-us/account-billing/how-to-help-keep-your-microsoft-account-secure-628538c2-7006-33bb-5ef4-c917657362b9

@@ -5,13 +5,13 @@ title:  "Security part 3 - Passwords"
 
 In part 1, we looked at your [email account]({% link 2026/03/30/online-security/1-email.md %}).
 
-For some email providers, you need more than just a password.  People give the same password to different accounts.  Criminals can then target the weakest system, and steal the password.  In response, popular email providers use additional verification methods.
+For some email providers, you need more than just a password.  People give the same password to different account systems.  Criminals can then target the weakest system, and steal the password.  In response, popular email providers use additional verification methods.
 
 In part 2, we looked at securing your [device]({% link 2026/03/30/online-security/2-device.md %}).
 
 Your device comes with a *password manager*.  This will let you save passwords for different accounts.  It is specifically designed to improve your security.
 
-See also: [Cyber Aware \- Why you should use a password manager](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/password-managers).
+See also: [NCSC tips - Why you should use a password manager](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/password-managers).
 
 
 **Contents**
@@ -84,7 +84,7 @@ Most people have used the same password for more than one thing.  This is a prob
 
 Set a password which is not used for any other online account.  It should not be easy to guess, e.g. from personal information.
 
-Cyber Aware recommends: use [three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words).
+NCSC recommends: use [three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words).
 
 ### 4. Make paper notes
 
@@ -120,7 +120,7 @@ If you believe a certain password has been leaked \- e.g. because it was used in
 
 When you have a reliable way to record passwords, you can use different passwords for different accounts.
 
-For example, your email account is important.  If you have re-used this password on any other account, now is the time to fix it\!  Go back to your email account settings, and change the password.  It should be different from any other password.  It should not be easy to guess, e.g. from personal information.
+For example, your email account is important.  If you have re-used this password on any other account, now is the time to fix it!  Go back to your email account settings, and change the password.  It should be different from any other password.  It should not be easy to guess, e.g. from personal information.
 
 Note: You might use an Orange password manager, and also an Orange email, for example.  These services may use a single online account, with a single password.  So you might have already set a unique password for your email.
 
@@ -132,6 +132,6 @@ When you have time available, look through the rest of your passwords.  Start wi
 
 # Next steps
 
-There is always more you could learn.  We have gone through most of the Cyber Aware top tips, but there is one final tip:
+There is always more you could learn.  We have gone through most of the tips from the NCSC, but there is one final tip:
 
-- [Cyber Aware top tips \- Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
+- [NCSC top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)

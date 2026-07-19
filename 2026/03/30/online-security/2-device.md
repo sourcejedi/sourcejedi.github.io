@@ -30,9 +30,9 @@ Your phone still requires your lock code once every three days.  This is to test
 
 ## Install your security updates
 
-Be Cyber Aware: [Install the latest software and app updates](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/install-the-latest-software-and-app-updates).
+Stay secure -- [Install the latest software and app updates](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/install-the-latest-software-and-app-updates).
 
-Out-of-date apps and devices will miss out on security fixes.
+Out-of-date apps and devices will miss critical security fixes.
 
 If your device does not have security updates, criminals could hijack your device and accounts.  New attacks are discovered every day.  Many attacks are delivered through online adverts and spam.  These risks vary depending on your usage, but you cannot avoid them entirely.
 
@@ -40,4 +40,4 @@ If your device does not have security updates, criminals could hijack your devic
 
 - [Security part 3 - Manage your passwords]({% link 2026/03/30/online-security/3-passwords.md %})
 
-- [Cyber Aware top tips \- Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
+- [NCSC top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)

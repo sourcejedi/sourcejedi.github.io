@@ -3,9 +3,9 @@ layout: page-narrow
 title:  "Security part 1 - Email sign-in"
 ---
 
-For a good guide to online security, read the [Cyber Aware "top tips"][cyber-aware].
+I recommend using the [Top tips for staying secure online][cyber-aware], from UK NCSC.
 
-I needed to break down some steps.  Here are my (somewhat longer) notes.  If you need help with the [Cyber Aware][cyber-aware] tips, you might find these useful.
+I needed to break down some steps.  Below are my own (somewhat longer) notes.  If you need more help with the NCSC tips, you might find these useful.
 
 [cyber-aware]: https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online
 
@@ -14,7 +14,7 @@ I needed to break down some steps.  Here are my (somewhat longer) notes.  If you
 
 ## Your email sign-in
 
-Cyber Aware starts with your email account.
+Online security starts with your email account.
 
 Your email is important.  It can be used to reset passwords on many other apps and websites.  Your messages also contain personal info.
 
@@ -211,11 +211,11 @@ In the following steps, we can create recovery and security plans for a password
 
 If you are ready to continue now, there are two options to secure your Microsoft account:
 
-1. Cyber Aware says to turn on two-step verification, following the Microsoft guide:
+1. NCSC experts say to turn on two-step verification, following the Microsoft guide:
 
    [How to use two-step verification with your Microsoft account](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
 
-2. Microsoft says you could "increase the security of your account by removing your password and signing in with a passwordless method instead."
+2. Microsoft say you could "increase the security of your account by removing your password and signing in with a passwordless method instead."
 
    If your sign-in settings currently show a password, you will need to install the Microsoft Authenticator app on your phone, before you can go passwordless:
 
@@ -239,13 +239,13 @@ At this point, you have successfully signed in.  You should have a sheet with yo
 
 If you used the same password for other accounts, change it now.  It should be different from any other password.  It should not be easy to guess, e.g. from personal information.
 
-Cyber Aware recommends: use [three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words).
+NCSC recommends: use [three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words).
 
 Remember to record the new password!  Keep your email recovery sheet up to date.
 
 Ultimately, you should use a secure *password manager* (and/or passkeys!).  Even then, an email recovery sheet is still very useful.  Some password managers depend on your email.  It can also provide an independent backup.  Many other accounts will let you sign in (or help recover) using your email.
 
-This option completes the Cyber Aware tip: [Use a strong and separate password for your email](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email).
+This option completes the NCSC tip: [Use a strong and separate password for your email](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email).
 
 ## Next steps
 
@@ -253,4 +253,4 @@ This option completes the Cyber Aware tip: [Use a strong and separate password f
 
 - [Security part 3 - Manage your passwords]({% link 2026/03/30/online-security/3-passwords.md %})
 
-- [Cyber Aware top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
+- [NCSC top tips - Backing up your data](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data)
